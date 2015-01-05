@@ -12,6 +12,7 @@ sed -i -e 's/#PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/ss
 service sshd restart
 adduser $my_ssh_user ; passwd $my_ssh_user
 ```
+
 #2. Swap, quota, fail2ban & firewall
 ```sh
 sudo fallocate -l 1G /var/swap.img ; chmod 600 /var/swap.img
@@ -25,4 +26,12 @@ cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 sed -i -e 's/bantime  = 600/bantime  = 3600/g' /etc/fail2ban/jail.local
 systemctl enable fail2ban.service ; systemctl start fail2ban.service
 systemctl stop firewalld.service ; systemctl disable firewalld.service
+```
+
+#3. Install MariaDB (secure_install: yes to all questions)
+```sh
+yum install -y mariadb-server
+service mariadb start ; systemctl enable mariadb.service
+service mariadb restart
+/usr/bin/mysql_secure_installation
 ```
