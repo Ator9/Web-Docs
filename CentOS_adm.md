@@ -43,3 +43,10 @@ yum install -y php php-devel php-gd php-imap php-ldap php-mssql php-mysql php-od
 systemctl start php-fpm.service ; systemctl enable php-fpm.service
 service httpd restart
 ```
+
+#5. Install phpMyAdmin
+```sh
+yum install -y phpmyadmin
+sed -i -e 's/Require ip ::1/Require ip ::1\nRequire all granted/' /etc/httpd/conf.d/phpMyAdmin.conf
+service httpd restart
+```
