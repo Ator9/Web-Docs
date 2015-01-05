@@ -28,7 +28,7 @@ systemctl enable fail2ban.service ; systemctl start fail2ban.service
 systemctl stop firewalld.service ; systemctl disable firewalld.service
 ```
 
-#3. Install MariaDB (secure_install: yes to all questions)
+#3. Install MariaDB
 ```sh
 yum install -y mariadb-server
 service mariadb start ; systemctl enable mariadb.service
