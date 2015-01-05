@@ -3,6 +3,7 @@ CentOS 7 - Multiserver - Admin
 #1. Startup
 ```sh
 my_ssh_user=XXX
+
 my_adm_host=YYY
 my_adm_ip=ZZZ
 my_db_host=YYY
@@ -11,15 +12,13 @@ my_http_host=YYY
 my_http_ip=ZZZ
 ```
 ```sh
+yum update -y
+yum install -y telnet nmap quota ntp epel-release git
+yum install -y clamav clamav-update rkhunter
 echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
 echo "$my_db_ip     $my_db_host" >> /etc/hosts
 echo "$my_http_ip     $my_http_host" >> /etc/hosts
 service network restart
-```
-```sh
-yum update -y
-yum install -y telnet nmap quota ntp epel-release git
-yum install -y clamav clamav-update rkhunter
 yes | cp /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
 sed -i -e 's/#PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/sshd_config
 service sshd restart
