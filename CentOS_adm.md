@@ -62,3 +62,12 @@ GRANT ALL PRIVILEGES ON *.* TO  'root'@'db.server.com' IDENTIFIED BY 'YOUR_PASSW
 CREATE USER 'root'@'http.server.com' IDENTIFIED BY 'YOUR_PASSWORD';
 GRANT ALL PRIVILEGES ON *.* TO  'root'@'http.server.com' IDENTIFIED BY 'YOUR_PASSWORD' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
 ```
+
+#7. ISPConfig (Expert mode)
+```sh
+yum install -y perl-DateTime-Format-HTTP perl-DateTime-Format-Builder perl-Time*
+service httpd restart
+wget http://www.ispconfig.org/downloads/ISPConfig-3-stable.tar.gz
+tar -zxvf ISPConfig-3-stable.tar.gz
+sudo php -q ispconfig3_install/install/install.php
+```
