@@ -1,12 +1,19 @@
 CentOS 7 - Multiserver - Admin
-```sh
-my_ssh_user=XXX
-```
+
 #1. Startup
 ```sh
-echo "IP     adm.server.com" >> /etc/hosts
-echo "IP     db.server.com" >> /etc/hosts
-echo "IP     http.server.com" >> /etc/hosts
+my_ssh_user=XXX
+my_adm_host=YYY
+my_adm_ip=ZZZ
+my_db_host=YYY
+my_db_ip=ZZZ
+my_http_host=YYY
+my_http_ip=ZZZ
+```
+```sh
+echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
+echo "$my_db_ip     $my_db_host" >> /etc/hosts
+echo "$my_http_ip     $my_http_host" >> /etc/hosts
 service network restart
 ```
 ```sh
