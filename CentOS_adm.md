@@ -29,7 +29,6 @@ systemctl stop firewalld.service ; systemctl disable firewalld.service
 ```
 
 #3. Install MariaDB
-secure_install: yes to all questions
 ```sh
 yum install -y mariadb-server
 service mariadb start ; systemctl enable mariadb.service
@@ -37,8 +36,6 @@ service mariadb start ; systemctl enable mariadb.service
 ```
 
 #4. Install Apache & PHP
-Document root: /var/www/html
-Configuration files: /etc/httpd/conf.d/
 ```sh
 yum install -y httpd mod_ssl
 service httpd start ; systemctl enable httpd.service
