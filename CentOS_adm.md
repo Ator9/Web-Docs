@@ -12,7 +12,7 @@ sed -i -e 's/#PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/ss
 service sshd restart
 adduser $my_ssh_user ; passwd $my_ssh_user
 ```
-#2. Swap & Quota & fail2ban & Firewall Stop
+#2. Swap, Quota, fail2ban & Firewall
 ```sh
 sudo fallocate -l 1G /var/swap.img ; chmod 600 /var/swap.img
 mkswap /var/swap.img ; swapon /var/swap.img
