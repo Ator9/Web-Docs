@@ -39,14 +39,14 @@ systemctl enable fail2ban.service ; systemctl start fail2ban.service
 systemctl stop firewalld.service ; systemctl disable firewalld.service
 ```
 
-#3. Install MariaDB
+#3. MariaDB
 ```sh
 yum install -y mariadb-server
 service mariadb start ; systemctl enable mariadb.service
 /usr/bin/mysql_secure_installation
 ```
 
-#4. Install Apache & PHP
+#4. Apache & PHP
 ```sh
 yum install -y httpd mod_ssl
 service httpd start ; systemctl enable httpd.service
@@ -55,7 +55,7 @@ systemctl start php-fpm.service ; systemctl enable php-fpm.service
 service httpd restart
 ```
 
-#5. Install phpMyAdmin
+#5. phpMyAdmin
 ```sh
 yum install -y phpmyadmin
 sed -i -e 's/Require ip ::1/Require ip ::1\nRequire all granted/' /etc/httpd/conf.d/phpMyAdmin.conf
