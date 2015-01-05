@@ -64,7 +64,7 @@ service httpd restart
 
 #6. MySQL GRANT Access to other servers
 ```sh
-mysql -hlocalhost -uroot -pYOUR_PASSWORD
+mysql -hlocalhost -uroot -p
 ```
 ```sh
 CREATE USER 'root'@'db.server.com' IDENTIFIED BY 'YOUR_PASSWORD';
