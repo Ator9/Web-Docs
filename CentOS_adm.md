@@ -1,6 +1,7 @@
 CentOS 7 - Multiserver - Admin
 
 #1. Startup
+Complete with your data:
 ```sh
 my_ssh_user=XXX
 
