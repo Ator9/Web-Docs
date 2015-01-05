@@ -82,3 +82,18 @@ wget http://www.ispconfig.org/downloads/ISPConfig-3-stable.tar.gz
 tar -zxvf ISPConfig-3-stable.tar.gz
 sudo php -q ispconfig3_install/install/install.php
 ```
+
+#8. Extra Configs
+```sh
+sed -i -e 's/?>//g' /etc/phpMyAdmin/config.inc.php
+echo "\$i++;\$cfg['Servers'][\$i]['host'] = 'db1.adverzen.com';" >> /etc/phpMyAdmin/config.inc.php
+echo "\$i++;\$cfg['Servers'][\$i]['host'] = 'http1.adverzen.com';" >> /etc/phpMyAdmin/config.inc.php
+sed -i -e 's/short_open_tag = Off/short_open_tag = On/g' /etc/php.ini
+sed -i -e 's/expose_php = On/expose_php = Off/g' /etc/php.ini
+echo "AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript" >> /etc/httpd/conf/httpd.conf
+echo 'KeepAlive On' >> /etc/httpd/conf/httpd.conf
+echo 'KeepAliveTimeout 5' >> /etc/httpd/conf/httpd.conf
+echo 'ServerTokens ProductOnly' >> /etc/httpd/conf/httpd.conf
+echo 'ServerSignature Off' >> /etc/httpd/conf/httpd.conf
+service httpd restart
+```
