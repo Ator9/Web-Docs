@@ -24,7 +24,7 @@ service sshd restart
 adduser $my_ssh_user ; passwd $my_ssh_user
 ```
 
-#2. Swap (1GB), quota, fail2ban & firewall
+#2. Swap, quota, fail2ban & firewall
 ```sh
 sudo fallocate -l 1G /var/swap.img ; chmod 600 /var/swap.img
 mkswap /var/swap.img ; swapon /var/swap.img
