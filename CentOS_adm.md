@@ -83,7 +83,7 @@ tar -zxvf ISPConfig-3-stable.tar.gz
 sudo php -q ispconfig3_install/install/install.php
 ```
 
-#8. Extra Configs
+# Optional Configs
 ```sh
 sed -i -e 's/short_open_tag = Off/short_open_tag = On/g' /etc/php.ini
 sed -i -e 's/expose_php = On/expose_php = Off/g' /etc/php.ini
