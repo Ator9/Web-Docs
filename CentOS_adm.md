@@ -50,3 +50,15 @@ yum install -y phpmyadmin
 sed -i -e 's/Require ip ::1/Require ip ::1\nRequire all granted/' /etc/httpd/conf.d/phpMyAdmin.conf
 service httpd restart
 ```
+
+#6. MySQL GRANT Access to other servers
+```sh
+mysql -hlocalhost -uroot -pYOUR_PASSWORD
+```
+```sh
+CREATE USER 'root'@'db.server.com' IDENTIFIED BY 'YOUR_PASSWORD';
+GRANT ALL PRIVILEGES ON *.* TO  'root'@'db.server.com' IDENTIFIED BY 'YOUR_PASSWORD' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+
+CREATE USER 'root'@'http.server.com' IDENTIFIED BY 'YOUR_PASSWORD';
+GRANT ALL PRIVILEGES ON *.* TO  'root'@'http.server.com' IDENTIFIED BY 'YOUR_PASSWORD' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+```
