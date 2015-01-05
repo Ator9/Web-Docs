@@ -1,6 +1,8 @@
 Commands
 ========
-
+```sh
+/usr/local/ispconfig/server/server.sh
+```
 ```sh
 service mariadb restart
 service httpd restart
@@ -18,10 +20,4 @@ nano /etc/postfix/main.cf
 
 tail -100 /var/log/mysqld.log
 tail -100 /var/log/httpd/error_log
-```
-
-ISPConfig
-=========
-```sh
-/usr/local/ispconfig/server/server.sh
 ```
