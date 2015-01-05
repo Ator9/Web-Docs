@@ -8,6 +8,8 @@ my_db_host=XXX
 my_db_ip=XXX
 my_http_host=XXX
 my_http_ip=XXX
+
+history -c
 ```
 #1. Startup
 ```sh
