@@ -1,6 +1,4 @@
 CentOS 7 - Multiserver - Admin
-
-Complete with your data:
 ```sh
 my_ssh_user=XXX
 
