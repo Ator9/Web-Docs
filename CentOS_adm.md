@@ -1,6 +1,5 @@
 CentOS 7 - Multiserver - Admin
 
-#1. Startup
 Complete with your data:
 ```sh
 my_ssh_user=XXX
@@ -12,6 +11,7 @@ my_db_ip=ZZZ
 my_http_host=YYY
 my_http_ip=ZZZ
 ```
+#1. Startup
 ```sh
 yum update -y
 yum install -y telnet nmap quota ntp epel-release git
