@@ -32,6 +32,5 @@ systemctl stop firewalld.service ; systemctl disable firewalld.service
 ```sh
 yum install -y mariadb-server
 service mariadb start ; systemctl enable mariadb.service
-service mariadb restart
 /usr/bin/mysql_secure_installation
 ```
