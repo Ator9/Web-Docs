@@ -1,4 +1,4 @@
-CentOS 7 Multiserver - Admin
+CentOS 7 - Multiserver - Admin
 ```sh
 my_ssh_user=XXX
 ```
