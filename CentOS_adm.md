@@ -36,8 +36,8 @@ service mariadb start ; systemctl enable mariadb.service
 ```
 
 #4. Install Apache & PHP
--Document root: /var/www/html
--Configuration files: /etc/httpd/conf.d/
+--Document root: /var/www/html
+--Configuration files: /etc/httpd/conf.d/
 ```sh
 yum install -y httpd mod_ssl
 service httpd start ; systemctl enable httpd.service
