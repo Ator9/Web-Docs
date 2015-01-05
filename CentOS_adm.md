@@ -4,6 +4,12 @@ my_ssh_user=XXX
 ```
 #1. Startup
 ```sh
+echo "IP     adm.server.com" >> /etc/hosts
+echo "IP     db.server.com" >> /etc/hosts
+echo "IP     http.server.com" >> /etc/hosts
+service network restart
+```
+```sh
 yum update -y
 yum install -y telnet nmap quota ntp epel-release git
 yum install -y clamav clamav-update rkhunter
