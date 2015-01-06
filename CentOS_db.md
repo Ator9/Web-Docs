@@ -10,7 +10,7 @@ my_db_ip=XXX
 my_http_host=XXX
 my_http_ip=XXX
 ```
-#<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#1-startup" target="_blank">1. Startup</a>
+##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#1-startup" target="_blank">1. Startup</a>
 #2. Swap, quota, fail2ban & firewall
 #3. MariaDB & GRANT access to servers
 
