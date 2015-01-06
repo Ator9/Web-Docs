@@ -8,12 +8,10 @@ my_db_host=XXX
 my_db_ip=XXX
 my_http_host=XXX
 my_http_ip=XXX
-
-history -c
 ```
 #1. Startup
 ```sh
-yum update -y
+yum update -y ;  history -c
 yum install -y telnet nmap quota ntp epel-release git
 yum install -y clamav clamav-update rkhunter
 echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
