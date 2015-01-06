@@ -25,9 +25,9 @@ make ; sudo make install
 cd .. ; rm -rf jailkit-2.17*
 
 ```
-##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#6-ispconfig-expert-mode" target="_blank">7. ISPConfig (Expert mode)</a>
-##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#7-configuration" target="_blank">8. Configuration</a>
-##9. Secure PureFTPd (Optional)
+##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#6-ispconfig-expert-mode" target="_blank">6. ISPConfig (Expert mode)</a>
+##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#7-configuration" target="_blank">7. Configuration</a>
+##8. Secure PureFTPd (Optional)
 ```sh
 mkdir -p /etc/ssl/private/
 openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
