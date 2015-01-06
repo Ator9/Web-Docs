@@ -1,6 +1,7 @@
 CentOS 7 - Multiserver - Admin
 ```sh
 my_ssh_user=XXX
+my_db_pass=XXX
 
 my_adm_host=XXX
 my_adm_ip=XXX
@@ -64,14 +65,14 @@ service httpd restart
 
 #6. MySQL GRANT Access to other servers
 ```sh
-mysql -hlocalhost -uroot -p
-```
-```sh
-CREATE USER 'root'@'db.server.com' IDENTIFIED BY 'YOUR_PASSWORD';
-GRANT ALL PRIVILEGES ON *.* TO  'root'@'db.server.com' IDENTIFIED BY 'YOUR_PASSWORD' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+mysql -hlocalhost -uroot -p$my_db_pass -e "CREATE USER 'root'@'$my_adm_host' IDENTIFIED BY '$my_db_pass'"
+mysql -hlocalhost -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_adm_host' IDENTIFIED BY '$my_db_pass' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0"
 
-CREATE USER 'root'@'http.server.com' IDENTIFIED BY 'YOUR_PASSWORD';
-GRANT ALL PRIVILEGES ON *.* TO  'root'@'http.server.com' IDENTIFIED BY 'YOUR_PASSWORD' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+mysql -hlocalhost -uroot -p$my_db_pass -e "CREATE USER 'root'@'$my_db_host' IDENTIFIED BY '$my_db_pass'"
+mysql -hlocalhost -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_db_host' IDENTIFIED BY '$my_db_pass' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0"
+
+mysql -hlocalhost -uroot -p$my_db_pass -e "CREATE USER 'root'@'$my_http_host' IDENTIFIED BY '$my_db_pass'"
+mysql -hlocalhost -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_http_host' IDENTIFIED BY '$my_db_pass' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0"
 ```
 
 #7. ISPConfig (Expert mode)
