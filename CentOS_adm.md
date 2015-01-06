@@ -47,7 +47,7 @@ yum install -y mariadb-server
 service mariadb start ; systemctl enable mariadb.service
 /usr/bin/mysql_secure_installation
 ```
-
+GRANT access to servers:
 ```sh
 mysql -hlocalhost -uroot -p$my_db_pass -e "CREATE USER 'root'@'$my_adm_host' IDENTIFIED BY '$my_db_pass'"
 mysql -hlocalhost -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_adm_host' IDENTIFIED BY '$my_db_pass' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0"
