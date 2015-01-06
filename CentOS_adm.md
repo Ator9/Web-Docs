@@ -24,6 +24,7 @@ yes | cp /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
 sed -i -e 's/#PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/sshd_config
 service sshd restart
 adduser $my_ssh_user ; passwd $my_ssh_user
+
 ```
 
 #2. Swap, quota, fail2ban & firewall
@@ -39,6 +40,7 @@ cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 sed -i -e 's/bantime  = 600/bantime  = 3600/g' /etc/fail2ban/jail.local
 systemctl enable fail2ban.service ; systemctl start fail2ban.service
 systemctl stop firewalld.service ; systemctl disable firewalld.service
+
 ```
 
 #3. MariaDB & GRANT access to servers
@@ -46,6 +48,7 @@ systemctl stop firewalld.service ; systemctl disable firewalld.service
 yum install -y mariadb-server
 service mariadb start ; systemctl enable mariadb.service
 /usr/bin/mysql_secure_installation
+
 ```
 GRANT access to servers:
 ```sh
@@ -57,6 +60,7 @@ mysql -hlocalhost -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root
 
 mysql -hlocalhost -uroot -p$my_db_pass -e "CREATE USER 'root'@'$my_http_host' IDENTIFIED BY '$my_db_pass'"
 mysql -hlocalhost -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_http_host' IDENTIFIED BY '$my_db_pass' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0"
+
 ```
 
 #4. Apache & PHP
@@ -66,6 +70,7 @@ service httpd start ; systemctl enable httpd.service
 yum install -y php php-devel php-gd php-imap php-ldap php-mssql php-mysql php-odbc php-pear php-xml php-xmlrpc php-pecl-apc php-mbstring php-mcrypt php-snmp php-soap php-tidy curl curl-devel perl-libwww-perl ImageMagick libxml2 libxml2-devel php-cli httpd-devel unzip bzip2 perl-DBD-mysql php-fpm mod_fcgid
 systemctl start php-fpm.service ; systemctl enable php-fpm.service
 service httpd restart
+
 ```
 
 #5. phpMyAdmin
@@ -73,6 +78,7 @@ service httpd restart
 yum install -y phpmyadmin
 sed -i -e 's/Require ip ::1/Require ip ::1\nRequire all granted/' /etc/httpd/conf.d/phpMyAdmin.conf
 service httpd restart
+
 ```
 
 #6. ISPConfig (Expert mode)
@@ -82,6 +88,7 @@ service httpd restart
 wget http://www.ispconfig.org/downloads/ISPConfig-3-stable.tar.gz
 tar -zxvf ISPConfig-3-stable.tar.gz
 sudo php -q ispconfig3_install/install/install.php
+
 ```
 
 #7. Configuration
@@ -94,4 +101,5 @@ echo 'KeepAliveTimeout 5' >> /etc/httpd/conf/httpd.conf
 echo 'ServerTokens ProductOnly' >> /etc/httpd/conf/httpd.conf
 echo 'ServerSignature Off' >> /etc/httpd/conf/httpd.conf
 service httpd restart
+
 ```
