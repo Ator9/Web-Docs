@@ -21,6 +21,7 @@ chkconfig --levels 235 pure-ftpd on
 /etc/init.d/pure-ftpd start
 mkdir -p /etc/ssl/private/
 openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
+
 ```
 ##6. Jailkit
 ```sh
