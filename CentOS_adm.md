@@ -12,7 +12,8 @@ my_http_ip=XXX
 ```
 #1. Startup
 ```sh
-yum update -y ; history -c
+history -c
+yum update -y
 yum install -y telnet nmap quota ntp epel-release git
 yum install -y clamav clamav-update rkhunter
 echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
