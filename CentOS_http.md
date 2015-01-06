@@ -17,8 +17,7 @@ my_http_ip=XXX
 ##5. PureFTPd
 ```sh
 yum install -y pure-ftpd
-chkconfig --levels 235 pure-ftpd on
-/etc/init.d/pure-ftpd start
+systemctl enable pure-ftpd.service; systemctl start pure-ftpd.service
 mkdir -p /etc/ssl/private/
 openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
 
@@ -39,7 +38,7 @@ cd .. ; rm -rf jailkit-2.17*
 ```sh
 chmod 600 /etc/ssl/private/pure-ftpd.pem
 echo "TLS    2" >> /etc/pure-ftpd/pure-ftpd.conf
-service pure-ftpd restart
+systemctl restart pure-ftpd.service
 postmap /etc/postfix/virtual
 service postfix restart
 
