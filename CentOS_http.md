@@ -31,10 +31,5 @@ cd jailkit-2.17 ; ./configure
 make ; sudo make install
 cd .. ; rm -rf jailkit-2.17*
 ```
-##7. ISPConfig (Expert mode)
-```sh
-yum install -y php php-mysql php-odbcphp-mcrypt
-wget http://www.ispconfig.org/downloads/ISPConfig-3-stable.tar.gz
-tar -zxvf ISPConfig-3-stable.tar.gz
-sudo php -q ispconfig3_install/install/install.php
-```
+##
+##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#6-ispconfig-expert-mode" target="_blank">7. ISPConfig (Expert mode)</a>
