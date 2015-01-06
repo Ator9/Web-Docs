@@ -33,3 +33,12 @@ cd .. ; rm -rf jailkit-2.17*
 ```
 ##
 ##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#6-ispconfig-expert-mode" target="_blank">7. ISPConfig (Expert mode)</a>
+##8. PureFTPd & Postfix Configuration
+```sh
+chmod 600 /etc/ssl/private/pure-ftpd.pem
+echo "TLS    2" >> /etc/pure-ftpd/pure-ftpd.conf
+service pure-ftpd restart
+postmap /etc/postfix/virtual
+service postfix restart
+```
+##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#7-configuration" target="_blank">9. Configuration</a>
