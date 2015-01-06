@@ -41,7 +41,7 @@ systemctl enable fail2ban.service ; systemctl start fail2ban.service
 systemctl stop firewalld.service ; systemctl disable firewalld.service
 ```
 
-#3. MariaDB & GRANT access
+#3. MariaDB & GRANT access to servers
 ```sh
 yum install -y mariadb-server
 service mariadb start ; systemctl enable mariadb.service
