@@ -14,17 +14,10 @@ my_http_ip=XXX
 ##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#2-swap-quota-fail2ban--firewall" target="_blank">2. Swap, quota, fail2ban & firewall</a>
 ##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#3-mariadb--grant-access-to-servers" target="_blank">3. MariaDB & GRANT access to servers</a>
 ##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#4-apache--php" target="_blank">4. Apache & PHP</a>
-##5. PureFTPd
+##5. PureFTPd & Jailkit
 ```sh
-yum install -y pure-ftpd
+yum install -y pure-ftpd gcc
 systemctl enable pure-ftpd.service; systemctl start pure-ftpd.service
-mkdir -p /etc/ssl/private/
-openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
-
-```
-##6. Jailkit
-```sh
-yum install -y gcc
 wget http://olivier.sessink.nl/jailkit/jailkit-2.17.tar.gz
 tar -zxvf jailkit-2.17.tar.gz
 cd jailkit-2.17 ; ./configure
@@ -35,6 +28,11 @@ cd .. ; rm -rf jailkit-2.17*
 ##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#6-ispconfig-expert-mode" target="_blank">7. ISPConfig (Expert mode)</a>
 ##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#7-configuration" target="_blank">8. Configuration</a>
 ##9. Secure PureFTPd (Optional)
+```sh
+mkdir -p /etc/ssl/private/
+openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
+
+```
 ```sh
 chmod 600 /etc/ssl/private/pure-ftpd.pem
 echo "TLS    2" >> /etc/pure-ftpd/pure-ftpd.conf
