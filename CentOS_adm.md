@@ -41,11 +41,21 @@ systemctl enable fail2ban.service ; systemctl start fail2ban.service
 systemctl stop firewalld.service ; systemctl disable firewalld.service
 ```
 
-#3. MariaDB
+#3. MariaDB & GRANT access
 ```sh
 yum install -y mariadb-server
 service mariadb start ; systemctl enable mariadb.service
 /usr/bin/mysql_secure_installation
+```
+```sh
+mysql -hlocalhost -uroot -p$my_db_pass -e "CREATE USER 'root'@'$my_adm_host' IDENTIFIED BY '$my_db_pass'"
+mysql -hlocalhost -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_adm_host' IDENTIFIED BY '$my_db_pass' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0"
+
+mysql -hlocalhost -uroot -p$my_db_pass -e "CREATE USER 'root'@'$my_db_host' IDENTIFIED BY '$my_db_pass'"
+mysql -hlocalhost -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_db_host' IDENTIFIED BY '$my_db_pass' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0"
+
+mysql -hlocalhost -uroot -p$my_db_pass -e "CREATE USER 'root'@'$my_http_host' IDENTIFIED BY '$my_db_pass'"
+mysql -hlocalhost -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_http_host' IDENTIFIED BY '$my_db_pass' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER
 ```
 
 #4. Apache & PHP
@@ -64,19 +74,7 @@ sed -i -e 's/Require ip ::1/Require ip ::1\nRequire all granted/' /etc/httpd/con
 service httpd restart
 ```
 
-#6. MySQL GRANT Access to other servers
-```sh
-mysql -hlocalhost -uroot -p$my_db_pass -e "CREATE USER 'root'@'$my_adm_host' IDENTIFIED BY '$my_db_pass'"
-mysql -hlocalhost -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_adm_host' IDENTIFIED BY '$my_db_pass' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0"
-
-mysql -hlocalhost -uroot -p$my_db_pass -e "CREATE USER 'root'@'$my_db_host' IDENTIFIED BY '$my_db_pass'"
-mysql -hlocalhost -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_db_host' IDENTIFIED BY '$my_db_pass' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0"
-
-mysql -hlocalhost -uroot -p$my_db_pass -e "CREATE USER 'root'@'$my_http_host' IDENTIFIED BY '$my_db_pass'"
-mysql -hlocalhost -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_http_host' IDENTIFIED BY '$my_db_pass' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0"
-```
-
-#7. ISPConfig (Expert mode)
+#6. ISPConfig (Expert mode)
 ```sh
 yum install -y perl-DateTime-Format-HTTP perl-DateTime-Format-Builder perl-Time*
 service httpd restart
