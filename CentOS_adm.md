@@ -76,7 +76,7 @@ service httpd restart
 
 #6. ISPConfig (Expert mode)
 ```sh
-yum install -y perl-DateTime-Format-HTTP perl-DateTime-Format-Builder perl-Time*
+yum install -y awstats perl-DateTime-Format-HTTP perl-DateTime-Format-Builder perl-Time*
 service httpd restart
 wget http://www.ispconfig.org/downloads/ISPConfig-3-stable.tar.gz
 tar -zxvf ISPConfig-3-stable.tar.gz
