@@ -11,7 +11,7 @@ my_http_host=XXX
 my_http_ip=XXX
 ```
 
-#1. Startup
+#1. [Startup] (https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#1-startup)
 #2. Swap, quota, fail2ban & firewall
 #3. MariaDB & GRANT access to servers
 
