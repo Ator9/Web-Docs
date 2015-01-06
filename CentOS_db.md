@@ -20,4 +20,5 @@ yum install -y php php-mysql php-odbcphp-mcrypt
 wget http://www.ispconfig.org/downloads/ISPConfig-3-stable.tar.gz
 tar -zxvf ISPConfig-3-stable.tar.gz
 sudo php -q ispconfig3_install/install/install.php
+
 ```
