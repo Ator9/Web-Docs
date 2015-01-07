@@ -93,9 +93,6 @@ sudo php -q ispconfig3_install/install/install.php
 
 #7. Configuration
 ```sh
-sed -i -e 's/\[mysqld\]/\[mysqld\]\nquery_cache_type=1/g' /etc/my.cnf
-sed -i -e 's/\[mysqld\]/\[mysqld\]\nlong_query_time=1/g' /etc/my.cnf
-service mariadb restart
 sed -i -e 's/short_open_tag = Off/short_open_tag = On/g' /etc/php.ini
 sed -i -e 's/expose_php = On/expose_php = Off/g' /etc/php.ini
 echo "AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript" >> /etc/httpd/conf/httpd.conf
