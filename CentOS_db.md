@@ -21,7 +21,8 @@ tar -zxvf ISPConfig-3-stable.tar.gz
 sudo php -q ispconfig3_install/install/install.php
 
 ```
-###5. Private Access (Optional)
+###Optional Configuration
+Private Network Access
 ```sh
 sed -i -e 's/\[mysqld\]/\[mysqld\]\nbind-address = $my_db_ip/g' /etc/my.cnf
 service mariadb restart
