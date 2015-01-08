@@ -20,4 +20,6 @@ nano /etc/postfix/main.cf
 
 tail -100 /var/log/mysqld.log
 tail -100 /var/log/httpd/error_log
+
+scp file.tar.gz user@domain.net:/var/test
 ```
