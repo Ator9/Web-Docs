@@ -1,8 +1,6 @@
 Commands
 ========
 ```sh
-mysql -uroot -p$my_db_pass -e "SHOW DATABASES"
-
 /usr/local/ispconfig/server/server.sh
 
 service mariadb restart
