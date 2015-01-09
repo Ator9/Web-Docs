@@ -81,6 +81,8 @@ service httpd restart
 yum install -y phpmyadmin
 sed -i -e 's/Require ip ::1/Require ip ::1\nRequire all granted/' /etc/httpd/conf.d/phpMyAdmin.conf
 service httpd restart
+sed -i -e 's/?>//g' /etc/phpMyAdmin/config.inc.php
+echo "\$cfg['Servers'][\$i]['hide_db'] = '^information_schema|dbispconfig|performance_schema|mysql\$';" >> /etc/phpMyAdmin/config.inc.php
 
 ```
 
