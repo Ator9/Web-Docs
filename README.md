@@ -23,4 +23,8 @@ tail -100 /var/log/httpd/error_log
 scp file.tar.gz user@domain.net:/var/test
 
 echo "\$i++;\$cfg['Servers'][\$i]['host'] = server.com';" >> /etc/phpMyAdmin/config.inc.php
+
+
+show top 10 biggest subdirs in the current dir
+du -sk * | sort -nr | head -10
 ```
