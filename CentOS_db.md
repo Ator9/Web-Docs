@@ -36,5 +36,5 @@ service mariadb restart
 ```
 Backup Cron
 ```sh
-55 * * * *   root    mysqldump -uXXX -pXXX --databases name | gzip > /backups/name.sql.gz
+55 * * * *   root    mysqldump -uXXX -pXXX dbname | gzip > /backups/dbname.sql.gz
 ```
