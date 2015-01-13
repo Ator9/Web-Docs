@@ -26,7 +26,10 @@ sudo php -q ispconfig3_install/install/install.php
 Private Network Access
 ```sh
 sed -i -e "s/\[mysqld\]/\[mysqld\]\nbind-address = $my_db_ip/g" /etc/my.cnf
-sed -i -e 's/\[mysqld\]/\[mysqld\]\nmax_connections = 500/g' /etc/my.cnf
 service mariadb restart
 
 ```
+Max connections
+```sh
+sed -i -e 's/\[mysqld\]/\[mysqld\]\nmax_connections = 500/g' /etc/my.cnf
+service mariadb restart
