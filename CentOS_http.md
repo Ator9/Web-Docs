@@ -10,10 +10,10 @@ my_db_ip=XXX
 my_http_host=XXX
 my_http_ip=XXX
 ```
-##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#1-startup" target="_blank">1. Startup</a>
-##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#2-swap-quota-fail2ban--firewall" target="_blank">2. Swap, quota, fail2ban & firewall</a>
-##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#3-mariadb--grant-access-to-servers" target="_blank">3. MariaDB & GRANT access to servers</a>
-##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#4-apache--php" target="_blank">4. Apache & PHP</a>
+##<a href="https://github.com/Ator9/Docs/blob/master/CentOS_adm.md#1-startup" target="_blank">1. Startup</a>
+##<a href="https://github.com/Ator9/Docs/blob/master/CentOS_adm.md#2-swap-quota-fail2ban--firewall" target="_blank">2. Swap, quota, fail2ban & firewall</a>
+##<a href="https://github.com/Ator9/Docs/blob/master/CentOS_adm.md#3-mariadb--grant-access-to-servers" target="_blank">3. MariaDB & GRANT access to servers</a>
+##<a href="https://github.com/Ator9/Docs/blob/master/CentOS_adm.md#4-apache--php" target="_blank">4. Apache & PHP</a>
 ##5. PureFTPd & Jailkit
 ```sh
 yum install -y pure-ftpd gcc
@@ -25,8 +25,8 @@ make ; sudo make install
 cd .. ; rm -rf jailkit-2.17*
 
 ```
-##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#6-ispconfig-expert-mode" target="_blank">6. ISPConfig (Expert mode)</a>
-##<a href="https://github.com/Ator9/ISPConfig/blob/master/CentOS_adm.md#7-configuration" target="_blank">7. Configuration</a>
+##<a href="https://github.com/Ator9/Docs/blob/master/CentOS_adm.md#6-ispconfig-expert-mode" target="_blank">6. ISPConfig (Expert mode)</a>
+##<a href="https://github.com/Ator9/Docs/blob/master/CentOS_adm.md#7-configuration" target="_blank">7. Configuration</a>
 ##8. Secure PureFTPd (Optional)
 ```sh
 mkdir -p /etc/ssl/private/
