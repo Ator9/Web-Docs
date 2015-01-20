@@ -3,7 +3,7 @@
 mysqldump -uroot -pXXX dbname > /backups/dump.sql
 ```
 
-### IMPORT
+== IMPORT
 ```sh
 mysql -uroot -pXXX dbname < /backups/dump.sql
 ```
