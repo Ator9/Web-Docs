@@ -27,7 +27,17 @@ cd .. ; rm -rf jailkit-2.17*
 ```
 ##<a href="https://github.com/Ator9/Docs/blob/master/ISPConfig_CentOS_adm.md#6-ispconfig-expert-mode" target="_blank">6. ISPConfig (Expert mode)</a>
 ##<a href="https://github.com/Ator9/Docs/blob/master/ISPConfig_CentOS_adm.md#7-configuration" target="_blank">7. Configuration</a>
-##8. Secure PureFTPd (Optional)
+##8. Server Status (Optional)
+```sh
+echo '<Location /status>' >> /etc/httpd/conf/httpd.conf
+echo 'SetHandler server-status' >> /etc/httpd/conf/httpd.conf
+echo 'Order Deny,Allow' >> /etc/httpd/conf/httpd.conf
+echo 'Deny from all' >> /etc/httpd/conf/httpd.conf
+echo 'Allow from 1.1.1.1' >> /etc/httpd/conf/httpd.conf
+echo '</Location>' >> /etc/httpd/conf/httpd.conf
+
+```
+##9. Secure PureFTPd (Optional)
 ```sh
 mkdir -p /etc/ssl/private/
 openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
