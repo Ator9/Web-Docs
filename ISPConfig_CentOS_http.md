@@ -33,7 +33,7 @@ echo '<Location /status>' >> /etc/httpd/conf/httpd.conf
 echo 'SetHandler server-status' >> /etc/httpd/conf/httpd.conf
 echo 'Order Deny,Allow' >> /etc/httpd/conf/httpd.conf
 echo 'Deny from all' >> /etc/httpd/conf/httpd.conf
-echo 'Allow from 1.1.1.1' >> /etc/httpd/conf/httpd.conf
+echo "Allow from ${SSH_CLIENT%% *}" >> /etc/httpd/conf/httpd.conf
 echo '</Location>' >> /etc/httpd/conf/httpd.conf
 service httpd restart
 
