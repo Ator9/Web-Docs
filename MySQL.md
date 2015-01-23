@@ -1,6 +1,7 @@
 #### EXPORT
 ```sh
-mysqldump -uroot -pXXX dbname > /backups/dump.sql
+mysqldump -uroot -pXXX dbname > /backups/dbname.sql
+mysqldump -uroot -pXXX dbname | gzip > /backups/dbname.sql.gz
 ```
 
 #### IMPORT
