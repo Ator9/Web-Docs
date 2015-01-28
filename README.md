@@ -34,6 +34,6 @@ du -sk * | sort -nr | head -10
 Bind
 
 ```sh
-/var/www/clients/client1/web4/web /var/www/clients/client1/web5/web    none    bind,nobootwait,_netde$
+/var/www/clients/client1/web4/web /var/www/clients/client1/web5/web    none    bind,nobootwait,_netdev    0 0
 mount -a
 ```
