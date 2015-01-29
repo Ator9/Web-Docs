@@ -24,6 +24,8 @@ scp file.tar.gz user@domain.net:/var/test
 
 echo "\$i++;\$cfg['Servers'][\$i]['host'] = server.com';" >> /etc/phpMyAdmin/config.inc.php
 
+nano /etc/sysconfig/network
+
 ```
 show top 10 biggest subdirs in the current dir
 
