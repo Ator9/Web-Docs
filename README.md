@@ -26,6 +26,8 @@ echo "\$i++;\$cfg['Servers'][\$i]['host'] = server.com';" >> /etc/phpMyAdmin/con
 
 nano /etc/sysconfig/network
 
+chown bob:group2 filedir
+
 ```
 show top 10 biggest subdirs in the current dir
 
