@@ -1,5 +1,8 @@
-# GitLab
-
+CentOS 7 - GitLab
+```sh
+my_ssh_user=XXX
+```
+#1. Startup
 ```sh
 yum update -y
 sudo fallocate -l 1G /var/swap.img ; chmod 600 /var/swap.img
