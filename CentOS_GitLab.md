@@ -17,6 +17,7 @@ adduser $my_ssh_user ; passwd $my_ssh_user
 
 #2. fail2ban 
 ```sh
+yum install -y fail2ban
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 sed -i -e 's/bantime  = 600/bantime  = 3600/g' /etc/fail2ban/jail.local
 systemctl enable fail2ban.service ; systemctl start fail2ban.service
