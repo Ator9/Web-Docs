@@ -19,7 +19,15 @@ ON DUPLICATE KEY UPDATE column1 = VALUES(column1), column2 = VALUES(column2)
 #### DELETE + JOIN
 ```sh
 DELETE t1
-FROM aaa AS t1
-INNER JOIN bbb as t2 USING (ID)
+FROM aaaa AS t1
+INNER JOIN bbbb as t2 USING (ID)
 WHERE t1.column = "XXX"
+```
+
+#### UPDATE + JOIN
+```sh
+UPDATE aaaa as t1 
+INNER JOIN bbbb as t2 ON t1.id = t2.id
+SET t1.column = t2."XXX" 
+WHERE t1.id = "555"
 ```
