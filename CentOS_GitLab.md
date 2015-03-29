@@ -6,6 +6,7 @@ my_ssh_user=XXX
 ```sh
 history -c
 yum update -y
+yum install -y ntp epel-release
 yum install -y fail2ban
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 sed -i -e 's/bantime  = 600/bantime  = 3600/g' /etc/fail2ban/jail.local
