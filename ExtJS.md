@@ -11,8 +11,8 @@ text: Admin.t('Add'),
   menu: new Ext.menu.Menu({
       plain: true,
       items: [
-          { text: 'Google Search', scope: this, handler: this.addAdwords, service: 'SEARCH', serviceID: 1 },
-          { text: 'Google Display', scope: this, handler: this.addAdwords, service: 'DISPLAY', serviceID: 2 }
+          { text: 'Google Search', serviceID: 1 },
+          { text: 'Google Display', serviceID: 2 }
       ]
   })
 }
