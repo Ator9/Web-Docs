@@ -1,7 +1,9 @@
 ## Grid. Insert with default value
+```js
 Ext.create('Ext.ux.GridRowInsert', { defaultValues: { percent: 100 } })
+```
 
-## Grid. Insert with default value
+## Menu
 ```js
 {
 text: Admin.t('Add'),
