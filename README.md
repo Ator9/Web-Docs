@@ -11,6 +11,7 @@ service postfix restart
 mysql -V
 httpd -v
 php -v
+uname -a
 
 nano /etc/my.cnf
 nano /etc/httpd/conf/httpd.conf
