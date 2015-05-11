@@ -109,3 +109,9 @@ echo 'ServerSignature Off' >> /etc/httpd/conf/httpd.conf
 service httpd restart
 
 ```
+
+#8. ISPConfig Update (Optional / If Needed)
+```sh
+ispconfig_update.sh
+
+```
