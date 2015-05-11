@@ -115,3 +115,6 @@ service httpd restart
 ispconfig_update.sh
 
 ```
+Master / slave:
+- stable
+- reconfigure: yes
