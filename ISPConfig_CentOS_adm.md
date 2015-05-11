@@ -115,6 +115,7 @@ service httpd restart
 ispconfig_update.sh
 
 ```
-Master / slave:
-- stable
-- reconfigure: yes
+Master / Slaves Config:
+- Install: stable
+- Reconfigure Permissions: no on master, yes on slaves
+- Reconfigure Services: yes
