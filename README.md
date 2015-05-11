@@ -8,6 +8,8 @@ service httpd restart
 service pure-ftpd restart
 service postfix restart
 
+echo > ~/.bash_history ; history -c
+
 mysql -V
 httpd -v
 php -v
