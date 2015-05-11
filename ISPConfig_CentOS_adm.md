@@ -110,7 +110,7 @@ service httpd restart
 
 ```
 
-#8. ISPConfig Update (Optional / If Needed)
+#8. ISPConfig Update (Optional / If Needed) - <a href="http://www.faqforge.com/linux/controlpanels/ispconfig3/how-to-update-ispconfig-3/" target="_blank">Notes</a>
 ```sh
 ispconfig_update.sh
 
