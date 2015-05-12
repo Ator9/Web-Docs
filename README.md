@@ -10,6 +10,8 @@ service postfix restart
 
 echo > ~/.bash_history ; history -c
 
+sudo service rackspace-monitoring-agent start
+
 mysql -V
 httpd -v
 php -v
