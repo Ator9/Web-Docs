@@ -76,6 +76,13 @@ chown -R asterisk.asterisk /var/www/html
 
 #5. FreePBX
 ```sh
+mysqladmin -uroot -p$my_db_pass create asterisk
+mysqladmin -uroot -p$my_db_pass create asteriskcdrdb
+mysql -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON asterisk.* TO asterisk@localhost IDENTIFIED BY '$my_db_pass';"
+mysql -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON asteriskcdrdb.* TO asterisk@localhost IDENTIFIED BY '$my_db_pass';"
+mysql -uroot -p$my_db_pass -e "flush privileges;"
+```
+```sh
 cd /usr/src
 wget http://mirror.freepbx.org/freepbx-12.0.3.tgz
 tar -zvxf freepbx-12.0.3.tgz
