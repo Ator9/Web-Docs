@@ -105,3 +105,5 @@ sed -i 's/^\(User\|Group\).*/\1 asterisk/' /etc/httpd/conf/httpd.conf
 sed -i -e 's/AllowOverride None/AllowOverride All/g' /etc/httpd/conf/httpd.conf
 /bin/systemctl restart httpd.service
 ```
+
+/etc/asterisk/manager.conf
