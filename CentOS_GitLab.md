@@ -4,7 +4,7 @@ my_ssh_user=XXX
 ```
 #1. Startup & fail2ban
 ```sh
-history -c
+echo > ~/.bash_history ; history -c
 yum update -y
 yum install -y ntp epel-release
 yum install -y fail2ban
