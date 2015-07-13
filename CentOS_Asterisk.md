@@ -70,6 +70,28 @@ chown -R asterisk.asterisk /var/{lib,log,spool}/asterisk
 mkdir -p /usr/lib/asterisk; chown -R asterisk.asterisk /usr/lib/asterisk
 chown -R asterisk.asterisk /usr/lib64/asterisk
 chown -R asterisk.asterisk /var/www/html
-asterisk -r
+
+```
+
+#5. FreePBX
+```sh
+cd /usr/src
+wget http://mirror.freepbx.org/freepbx-12.0.3.tgz
+tar -zvxf freepbx-12.0.3.tgz
+cd freepbx
+./start_asterisk start
+rm -Rf /var/www/html/
+./install_amp --installdb --username=asterisk --password=${ASTERISK_DB_PW}
+```
+Config
+```sh
+ln -s /var/lib/asterisk/moh /var/lib/asterisk/mohmp3
+./start_asterisk restart
+amportal chown
+amportal a ma installall
+amportal a reload
+amportal a ma refreshsignatures
+amportal chown
+amportal restart
 
 ```
