@@ -51,5 +51,14 @@ make && make install
 adduser asterisk -M -c "Asterisk User"
 cd /usr/src
 wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-13-current.tar.gz
+tar -zvxf asterisk-13-current.tar.gz
+cd asterisk-*
+contrib/scripts/install_prereq install
+./configure --libdir=/usr/lib64
+contrib/scripts/get_mp3_source.sh
+make menuselect 
+```
+```sh
+make && make install && make samples
 
 ```
