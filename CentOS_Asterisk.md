@@ -74,7 +74,7 @@ chown -R asterisk.asterisk /var/www/html
 
 ```
 
-#5. FreePBX
+#5. FreePBX (admin / amp111)
 ```sh
 mysqladmin -uroot -p$my_db_pass create asterisk
 mysqladmin -uroot -p$my_db_pass create asteriskcdrdb
