@@ -43,7 +43,6 @@ autoreconf -i
 ./configure --libdir=/usr/lib64
 make && make install
 
-rpm -Uvh https://dl.fedoraproject.org/pub/epel/6/x86_64/libresample-0.1.3-12.el6.x86_64.rpm https://dl.fedoraproject.org/pub/epel/6/x86_64/libresample-devel-0.1.3-12.el6.x86_64.rpm
 ```
 
 
