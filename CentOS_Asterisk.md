@@ -22,6 +22,9 @@ adduser $my_ssh_user ; passwd $my_ssh_user
 
 #2. Asterisk
 ```sh
+service iptables save
+service iptables stop
+chkconfig iptables off
 sestatus
 sed -i -e 's/SELINUX=permissive/SELINUX=disabled/g' /etc/selinux/config
 
