@@ -27,9 +27,8 @@ yum install -y gcc gcc-c++ lynx bison mariadb-devel mariadb-server gmime-devel p
 service httpd start ; systemctl enable httpd.service
 systemctl start mariadb.service ; systemctl enable mariadb.service
 pear install db-1.7.14
-systemctl stop firewalld.service ; systemctl disable firewalld.service
-sestatus
-sed -i -e 's/SELINUX=permissive/SELINUX=disabled/g' /etc/selinux/config
+systemctl stop firewalld.service ; systemctl disable firewalld.service ; iptables -L -n
+sed -i -e 's/SELINUX=permissive/SELINUX=disabled/g' /etc/selinux/config ; sestatus
 reboot
 
 ```
