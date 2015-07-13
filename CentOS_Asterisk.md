@@ -63,7 +63,7 @@ make menuselect
 SELECT format_mp3 on this screen, then Save + Exit
 ```sh
 make && make install && make config && ldconfig
-chown -R asterisk /var/run/asterisk
+chown -R asterisk.asterisk /var/run/asterisk
 asterisk -r
 
 ```
