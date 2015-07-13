@@ -23,5 +23,6 @@ adduser $my_ssh_user ; passwd $my_ssh_user
 #2. Asterisk
 ```sh
 sestatus
+sed -i -e 's/SELINUX=permissive/SELINUX=disabled/g' /etc/selinux/config
 
 ```
