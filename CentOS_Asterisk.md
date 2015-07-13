@@ -51,7 +51,6 @@ make && make install
 #4. Asterisk
 ```sh
 adduser asterisk -M -c "Asterisk User"
-sed -i 's/^\(User\|Group\).*/\1 asterisk/' /etc/httpd/conf/httpd.conf
 cd /usr/src
 ldconfig
 wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-13-current.tar.gz
@@ -102,5 +101,7 @@ amportal a ma refreshsignatures
 amportal chown
 amportal restart
 
+sed -i 's/^\(User\|Group\).*/\1 asterisk/' /etc/httpd/conf/httpd.conf
+sed -i -e 's/AllowOverride None/AllowOverride All/g' /etc/httpd/conf/httpd.conf
 /bin/systemctl restart httpd.service
 ```
