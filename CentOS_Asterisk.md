@@ -25,6 +25,7 @@ adduser $my_ssh_user ; passwd $my_ssh_user
 yum -y groupinstall core base
 yum install -y gcc gcc-c++ lynx bison mariadb-devel mariadb-server gmime-devel psmisc php php-mysql php-pear php-mbstring tftp-server httpd make ncurses-devel libtermcap-devel sendmail sendmail-cf caching-nameserver sox newt-devel libxml2-devel libtiff-devel audiofile-devel gtk2-devel subversion kernel-devel git subversion kernel-devel php-process crontabs cronie cronie-anacron wget vim php-xml uuid-devel libtool sqlite-devel
 service httpd start ; systemctl enable httpd.service
+mkdir /var/www/html ; chmod 777 /var/www/html
 systemctl start mariadb.service ; systemctl enable mariadb.service
 pear install db-1.7.14
 systemctl stop firewalld.service ; systemctl disable firewalld.service ; iptables -L -n
