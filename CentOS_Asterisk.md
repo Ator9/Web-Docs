@@ -38,6 +38,6 @@ reboot
 
 #3. Asterisk
 ```sh
-
+adduser asterisk -M -c "asterisk"
 
 ```
