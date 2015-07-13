@@ -43,10 +43,11 @@ autoreconf -i
 ./configure --libdir=/usr/lib64
 make && make install
 
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/6/x86_64/libresample-0.1.3-12.el6.x86_64.rpm https://dl.fedoraproject.org/pub/epel/6/x86_64/libresample-devel-0.1.3-12.el6.x86_64.rpm
 ```
 
 
-#4. Asterisk Dependencies
+#4. Asterisk
 ```sh
 adduser asterisk -M -c "Asterisk User"
 cd /usr/src
@@ -58,7 +59,8 @@ contrib/scripts/install_prereq install
 contrib/scripts/get_mp3_source.sh
 make menuselect 
 ```
+SELECT format_mp3 on this screen, then Save + Exit
 ```sh
-make && make install && make samples
+make && make install && make config && ldconfig
 
 ```
