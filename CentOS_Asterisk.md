@@ -36,7 +36,7 @@ reboot
 
 #3. Asterisk
 ```sh
-adduser asterisk -M -c "asterisk"
+adduser asterisk -M -c "Asterisk User"
 cd /usr/src
 wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-13-current.tar.gz
 git clone https://github.com/akheron/jansson.git
