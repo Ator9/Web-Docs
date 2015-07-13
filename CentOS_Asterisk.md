@@ -30,6 +30,7 @@ systemctl start mariadb.service ; systemctl enable mariadb.service
 pear install db-1.7.14
 systemctl stop firewalld.service ; systemctl disable firewalld.service ; iptables -L -n
 sed -i -e 's/SELINUX=permissive/SELINUX=disabled/g' /etc/selinux/config ; sestatus
+/usr/bin/mysql_secure_installation
 reboot
 
 ```
