@@ -95,4 +95,5 @@ amportal a ma refreshsignatures
 amportal chown
 amportal restart
 
+/bin/systemctl restart httpd.service
 ```
