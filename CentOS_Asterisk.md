@@ -104,6 +104,3 @@ amportal restart
 
 /bin/systemctl restart httpd.service
 ```
-
-User: admin
-Pass: amp111
