@@ -1,6 +1,7 @@
 CentOS 7 - Asterisk
 ```sh
 my_ssh_user=XXX
+my_db_pass=XXX
 ```
 #1. Startup & fail2ban
 ```sh
