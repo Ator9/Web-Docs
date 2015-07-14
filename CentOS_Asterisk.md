@@ -52,7 +52,6 @@ make && make install
 ```sh
 adduser asterisk -M -c "Asterisk User"
 cd /usr/src
-ldconfig
 wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-13-current.tar.gz
 tar -zvxf asterisk-13-current.tar.gz
 cd asterisk-*
