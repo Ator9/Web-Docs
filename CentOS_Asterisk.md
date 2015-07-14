@@ -1,4 +1,4 @@
-CentOS 7 - Asterisk
+CentOS 7.1 - Asterisk
 ```sh
 my_ssh_user=XXX
 my_db_pass=XXX
