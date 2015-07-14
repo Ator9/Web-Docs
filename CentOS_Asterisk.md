@@ -69,7 +69,7 @@ chown -R asterisk.asterisk /etc/asterisk
 chown -R asterisk.asterisk /var/{lib,log,spool}/asterisk
 mkdir -p /usr/lib/asterisk; chown -R asterisk.asterisk /usr/lib/asterisk
 chown -R asterisk.asterisk /usr/lib64/asterisk
-chown -R asterisk.asterisk /var/www/html
+chown -R asterisk.asterisk /var/www
 
 ```
 
