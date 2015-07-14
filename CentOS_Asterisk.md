@@ -88,7 +88,7 @@ tar -zvxf freepbx-12.0.3.tgz
 cd freepbx
 ./start_asterisk start
 rm -Rf /var/www/html/
-./install_amp --installdb --username=asterisk --password=${ASTERISK_DB_PW}
+./install_amp --installdb --username=asterisk --password=$my_db_pass
 ```
 Config
 ```sh
