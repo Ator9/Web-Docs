@@ -7,6 +7,7 @@ composer create-project laravel/laravel foldername
 Make Controller
 ```sh
 php artisan make:controller PagesController
+php artisan make:controller PagesController --plain
 ```
 
 #### Commands
