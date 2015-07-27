@@ -7,7 +7,7 @@ Install test (@foldername)
 php -S localhost:8888 -t public
 ```
 
-#### New Project
+#### Commands
 Edit composer.json and add this line.
 
 ```json
