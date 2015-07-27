@@ -1,6 +1,6 @@
 #### New Project
 ```ssh
-composer create-project laravel laravel projectname
+composer create-project laravel/laravel projectname
 ```
 
 Edit composer.json and add this line.
