@@ -15,8 +15,8 @@ php artisan make:controller PagesController --plain
 
 ## Blade Templates - <a href="http://laravel.com/docs/blade" target="_blank">Docs</a>
 ```html
-{{ $varname }} // htmlentities
-{!! $varname !!} // no htmlentities
+{{ $varname }} // echo htmlentities
+{!! $varname !!} // echo without htmlentities
 ```
 Master Layout
 ```html
