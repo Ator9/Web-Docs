@@ -6,7 +6,7 @@ composer create-project laravel/laravel foldername
 ## Artisan
 Help
 ```sh
-php artisan help make:controller
+php artisan help COMMAND
 ```
 
 Make Controller
