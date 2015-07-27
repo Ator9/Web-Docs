@@ -3,6 +3,12 @@
 composer create-project laravel/laravel foldername
 ```
 
+## Artisan
+Make Controller
+```sh
+php artisan make:controller PagesController
+```
+
 #### Commands
 Project test (@foldername)
 ```sh
