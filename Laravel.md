@@ -13,6 +13,11 @@ Make Controller
 php artisan make:controller PagesController --plain
 ```
 
+## Blade
+```html
+{{ $varname }}
+```
+
 #### Commands
 Project test (@foldername)
 ```sh
