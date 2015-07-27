@@ -1,4 +1,4 @@
-## New Project
+## Laravel - <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md" target="_blank">Coding Style Guide</a>
 ```sh
 composer create-project laravel/laravel foldername
 ```
