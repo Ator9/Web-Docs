@@ -1,4 +1,4 @@
-## New Project
+#### New Project
 ```ssh
 "config": {
 "preferred-install": "dist"
