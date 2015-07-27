@@ -3,7 +3,7 @@
 composer create-project laravel/laravel foldername
 ```
 
-## Artisan
+## Artisan Console
 ```sh
 php artisan help COMMAND
 ```
@@ -13,7 +13,7 @@ Make Controller
 php artisan make:controller PagesController --plain
 ```
 
-## Blade - <a href="http://laravel.com/docs/blade" target="_blank">Docs</a>
+## Blade Templates - <a href="http://laravel.com/docs/blade" target="_blank">Docs</a>
 ```html
 {{ $varname }} // escaped with htmlentities
 {!! $varname !!} // no escaped
