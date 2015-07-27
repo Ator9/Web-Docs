@@ -1,5 +1,5 @@
 #### New Project
-```ssh
+```sh
 composer create-project laravel/laravel projectname
 ```
 
