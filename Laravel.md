@@ -15,8 +15,8 @@ php artisan make:controller PagesController --plain
 
 ## Blade
 ```html
-{{ $varname }} // Echo Escaped
-{!! $varname !!} // Echo Unescaped
+{{ $varname }} // echo escaped
+{!! $varname !!} // echo unescaped
 ```
 
 #### Commands
