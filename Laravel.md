@@ -1,6 +1,6 @@
 #### New Project
 ```sh
-composer create-project laravel/laravel projectname
+composer create-project laravel/laravel foldername
 ```
 
 Edit composer.json and add this line.
