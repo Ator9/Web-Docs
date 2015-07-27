@@ -1,4 +1,4 @@
-## Startup - New Project
+## Composer New Project
 ```sh
 composer create-project laravel/laravel foldername
 ```
