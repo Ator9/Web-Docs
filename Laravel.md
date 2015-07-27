@@ -37,7 +37,7 @@ Master Layout
 ```
 
 
-#### Commands
+## Misc Commands
 Project test (@foldername)
 ```sh
 php -S localhost:8888 -t public
