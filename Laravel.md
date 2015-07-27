@@ -4,7 +4,7 @@ composer create-project laravel/laravel foldername
 ```
 
 #### Commands
-Install test (@foldername)
+Project test (@foldername)
 ```sh
 php -S localhost:8888 -t public
 ```
