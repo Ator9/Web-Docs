@@ -13,7 +13,7 @@ Make Controller
 php artisan make:controller PagesController --plain
 ```
 
-## Blade
+## Blade <a href="laravel.com/docs/blade" target="_blank">Docs</a>
 ```html
 {{ $varname }} // escaped with htmlentities
 {!! $varname !!} // no escaped
