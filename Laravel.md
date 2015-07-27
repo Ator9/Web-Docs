@@ -45,11 +45,11 @@ Extended
     @parent
 
     <p>This is appended to the master sidebar.</p>
-@endsection
+@stop
 
 @section('content')
     <p>This is my body content.</p>
-@endsection
+@stop
 ```
 
 ## Misc Commands
