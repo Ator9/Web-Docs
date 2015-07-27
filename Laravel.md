@@ -37,7 +37,7 @@ Master Layout
 ```
 Extended
 ```html
-@extends('layouts.master')
+@extends('master')
 
 @section('title', 'Page Title')
 
