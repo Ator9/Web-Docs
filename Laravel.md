@@ -2,6 +2,10 @@
 ```sh
 composer create-project laravel/laravel foldername
 ```
+Install test
+```sh
+@foldername php -S localhost:8888 -t public
+```
 
 Edit composer.json and add this line.
 
