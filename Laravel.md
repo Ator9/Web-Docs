@@ -15,8 +15,8 @@ php artisan make:controller PagesController --plain
 
 ## Blade Templates - <a href="http://laravel.com/docs/blade" target="_blank">Docs</a>
 ```html
-{{ $varname }} // escaped with htmlentities
-{!! $varname !!} // no escaped
+{{ $varname }} // htmlentities
+{!! $varname !!} // no htmlentities
 ```
 
 #### Commands
