@@ -25,6 +25,14 @@ php artisan migrate:rollback
 php artisan migrate:refresh
 ```
 
+## Model
+
+```sh
+$article = App\Article
+
+```
+
+
 ## Blade Templates - <a href="http://laravel.com/docs/blade" target="_blank">Docs</a>
 ```html
 {{ $varname }} // echo with htmlentities
