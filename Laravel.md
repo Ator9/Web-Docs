@@ -11,7 +11,7 @@ php artisan help COMMAND
 Make Files
 ```sh
 php artisan make:controller PagesController --plain
-php artisan make:migration
+php artisan make:migration name_table
 ```
 
 Database Migrations
