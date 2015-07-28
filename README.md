@@ -31,6 +31,8 @@ echo "\$i++;\$cfg['Servers'][\$i]['host'] = server.com';" >> /etc/phpMyAdmin/con
 
 nano /etc/sysconfig/network
 
+killall nautilus
+
 chown bob:group2 filedir
 
 ```
