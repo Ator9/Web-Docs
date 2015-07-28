@@ -27,11 +27,19 @@ php artisan migrate:refresh
 
 ## Model
 ```php
-protected $table = 'admins';
-protected $primaryKey = 'adminID';
 
-const CREATED_AT = 'date_created';
-const UPDATED_AT = 'date_updated';
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Test extends Model
+{
+    protected $table = 'admins';
+    protected $primaryKey = 'adminID';
+
+    const CREATED_AT = 'date_created';
+    const UPDATED_AT = 'date_updated';
+}
 ```
 
 ## Query Builder - <a href="http://laravel.com/docs/queries" target="_blank">Docs</a>
