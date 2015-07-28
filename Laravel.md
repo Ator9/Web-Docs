@@ -26,10 +26,16 @@ php artisan migrate:refresh
 ```
 
 ## Model
+```sh
+protected $table = 'admins';
+protected $primaryKey = 'adminID';
+
+const CREATED_AT = 'date_created';
+const UPDATED_AT = 'date_updated';
+```
 
 ```sh
 $article = App\Article
-
 ```
 
 
