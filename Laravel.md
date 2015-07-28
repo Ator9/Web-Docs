@@ -36,7 +36,8 @@ const UPDATED_AT = 'date_updated';
 
 ## Query Builder - <a href="http://laravel.com/docs/queries" target="_blank">Docs</a>
 ```sh
-$article = App\Article
+use DB;
+$users = DB::table('users')->get();
 ```
 
 
