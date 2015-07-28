@@ -26,7 +26,7 @@ php artisan migrate:refresh
 ```
 
 ## Model
-```sh
+```php
 protected $table = 'admins';
 protected $primaryKey = 'adminID';
 
@@ -35,7 +35,7 @@ const UPDATED_AT = 'date_updated';
 ```
 
 ## Query Builder - <a href="http://laravel.com/docs/queries" target="_blank">Docs</a>
-```sh
+```php
 use DB;
 $users = DB::table('users')->get();
 ```
