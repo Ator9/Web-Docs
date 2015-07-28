@@ -13,6 +13,11 @@ Make Controller
 php artisan make:controller PagesController --plain
 ```
 
+Migrations
+```sh
+php artisan migrate
+```
+
 ## Blade Templates - <a href="http://laravel.com/docs/blade" target="_blank">Docs</a>
 ```html
 {{ $varname }} // echo with htmlentities
