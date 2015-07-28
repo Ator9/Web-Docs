@@ -8,9 +8,10 @@ composer create-project laravel/laravel foldername
 php artisan help COMMAND
 ```
 
-Make Controller
+Make Files
 ```sh
 php artisan make:controller PagesController --plain
+php artisan mage:migration
 ```
 
 Database Migrations
