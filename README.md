@@ -3,6 +3,8 @@ Commands
 ```sh
 /usr/local/ispconfig/server/server.sh
 
+freenas.domain.net:/mnt/folder /home/myuser/freenas nfs defaults 0 0
+
 service mariadb restart
 service httpd restart
 service pure-ftpd restart
