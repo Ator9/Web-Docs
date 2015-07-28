@@ -32,7 +32,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Test extends Model
+class Admin extends Model
 {
     protected $table = 'admins';
     protected $primaryKey = 'adminID';
