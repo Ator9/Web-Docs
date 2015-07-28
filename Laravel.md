@@ -25,7 +25,7 @@ php artisan migrate:rollback
 php artisan migrate:refresh
 ```
 
-## Model
+## Model - <a href="http://laravel.com/docs/queries" target="_blank">Docs</a>
 ```sh
 protected $table = 'admins';
 protected $primaryKey = 'adminID';
