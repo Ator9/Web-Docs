@@ -16,6 +16,7 @@ php artisan make:controller PagesController --plain
 Database Migrations
 ```sh
 php artisan migrate
+php artisan migrate:rollback
 ```
 
 ## Blade Templates - <a href="http://laravel.com/docs/blade" target="_blank">Docs</a>
