@@ -13,7 +13,7 @@ Make Controller
 php artisan make:controller PagesController --plain
 ```
 
-Migrations
+Database Migrations
 ```sh
 php artisan migrate
 ```
