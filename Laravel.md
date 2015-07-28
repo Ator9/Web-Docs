@@ -25,7 +25,7 @@ php artisan migrate:rollback
 php artisan migrate:refresh
 ```
 
-## Model - <a href="http://laravel.com/docs/queries" target="_blank">Docs</a>
+## Model
 ```sh
 protected $table = 'admins';
 protected $primaryKey = 'adminID';
@@ -34,6 +34,7 @@ const CREATED_AT = 'date_created';
 const UPDATED_AT = 'date_updated';
 ```
 
+## Query Builder - <a href="http://laravel.com/docs/queries" target="_blank">Docs</a>
 ```sh
 $article = App\Article
 ```
