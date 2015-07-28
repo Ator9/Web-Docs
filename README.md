@@ -3,8 +3,6 @@ Commands
 ```sh
 /usr/local/ispconfig/server/server.sh
 
-freenas.domain.net:/mnt/folder /home/myuser/freenas nfs defaults 0 0
-
 service mariadb restart
 service httpd restart
 service pure-ftpd restart
@@ -45,6 +43,12 @@ du -sk * | sort -nr | head -10
 Bind
 ```sh
 /var/www/clients/client1/web4/web /var/www/clients/client1/web5/web    none    bind,nobootwait,_netdev    0 0
+mount -a
+```
+
+Mount
+```sh
+freenas.domain.net:/mnt/folder /home/myuser/freenas nfs defaults 0 0
 mount -a
 ```
 
