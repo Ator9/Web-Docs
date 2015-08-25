@@ -6,9 +6,11 @@ Check Disks
 ```sh
 zpool status -v
 ```
-Check Disks
+Boot
 ```sh
-If you want to reinstall FreeNAS, I'd install the same version you were running before on a new flash drive. Look here for older versions: http://download.freenas.org/
+If you want to reinstall FreeNAS, I'd install the same version you were running before on a new flash drive.
+Look here for older versions: http://download.freenas.org/
 
-If you saved the configuration file, you can restore it using the webGUI after you do the fresh install. If not, just do an autoimport of your pool and reconfigure the server. 
+If you saved the configuration file, you can restore it using the webGUI after you do the fresh install.
+If not, just do an autoimport of your pool and reconfigure the server. 
 ```
