@@ -74,5 +74,7 @@ sudo iptables -P INPUT ACCEPT ; sudo iptables -P FORWARD ACCEPT ; sudo iptables 
 
 sudo iptables -t nat -F ; sudo iptables -t mangle -F ; sudo iptables -F ; sudo iptables -X ;
 /etc/init.d/iptables save
+
+csf -x
 ```
 You can disable the "bandmin" cron jobs using the "crontab -e" command, as it's those cron jobs that add the iptables rules you are referring to. 
