@@ -6,7 +6,8 @@ mysqldump -uroot -pXXX dbname | gzip > /backups/dbname.sql.gz
 
 #### IMPORT
 ```sh
-mysql -uroot -pXXX dbname < /backups/dump.sql
+mysql -uroot -pXXX dbname < /backups/dbname.sql
+zcat /backups/dbname.sql.gz | mysql -uroot -pXXX dbname
 ```
 
 #### INSERT + ON DUPLICATE KEY UPDATE
