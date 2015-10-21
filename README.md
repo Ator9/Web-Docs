@@ -36,6 +36,11 @@ killall nautilus
 chown bob:group2 filedir
 
 ```
+Email
+```sh
+mail -s "asunto ejemplo" your@email.com
+```
+
 show top 10 biggest subdirs in the current dir
 
 ```sh
