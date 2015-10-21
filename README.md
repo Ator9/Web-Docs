@@ -38,7 +38,7 @@ chown bob:group2 filedir
 ```
 Email
 ```sh
-mail -s "asunto ejemplo" your@email.com
+mail -s "asunto ejemplo" your@email.com <<< "mensaje"
 ```
 
 show top 10 biggest subdirs in the current dir
