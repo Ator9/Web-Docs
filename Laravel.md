@@ -1,7 +1,6 @@
-## Laravel / Lumen - <a href="http://www.php-fig.org/psr/psr-2/" target="_blank">Coding Style Guide</a>
+## Laravel - <a href="http://www.php-fig.org/psr/psr-2/" target="_blank">Coding Style Guide</a>
 ```sh
 composer create-project laravel/laravel foldername
-composer create-project laravel/lumen foldername
 ```
 
 ## Artisan Console
