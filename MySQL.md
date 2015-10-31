@@ -1,10 +1,10 @@
-#### EXPORT
+#### Export
 ```sh
 mysqldump -uroot -pXXX dbname > /backups/dbname.sql
 mysqldump -uroot -pXXX dbname | gzip > /backups/dbname.sql.gz
 ```
 
-#### IMPORT
+#### Import
 ```sh
 mysql -uroot -pXXX dbname < /backups/dbname.sql
 zcat /backups/dbname.sql.gz | mysql -uroot -pXXX dbname
@@ -33,14 +33,50 @@ SET t1.column = t2."XXX"
 WHERE t1.id = "555"
 ```
 
+#### Trigger INSERT
+```sh
+IF @TRIGGERED IS NULL THEN
+
+SET @TRIGGERED = 1;
+
+INSERT IGNORE INTO other_table (
+    column1,
+    column2
+)
+VALUES ( 
+	NEW.column1,
+	NEW.column2
+);
+
+SET @TRIGGERED = NULL;
+
+END IF
+```
+
+#### Trigger UPDATE
+```sh
+IF @TRIGGERED IS NULL THEN
+
+SET @TRIGGERED = 1;
+
+UPDATE other_table SET 
+    column1 = NEW.column1,
+    column2 = NEW.column2
+WHERE primary = NEW.primary;
+
+SET @TRIGGERED = NULL;
+
+END IF
+```
+
 #### Trigger DELETE
 ```sh
 IF @TRIGGERED IS NULL THEN
 
 SET @TRIGGERED = 1;
 
-DELETE FROM users
-WHERE userID = OLD.adminID;
+DELETE FROM other_table
+WHERE primary = OLD.primary;
 
 SET @TRIGGERED = NULL;
 
