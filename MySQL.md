@@ -32,3 +32,17 @@ INNER JOIN bbbb as t2 ON t1.id = t2.id
 SET t1.column = t2."XXX" 
 WHERE t1.id = "555"
 ```
+
+#### Trigger DELETE
+```sh
+IF @TRIGGERED IS NULL THEN
+
+SET @TRIGGERED = 1;
+
+DELETE FROM users
+WHERE userID = OLD.adminID;
+
+SET @TRIGGERED = NULL;
+
+END IF
+```
