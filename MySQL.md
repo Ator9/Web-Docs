@@ -86,10 +86,12 @@ END IF
 #### my.cnf Configuration
 ```sh
 [mysqld]
+long_query_time = 1
+bind-address = internal network ip
+
 max_connections = 800
 tmp_table_size = 128M
 key_buffer_size = 256M
-bind-address = internal network ip
 
 query_cache_type = 1
 query_cache_size = 16M
