@@ -86,9 +86,11 @@ END IF
 #### my.cnf Configuration
 ```sh
 [mysqld]
-long_query_time = 1
-slow_query_log_file = /var/log/mariadb/mariadb-slow.log
 bind-address = internal network ip
+
+slow_query_log = 1
+slow_query_log_file = /var/log/mariadb/mariadb-slow.log
+long_query_time = 1
 
 max_connections = 800
 tmp_table_size = 128M
