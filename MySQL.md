@@ -82,3 +82,12 @@ SET @TRIGGERED = NULL;
 
 END IF
 ```
+
+#### Recommended Configuration
+```sh
+[mysqld]
+max_connections = 800
+tmp_table_size = 128M
+key_buffer_size = 256M
+bind-address = internal network ip
+```
