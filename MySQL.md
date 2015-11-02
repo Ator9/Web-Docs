@@ -87,6 +87,7 @@ END IF
 ```sh
 [mysqld]
 long_query_time = 1
+slow_query_log_file = /var/log/mariadb/mariadb-slow.log
 bind-address = internal network ip
 
 max_connections = 800
