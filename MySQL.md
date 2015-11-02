@@ -96,3 +96,10 @@ key_buffer_size = 256M
 query_cache_type = 1
 query_cache_size = 16M
 ```
+
+#### pt-query-digest / Percona Toolkit
+```sh
+rpm -Uhv http://www.percona.com/downloads/percona-release/percona-release-0.0-1.x86_64.rpm
+yum install percona-toolkit
+pt-query-digest
+```
