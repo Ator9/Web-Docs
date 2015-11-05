@@ -73,6 +73,12 @@ Descomprimir tar.gz
 tar -zxvf  backup_2012.tar.gz
 ```
 
+Search repo rpm and delete (to solve yum conflicts)
+```sh
+rpm -qa | grep -i repo-name
+rpm -e repo-name
+```
+
 Flush All Rules, Delete All Chains, and Accept All
 ```sh
 sudo iptables -P INPUT ACCEPT ; sudo iptables -P FORWARD ACCEPT ; sudo iptables -P OUTPUT ACCEPT
