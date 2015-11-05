@@ -102,7 +102,6 @@ query_cache_size = 16M
 
 #### pt-query-digest / Percona Toolkit
 ```sh
-rpm -Uhv http://www.percona.com/downloads/percona-release/percona-release-0.0-1.x86_64.rpm
-yum install percona-toolkit
+yum install https://www.percona.com/downloads/percona-toolkit/2.2.15/RPM/percona-toolkit-2.2.15-2.noarch.rpm
 pt-query-digest /var/log/mariadb/mariadb-slow.log
 ```
