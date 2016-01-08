@@ -36,6 +36,15 @@ killall nautilus
 chown bob:group2 filedir
 
 ```
+How do I force Git to overwrite local files on pull?
+```sh
+error: Your local changes to the following files would be overwritten by merge:
+error: The following untracked working tree files would be overwritten by merge:
+
+git fetch --all
+git reset --hard origin/master
+```
+
 Email
 ```sh
 mail -s "asunto ejemplo" your@email.com <<< "mensaje"
