@@ -13,6 +13,7 @@ echo > ~/.bash_history ; history -c
 sudo service rackspace-monitoring-agent restart
 
 * * * * *   root    pgrep httpd > /dev/null || /bin/systemctl start httpd.service
+* * * * *   root    pgrep mysqld > /dev/null || /bin/systemctl start mariadb.service
 
 mysql -V
 httpd -v
