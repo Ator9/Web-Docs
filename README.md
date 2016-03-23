@@ -72,6 +72,11 @@ freenas.domain.net:/mnt/folder /home/myuser/freenas nfs defaults 0 0
 mount -a
 ```
 
+Delete queued mail
+```sh
+postsuper -d ALL
+```
+
 Comprimir tar.gz
 ```sh
 tar -zcvf backup_2012.tar.gz directory-name
