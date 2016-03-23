@@ -74,6 +74,7 @@ mount -a
 
 Delete queued mail
 ```sh
+postqueue -p
 postsuper -d ALL
 ```
 
