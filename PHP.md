@@ -1,4 +1,4 @@
- ## Buffer
+## Buffer
 ```php
 ob_start(); // Start output buffering
 
