@@ -1,5 +1,5 @@
 #### Export
-Crontab Escape % to /%
+Crontab: escape "%" to "/%".
 ```sh
 mysqldump -uroot -pXXX dbname > /backups/dbname.sql
 mysqldump -uroot -pXXX dbname | gzip > /backups/dbname.sql.gz
