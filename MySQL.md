@@ -1,5 +1,5 @@
 #### Export
-Escape "%" in crontab. So user "/%".
+Escape "%" in crontab = "/%".
 ```sh
 mysqldump -uroot -pXXX dbname > /backups/dbname.sql
 mysqldump -uroot -pXXX dbname | gzip > /backups/dbname.sql.gz
