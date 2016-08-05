@@ -11,7 +11,8 @@ my_http_ip=XXX
 ```
 #1. Startup
 ```sh
-adduser xxx ; passwd xxx
+adduser XXX ; passwd XXX; passwd
+
 yum update -y
 yum install -y telnet nmap quota ntp epel-release git
 yum install -y clamav clamav-update rkhunter
