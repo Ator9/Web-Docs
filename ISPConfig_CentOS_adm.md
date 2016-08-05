@@ -88,7 +88,8 @@ service httpd restart
 
 ```
 
-#6. ISPConfig (Expert mode)
+#6. ISPConfig
+Expert mode ("N" to mail/dns/interface, "Y" rest)
 ```sh
 yum install -y awstats perl-DateTime-Format-HTTP perl-DateTime-Format-Builder perl-Time*
 service httpd restart
