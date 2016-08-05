@@ -1,6 +1,5 @@
 CentOS 7 - Multiserver - HTTP Server
 ```sh
-my_ssh_user=XXX
 my_db_pass=XXX
 
 my_adm_host=XXX
