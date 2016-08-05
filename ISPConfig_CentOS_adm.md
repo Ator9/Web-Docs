@@ -1,5 +1,9 @@
 CentOS 7 - Multiserver - Admin
 ```sh
+passwd ; adduser XXX ; passwd XXX
+```
+#1. Startup
+```sh
 my_db_pass=XXX
 
 my_adm_host=XXX
@@ -8,10 +12,6 @@ my_db_host=XXX
 my_db_ip=XXX
 my_http_host=XXX
 my_http_ip=XXX
-```
-#1. Startup
-```sh
-passwd ; adduser XXX ; passwd XXX
 ```
 ```sh
 yum update -y
