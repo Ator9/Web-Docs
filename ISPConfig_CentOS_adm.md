@@ -11,7 +11,7 @@ my_http_ip=XXX
 ```
 #1. Startup
 ```sh
-adduser XXX ; passwd XXX; passwd
+passwd ; adduser XXX ; passwd XXX
 ```
 ```sh
 yum update -y
