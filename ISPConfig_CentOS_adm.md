@@ -1,6 +1,5 @@
 CentOS 7 - Multiserver - Admin
 ```sh
-my_ssh_user=XXX
 my_db_pass=XXX
 
 my_adm_host=XXX
@@ -12,6 +11,7 @@ my_http_ip=XXX
 ```
 #1. Startup
 ```sh
+adduser xxx ; passwd xxx
 yum update -y
 yum install -y telnet nmap quota ntp epel-release git
 yum install -y clamav clamav-update rkhunter
@@ -23,7 +23,6 @@ ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
 sed -i -e 's/#PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/sshd_config
 service sshd restart
 chkconfig ip6tables off
-adduser $my_ssh_user ; passwd $my_ssh_user
 
 ```
 
