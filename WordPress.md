@@ -7,7 +7,7 @@ https://codex.wordpress.org/Create_A_Network
 define( 'WP_ALLOW_MULTISITE', true );
 ```
 
-### Custom
+### Custom Vars
 ```php
-define('COOKIE_DOMAIN', false);
+if($_SERVER['HTTP_HOST'] != DOMAIN_CURRENT_SITE) define('COOKIE_DOMAIN', false);
 ```
