@@ -31,15 +31,6 @@ tail -100 /var/log/mariadb/mariadb.log
 
 scp file.tar.gz user@domain.net:/var/test
 scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
-
-echo "\$i++;\$cfg['Servers'][\$i]['host'] = server.com';" >> /etc/phpMyAdmin/config.inc.php
-
-nano /etc/sysconfig/network
-
-killall nautilus
-
-chown bob:group2 filedir
-
 ```
 How do I force Git to overwrite local files on pull?
 ```sh
@@ -82,11 +73,6 @@ postsuper -d ALL
 Comprimir tar.gz
 ```sh
 tar -zcvf backup_2012.tar.gz directory-name
-
--z: Compress archive using gzip program
--c: Create archive
--v: Verbose i.e display progress while creating archive
--f: Archive File name
 ```
 Descomprimir tar.gz
 ```sh
