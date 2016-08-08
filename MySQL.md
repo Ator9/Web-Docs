@@ -1,9 +1,9 @@
 #### Export
 Crontab: escape "%" to "/%".
 ```sh
-mysqldump -uroot -pXXX dbname > /backups/dbname.sql
-mysqldump -uroot -pXXX dbname | gzip > /backups/dbname.sql.gz
-mysqldump -uroot -pXXX --databases $(mysql -uroot -pXXX -N information_schema -e "SELECT DISTINCT(TABLE_SCHEMA) FROM tables WHERE TABLE_SCHEMA LIKE 'prefix%'" ) | gzip > /backups/alldb.sql.gz
+mysqldump -uroot -pXXX dbname > /var/backup/dbname.sql
+mysqldump -uroot -pXXX dbname | gzip > /var/backup/dbname.sql.gz
+mysqldump -uroot -pXXX --databases $(mysql -uroot -pXXX -N information_schema -e "SELECT DISTINCT(TABLE_SCHEMA) FROM tables WHERE TABLE_SCHEMA LIKE 'prefix%'" ) | gzip > /var/backup/alldb.sql.gz
 ```
 
 #### Import
