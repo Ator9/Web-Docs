@@ -14,5 +14,7 @@ if($_SERVER['HTTP_HOST'] != DOMAIN_CURRENT_SITE) define('COOKIE_DOMAIN', false);
 
 ### Home Redirect .htaccess
 ```sh
+RewriteEngine On
+RewriteBase /
 Redirect 301 /$ http://yourweb.com
 ```
