@@ -17,5 +17,5 @@ if($_SERVER['HTTP_HOST'] != DOMAIN_CURRENT_SITE) define('COOKIE_DOMAIN', false);
 RewriteEngine On
 RewriteBase /
 RewriteCond %{HTTP_HOST} ^currentsite.com$ [NC]
-Redirect 301 /$ http://newsite.com
+RewriteRule 301 /$ http://newsite.com
 ```
