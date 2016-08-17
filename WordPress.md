@@ -12,7 +12,7 @@ define( 'WP_ALLOW_MULTISITE', true );
 if($_SERVER['HTTP_HOST'] != DOMAIN_CURRENT_SITE) define('COOKIE_DOMAIN', false);
 ```
 
-### Home Redirect .htaccess
+### Home Redirect with htaccess
 ```sh
 RewriteEngine On
 RewriteBase /
