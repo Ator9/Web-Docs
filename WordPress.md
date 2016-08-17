@@ -11,3 +11,8 @@ define( 'WP_ALLOW_MULTISITE', true );
 ```php
 if($_SERVER['HTTP_HOST'] != DOMAIN_CURRENT_SITE) define('COOKIE_DOMAIN', false);
 ```
+
+### Home Redirect .htaccess
+```sh
+Redirect 301 /$ http://yourweb.com
+```
