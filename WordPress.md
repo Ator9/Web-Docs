@@ -1,7 +1,10 @@
 # WordPress
 
+### Manual Update
+<a href="https://codex.wordpress.org/Updating_WordPress#Manual_Update" target="_blank">Manual Update</a>
+
 ### Multisite
-https://codex.wordpress.org/Create_A_Network
+<a href="https://codex.wordpress.org/Create_A_Network" target="_blank">Create a Network</a>
 ```php
 /* Multisite */
 define( 'WP_ALLOW_MULTISITE', true );
