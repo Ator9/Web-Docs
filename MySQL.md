@@ -98,9 +98,9 @@ query_cache_type = 1
 query_cache_size = 16M
 
 #Percona Analysis
+long_query_time = 1
 slow_query_log = 1
 slow_query_log_file = /var/log/mariadb/mariadb-slow.log
-long_query_time = 1
 ```
 
 #### Percona Toolkit (<a href="https://www.percona.com/downloads/percona-toolkit/" target="_blank">Web</a>)
