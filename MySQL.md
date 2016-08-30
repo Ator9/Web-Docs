@@ -90,16 +90,17 @@ END IF
 [mysqld]
 bind-address = internal network ip
 
-slow_query_log = 1
-slow_query_log_file = /var/log/mariadb/mariadb-slow.log
-long_query_time = 1
-
 max_connections = 800
 tmp_table_size = 128M
 key_buffer_size = 256M
 
 query_cache_type = 1
 query_cache_size = 16M
+
+#Percona Analysis
+slow_query_log = 1
+slow_query_log_file = /var/log/mariadb/mariadb-slow.log
+long_query_time = 1
 ```
 
 #### Percona Toolkit (<a href="https://www.percona.com/downloads/percona-toolkit/" target="_blank">Web</a>)
