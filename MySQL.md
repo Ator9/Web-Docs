@@ -108,3 +108,6 @@ slow_query_log_file = /var/log/mariadb/mariadb-slow.log
 yum install https://www.percona.com/downloads/percona-toolkit/2.2.19/RPM/percona-toolkit-2.2.19-1.noarch.rpm
 pt-query-digest /var/log/mariadb/mariadb-slow.log
 ```
+```sh
+pt-duplicate-key-checker -pXXX
+```
