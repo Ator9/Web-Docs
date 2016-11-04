@@ -41,6 +41,11 @@ git fetch --all
 git reset --hard origin/master
 ```
 
+PfSense Block Ips/Domains
+```sh
+http://www.serdarbayram.net/blocking-https-facebook-and-twitter-on-pfsense.html
+```
+
 Email
 ```sh
 mail -s "asunto ejemplo" your@email.com <<< "mensaje"
