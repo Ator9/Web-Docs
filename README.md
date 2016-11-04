@@ -44,6 +44,8 @@ git reset --hard origin/master
 PfSense Block Ips/Domains
 ```sh
 http://www.serdarbayram.net/blocking-https-facebook-and-twitter-on-pfsense.html
+
+whois -h whois.radb.net -- '-i origin AS32934' | grep ^route
 ```
 
 Email
