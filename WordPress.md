@@ -22,3 +22,14 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^currentsite.com$ [NC]
 RewriteRule ^$ http://newsite.com/ [R=301,L]
 ```
+
+# Avada
+### php.ini
+```php
+max_execution_time = 300
+max_input_vars = 1500
+```
+### wp-config.php
+```sh
+define('WP_MEMORY_LIMIT', '256M'); // Avada
+```
