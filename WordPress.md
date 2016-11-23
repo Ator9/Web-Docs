@@ -1,4 +1,4 @@
-# WordPress <a href="https://codex.wordpress.org/Updating_WordPress#Manual_Update" target="_blank">Manual Update</a>
+# WordPress - <a href="https://codex.wordpress.org/Updating_WordPress#Manual_Update" target="_blank">Manual Update</a>
 
 ### Multisite
 <a href="https://codex.wordpress.org/Create_A_Network" target="_blank">Create a Network</a>
