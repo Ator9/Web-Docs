@@ -87,7 +87,7 @@ Descomprimir tar.gz
 tar -zxvf  backup_2012.tar.gz
 ```
 
-Asterisk Restart from CLI
+Asterisk Restart from CLI Admin
 ```sh
 core restart now
 ```
