@@ -81,9 +81,15 @@ Comprimir tar.gz
 ```sh
 tar -zcvf backup_2012.tar.gz directory-name
 ```
+
 Descomprimir tar.gz
 ```sh
 tar -zxvf  backup_2012.tar.gz
+```
+
+Asterisk Restart from CLI
+```sh
+core restart now
 ```
 
 Search repo rpm and delete (to solve yum conflicts)
