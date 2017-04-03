@@ -29,7 +29,7 @@ tail -100 /var/log/mysqld.log
 tail -100 /var/log/httpd/error_log
 tail -100 /var/log/mariadb/mariadb.log
 
-scp file.tar.gz user@domain.net:/var/test
+scp file.tar.gz user@domain.net:/home/user
 scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 ```
 How do I force Git to overwrite local files on pull?
