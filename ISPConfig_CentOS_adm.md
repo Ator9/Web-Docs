@@ -2,7 +2,7 @@ CentOS 7 - Multiserver - Admin
 ```sh
 passwd ; adduser XXX ; passwd XXX
 ```
-#1. Startup
+# 1. Startup
 ```sh
 my_db_pass=XXX
 
@@ -28,7 +28,7 @@ chkconfig ip6tables off
 
 ```
 
-#2. Swap, quota, fail2ban & firewall
+# 2. Swap, quota, fail2ban & firewall
 ```sh
 sudo fallocate -l 1G /var/swap.img ; chmod 600 /var/swap.img
 mkswap /var/swap.img ; swapon /var/swap.img
@@ -44,7 +44,7 @@ systemctl stop firewalld.service ; systemctl disable firewalld.service
 
 ```
 
-#3. MariaDB & GRANT access to servers
+# 3. MariaDB & GRANT access to servers
 ```sh
 yum install -y mariadb-server
 systemctl start mariadb.service ; systemctl enable mariadb.service
@@ -67,7 +67,7 @@ mysql -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_http_
 mysql -uroot -p$my_db_pass -e "SHOW DATABASES;SELECT User,Host FROM mysql.user"
 ```
 
-#4. Apache & PHP
+# 4. Apache & PHP
 ```sh
 yum install -y httpd mod_ssl
 service httpd start ; systemctl enable httpd.service
@@ -77,7 +77,7 @@ service httpd restart
 
 ```
 
-#5. phpMyAdmin
+# 5. phpMyAdmin
 ```sh
 yum install -y phpmyadmin
 sed -i -e 's/Require ip ::1/Require ip ::1\nRequire all granted/' /etc/httpd/conf.d/phpMyAdmin.conf
@@ -88,7 +88,7 @@ service httpd restart
 
 ```
 
-#6. ISPConfig
+# 6. ISPConfig
 Expert mode ("N" to mail/dns/interface, "Y" rest)
 ```sh
 yum install -y awstats perl-DateTime-Format-HTTP perl-DateTime-Format-Builder perl-Time*
@@ -99,7 +99,7 @@ sudo php -q ispconfig3_install/install/install.php
 
 ```
 
-#7. Configuration
+# 7. Configuration
 ```sh
 sed -i -e 's/short_open_tag = Off/short_open_tag = On/g' /etc/php.ini
 sed -i -e 's/expose_php = On/expose_php = Off/g' /etc/php.ini
@@ -112,7 +112,7 @@ service httpd restart
 
 ```
 
-#8. ISPConfig Update (Optional / If Needed) - <a href="http://www.faqforge.com/linux/controlpanels/ispconfig3/how-to-update-ispconfig-3/" target="_blank">Notes</a>
+# 8. ISPConfig Update (Optional / If Needed) - <a href="http://www.faqforge.com/linux/controlpanels/ispconfig3/how-to-update-ispconfig-3/" target="_blank">Notes</a>
 ```sh
 ispconfig_update.sh
 
