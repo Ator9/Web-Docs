@@ -2,7 +2,7 @@ CentOS 7 - GitLab
 ```sh
 my_ssh_user=XXX
 ```
-#1. Startup & fail2ban
+# 1. Startup & fail2ban
 ```sh
 echo > ~/.bash_history ; history -c
 yum update -y
@@ -20,4 +20,4 @@ service sshd restart
 adduser $my_ssh_user ; passwd $my_ssh_user
 ```
 
-#2. <a href="https://about.gitlab.com/downloads/" target="_blank">GitLab</a>
+# 2. <a href="https://about.gitlab.com/downloads/" target="_blank">GitLab</a>
