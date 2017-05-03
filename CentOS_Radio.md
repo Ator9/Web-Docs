@@ -8,6 +8,22 @@ yum install icecast
 # 2. Copy & Edit Config File (/etc/icecast.xml)
 ```xml
 <icecast>
+    <authentication>
+        <source-password>hackme</source-password>
+        <relay-password>hackme</relay-password>
+        <admin-user>admin</admin-user>
+        <admin-password>hackme</admin-password>
+    </authentication>
+    <hostname>localhost</hostname>
+    <listen-socket>
+        <port>8000</port>
+        <bind-address>127.0.0.1</bind-address>
+    </listen-socket>
+</icecast>
+```
+
+```xml
+<icecast>
     <limits>
         <clients>100</clients>
         <sources>2</sources>
@@ -179,7 +195,6 @@ yum install icecast
         </changeowner>
     </security>
 </icecast>
-
 ```
 
 # 3. Run Icecast
