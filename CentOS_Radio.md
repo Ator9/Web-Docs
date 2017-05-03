@@ -9,13 +9,14 @@ yum install icecast
 ```xml
 <icecast>
     <authentication>
-        <source-password>hackme</source-password>
-        <admin-password>hackme</admin-password>
+        <source-password>new_password</source-password>
+        <admin-password>new_password</admin-password>
     </authentication>
     <hostname>radio.domain.com</hostname>
     <listen-socket>
         <port>8000</port>
     </listen-socket>
+    <shoutcast-mount>/bachata</shoutcast-mount>
 </icecast>
 ```
 
