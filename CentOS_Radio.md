@@ -16,7 +16,7 @@ yum install icecast
     <listen-socket>
         <port>8000</port>
     </listen-socket>
-    <shoutcast-mount>/bachata</shoutcast-mount>
+    <shoutcast-mount>/radio_stream_url</shoutcast-mount>
 </icecast>
 ```
 
