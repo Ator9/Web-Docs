@@ -5,7 +5,7 @@ CentOS 7 - Radio Streaming
 yum install icecast
 ```
 
-# 2. Edit Config XML (Template @ /etc/icecast.xml)
+# 2. Copy & Edit Config File (/etc/icecast.xml)
 ```xml
 <icecast>
     <limits>
@@ -182,3 +182,7 @@ yum install icecast
 
 ```
 
+# 3. Run Icecast
+```sh
+icecast -c /path_to/icecast.xml
+```
