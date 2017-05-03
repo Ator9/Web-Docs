@@ -14,10 +14,9 @@ yum install icecast
         <admin-user>admin</admin-user>
         <admin-password>hackme</admin-password>
     </authentication>
-    <hostname>domain.com</hostname>
+    <hostname>radio.domain.com</hostname>
     <listen-socket>
         <port>8000</port>
-        <bind-address>127.0.0.1</bind-address>
     </listen-socket>
 </icecast>
 ```
