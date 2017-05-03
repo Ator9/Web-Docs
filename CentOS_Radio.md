@@ -10,8 +10,6 @@ yum install icecast
 <icecast>
     <authentication>
         <source-password>hackme</source-password>
-        <relay-password>hackme</relay-password>
-        <admin-user>admin</admin-user>
         <admin-password>hackme</admin-password>
     </authentication>
     <hostname>radio.domain.com</hostname>
