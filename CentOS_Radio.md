@@ -204,9 +204,9 @@ Test Interface URL:
 http://radio.domain.com:8000/
 ```
 
-# 4. Install Source Client like <a href="http://www.icecast.org/ices/" target="_blank">Ices</a>
+# 4. Install <a href="http://www.icecast.org/ices/" target="_blank">Ices</a>
 ```sh
-wget http://downloads.us.xiph.org/releases/ices/ices-2.0.2.tar.bz2
+wget http://downloads.us.xiph.org/releases/ices/ices-2.0.2.tar.gz
 tar -zxvf ices-2.0.2.tar.bz2
 cd ices-2.0.2 ; ./configure
 make ; sudo make install
