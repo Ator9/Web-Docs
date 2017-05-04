@@ -79,3 +79,9 @@ find /path_to_ogg_files/ -name "*.ogg" > /path_to/playlist.txt
 ices /path_to/ices-playlist.xml
 ```
 
+# 8. Check your radio :)
+Logs
+```sh
+cat /var/log/icecast/error.log
+cat /var/log/icecast/ices.log
+```
