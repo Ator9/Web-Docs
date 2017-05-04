@@ -195,7 +195,7 @@ yum install icecast
 </icecast>
 ```
 
-# 3. Run Icecast
+# 3. Run Icecast in background
 ```sh
-icecast -c /path_to/icecast.xml
+icecast -b -c /path_to/icecast.xml
 ```
