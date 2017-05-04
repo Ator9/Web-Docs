@@ -199,7 +199,9 @@ yum install icecast
 ```sh
 icecast -b -c /path_to/icecast.xml
 ```
-Test Interface:
+Test Interface URL:
 ```sh
-URL http://radio.domain.com:8000/
+http://radio.domain.com:8000/
 ```
+
+# 4. Install Source Client like <a href="http://www.icecast.org/ices/" target="_blank">Ices2</a>
