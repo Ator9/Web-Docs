@@ -117,8 +117,19 @@ service httpd restart
 ispconfig_update.sh
 
 ```
+
 Master / Slaves Config:
 - Method: stable
 - Reconfigure Permissions: no on master, yes on slaves
 - Reconfigure Services: yes
 - Reconfigure Crontab: yes
+
+# PHP 7.1
+```sh
+php --version
+wget -q http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+rpm -Uvh remi-release-7.rpm 
+yum-config-manager --enable remi-php71
+yum install -y php ; yum update -y
+php --version
+```
