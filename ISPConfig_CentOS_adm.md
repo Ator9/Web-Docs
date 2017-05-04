@@ -130,7 +130,7 @@ php --version
 wget -q http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 rpm -Uvh remi-release-7.rpm 
 yum-config-manager --enable remi-php71
-yum install -y php ; yum update -y
+yum install -y php php-pecl-zip ; yum update -y
 sed -i -e 's/;error_log = php_errors.log/error_log = \/var\/log\/php_errors.log/g' /etc/php.ini
 service httpd restart
 php --version
