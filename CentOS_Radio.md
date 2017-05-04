@@ -131,6 +131,11 @@ make ; sudo make install
 # 5. Copy & Edit Ices Config File (ices-playlist.xml)
 ```xml
 <ices>
+    <logpath>/var/log/icecast</logpath>
+</ices>
+```
+```xml
+<ices>
     <!-- run in background -->
     <background>0</background>
     <!-- where logs, etc go. -->
