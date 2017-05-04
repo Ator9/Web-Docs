@@ -208,8 +208,7 @@ http://radio.domain.com:8000/
 ```sh
 wget http://downloads.us.xiph.org/releases/ices/ices-2.0.2.tar.gz
 tar -zxvf ices-2.0.2.tar.gz
-cd ices-2.0.2
-./configure
+cd ices-2.0.2 ; ./configure
 make ; sudo make install
 ```
 
