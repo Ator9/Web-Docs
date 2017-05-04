@@ -132,6 +132,16 @@ make ; sudo make install
 ```xml
 <ices>
     <logpath>/var/log/icecast</logpath>
+    <stream>
+        <metadata>
+            <name>Example stream name</name>
+            <genre>Example genre</genre>
+            <description>A short description of your stream</description>
+        </metadata>
+        <input>
+            <param name="file">/path_to/playlist.txt</param>
+        </input>
+    </stream>
 </ices>
 ```
 ```xml
