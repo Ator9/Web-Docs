@@ -195,7 +195,8 @@ yum install icecast
 </icecast>
 ```
 
-# 3. Run Icecast in background (Test Interface http://radio.domain.com:8000/)
+# 3. Run Icecast in background
 ```sh
 icecast -b -c /path_to/icecast.xml
 ```
+Test Interface http://radio.domain.com:8000/
