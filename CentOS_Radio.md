@@ -209,8 +209,7 @@ http://radio.domain.com:8000/
 wget http://downloads.us.xiph.org/releases/ices/ices-2.0.2.tar.gz
 tar -zxvf ices-2.0.2.tar.gz
 cd ices-2.0.2
-export PKG_CONFIG_PATH=/usr/lib64:$PKG_CONFIG_PATH
-./configure --prefix=/usr/lib64
+./configure
 make ; sudo make install
 ```
 
