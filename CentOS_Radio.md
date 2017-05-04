@@ -53,10 +53,7 @@ make ; sudo make install
             <param name="restart-after-reread">1</param>
             <param name="file">/path_to/playlist.txt</param>
         </input>
-        
         <instance>
-            <hostname>localhost</hostname>
-            <port>8000</port>
             <password>new_password</password>
             <mount>/bachata.ogg</mount>
             <encode>
