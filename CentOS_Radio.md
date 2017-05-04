@@ -2,7 +2,7 @@ CentOS 7 - Radio Streaming - Icecast & Ices (OGG)
 
 # 1. Install <a href="http://icecast.org" target="_blank">Icecast</a>
 ```sh
-yum install icecast
+yum install icecast libshout -y
 ```
 
 # 2. Copy & Edit Config File (/etc/icecast.xml)
