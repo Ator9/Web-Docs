@@ -131,6 +131,7 @@ make ; sudo make install
 # 5. Copy & Edit Ices Config File (ices-playlist.xml)
 ```xml
 <ices>
+    <background>1</background>
     <logpath>/var/log/icecast</logpath>
     <stream>
         <metadata>
@@ -148,47 +149,7 @@ make ; sudo make install
 ```
 ```xml
 <ices>
-    <!-- run in background -->
-    <background>0</background>
-    <!-- where logs, etc go. -->
-    <logpath>/var/log/ices</logpath>
-    <logfile>ices.log</logfile>
-    <!-- 1=error,2=warn,3=info,4=debug -->
-    <loglevel>4</loglevel>
-    <!-- set this to 1 to log to the console instead of to the file above -->
-    <consolelog>0</consolelog>
-
-    <!-- optional filename to write process id to -->
-    <!-- <pidfile>/home/ices/ices.pid</pidfile> -->
-
     <stream>
-        <!-- metadata used for stream listing (not currently used) -->
-        <metadata>
-            <name>Example stream name</name>
-            <genre>Example genre</genre>
-            <description>A short description of your stream</description>
-        </metadata>
-
-        <!-- input module
-
-            The module used here is the playlist module - it has
-            'submodules' for different types of playlist. There are
-            two currently implemented, 'basic', which is a simple
-            file-based playlist, and 'script' which invokes a command
-            to returns a filename to start playing. -->
-
-        <input>
-            <module>playlist</module>
-            <param name="type">basic</param>
-            <param name="file">playlist.txt</param>
-            <!-- random play -->
-            <param name="random">0</param>
-            <!-- if the playlist get updated that start at the beginning -->
-            <param name="restart-after-reread">0</param>
-            <!-- if set to 1 , plays once through, then exits. -->
-            <param name="once">0</param>
-        </input>
-
                 <!-- Stream instance
             You may have one or more instances here. This allows you to
             send the same input data to one or more servers (or to different
