@@ -248,7 +248,12 @@ make ; sudo make install
 </ices>
 ```
 
-# 6. Run Ices
+# 6. Create playlist.txt rrom directory Ices
+```sh
+find /path_to_ogg_files/ -name "*.ogg" > /path_to/playlist.txt
+```
+
+# 7. Run Ices
 ```sh
 ices /path_to/ices-playlist.xml
 ```
