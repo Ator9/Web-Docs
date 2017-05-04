@@ -199,4 +199,6 @@ yum install icecast
 ```sh
 icecast -b -c /path_to/icecast.xml
 ```
-Test Interface http://radio.domain.com:8000/
+```sh
+Test Interface URL http://radio.domain.com:8000/
+```
