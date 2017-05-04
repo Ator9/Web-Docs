@@ -5,7 +5,7 @@ CentOS 7 - Radio Streaming - Icecast & Ices (OGG)
 yum install -y icecast libshout libshout-devel
 ```
 
-# 2. Copy & Edit Config File (/etc/icecast.xml)
+# 2. Copy & Edit Icecast Config File (/etc/icecast.xml)
 ```xml
 <icecast>
     <authentication>
@@ -212,8 +212,10 @@ cd ices-2.0.2 ; ./configure
 make ; sudo make install
 ```
 
-# 5. Run Ices
+# 5. Copy & Edit Ices Config File (ices-playlist.xml)
+
+# 6. Run Ices
 ```sh
-ices /path_to/ices.xml
+ices /path_to/ices-playlist.xml
 ```
 
