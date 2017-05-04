@@ -134,11 +134,12 @@ make ; sudo make install
     <logpath>/var/log/icecast</logpath>
     <stream>
         <metadata>
-            <name>Example stream name</name>
-            <genre>Example genre</genre>
-            <description>A short description of your stream</description>
+            <name>Radio Name</name>
+            <genre>Radio genre</genre>
+            <description>Radio Description!</description>
         </metadata>
         <input>
+            <param name="random">1</param>
             <param name="file">/path_to/playlist.txt</param>
         </input>
     </stream>
