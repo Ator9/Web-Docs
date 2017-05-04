@@ -140,6 +140,7 @@ make ; sudo make install
         </metadata>
         <input>
             <param name="random">1</param>
+            <param name="restart-after-reread">1</param>
             <param name="file">/path_to/playlist.txt</param>
         </input>
     </stream>
