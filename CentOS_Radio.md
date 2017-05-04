@@ -1,4 +1,4 @@
-CentOS 7 - Radio Streaming 
+CentOS 7 - Radio Streaming - Icecast & Ices (OGG)
 
 # 1. Install <a href="http://icecast.org" target="_blank">Icecast</a>
 ```sh
@@ -16,7 +16,7 @@ yum install icecast
     <listen-socket>
         <port>8000</port>
     </listen-socket>
-    <shoutcast-mount>/radio_stream_url</shoutcast-mount>
+    <shoutcast-mount>/bachata.ogg</shoutcast-mount>
 </icecast>
 ```
 
