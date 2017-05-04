@@ -69,7 +69,7 @@ make ; sudo make install
 </ices>
 ```
 
-# 6. Create playlist.txt rrom directory Ices
+# 6. Create playlist with directory files
 ```sh
 find /path_to_ogg_files/ -name "*.ogg" > /path_to/playlist.txt
 ```
