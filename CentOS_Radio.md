@@ -17,6 +17,9 @@ yum install -y icecast libshout libshout-devel
         <port>8000</port>
     </listen-socket>
     <shoutcast-mount>/bachata.ogg</shoutcast-mount>
+    <http-headers>
+        <header name="Cache-Control" value="no-transform" />
+    </http-headers>
 </icecast>
 ```
 
