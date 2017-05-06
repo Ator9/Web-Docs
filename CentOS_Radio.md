@@ -75,14 +75,16 @@ find /path_to_ogg_files/ -name "*.ogg" > /path_to/playlist.txt
 ```sh
 ices /path_to/ices-playlist.xml
 ```
-Error Protection / Reload (/etc/crontab)
-```sh
-* * * * *   root    pgrep ices > /dev/null || /bin/systemctl start ices /path_to/ices-playlist.xml
-```
 
 # 8. Check your radio :)
 Logs
 ```sh
 cat /var/log/icecast/error.log
 cat /var/log/icecast/ices.log
+```
+
+# Optional
+Error Protection / Restart (/etc/crontab)
+```sh
+* * * * *   root    pgrep ices > /dev/null || /bin/systemctl start ices /path_to/ices-playlist.xml
 ```
