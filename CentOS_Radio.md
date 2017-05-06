@@ -86,5 +86,6 @@ cat /var/log/icecast/ices.log
 # Optional
 Crontab Restart (crontab needs absolute paths)
 ```sh
+* * * * *   root    pgrep icecast > /dev/null || /usr/bin/icecast -b -c /path_to/icecast.xml
 * * * * *   root    pgrep ices > /dev/null || /usr/local/bin/ices /path_to/ices-playlist.xml
 ```
