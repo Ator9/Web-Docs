@@ -17,9 +17,6 @@ yum install -y icecast libshout libshout-devel
         <port>8000</port>
     </listen-socket>
     <shoutcast-mount>/bachata.ogg</shoutcast-mount>
-    <http-headers>
-        <header name="Cache-Control" value="no-transform" />
-    </http-headers>
 </icecast>
 ```
 
@@ -59,11 +56,6 @@ make ; sudo make install
         <instance>
             <password>new_password</password>
             <mount>/bachata.ogg</mount>
-            <encode>
-                <nominal-bitrate>64000</nominal-bitrate> <!-- bps. e.g. 64000 for 64 kbps -->
-                <samplerate>44100</samplerate>
-                <channels>2</channels>
-            </encode>
         </instance>
     </stream>
 </ices>
