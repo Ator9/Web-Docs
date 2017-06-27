@@ -10,7 +10,7 @@ echo $data; // will contain the contents
 ```
 
 #### TinyMCE Autosave
-```html
+```js
 save_onsavecallback: function () {
 
     var request = $.ajax({
