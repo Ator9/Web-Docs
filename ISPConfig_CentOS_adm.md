@@ -112,7 +112,18 @@ service httpd restart
 
 ```
 
-# 8. ISPConfig Update (Optional / If Needed) - <a href="http://www.faqforge.com/linux/controlpanels/ispconfig3/how-to-update-ispconfig-3/" target="_blank">Notes</a>
+# 8. Let's Encrypt (Optional / If Needed)
+```sh
+mkdir /opt/certbot
+cd /opt/certbot
+wget https://dl.eff.org/certbot-auto
+chmod a+x ./certbot-auto
+```
+```sh
+./certbot-auto
+```
+
+# 9. ISPConfig Update (Optional / If Needed) - <a href="http://www.faqforge.com/linux/controlpanels/ispconfig3/how-to-update-ispconfig-3/" target="_blank">Notes</a>
 ```sh
 ispconfig_update.sh
 
