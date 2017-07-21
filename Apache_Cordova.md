@@ -14,7 +14,7 @@ avdmanager.bat create avd -n "test" -k "system-images;android-25;google_apis;x86
 ```
 
 ## Fixes
-Cannot launch emulator on Linux
+#### Cannot launch emulator on Linux
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 <a href="https://stackoverflow.com/questions/35911302/cannot-launch-emulator-on-linux-ubuntu-15-10" target="_blank">Thread</a> 
 
