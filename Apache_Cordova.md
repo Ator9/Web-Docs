@@ -5,9 +5,9 @@ Apache Cordova
 avdmanager.bat create avd -n "test" -k "system-images;android-25;google_apis;x86"
 ```
 
-# 2. Enable virtualization in BIOS & Download <a href="https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager" target="_blank">HAXM</a> 
+# 2. Enable virtualization in BIOS & Download <a href="https://www.visualstudio.com/vs/msft-android-emulator/" target="_blank">Windows Emulator</a> 
 
-# 3. 
+# 3. Download <a href="https://www.visualstudio.com/vs/msft-android-emulator/" target="_blank">Windows Emulator</a> 
 ```sh
 
 ```
