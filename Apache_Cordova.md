@@ -1,5 +1,11 @@
 Apache Cordova
 
+# Commands
+Start App
+```sh
+Cordova Run Android
+```
+
 # 1. AVD
 ```sh
 avdmanager.bat create avd -n "test" -k "system-images;android-25;google_apis;x86"
