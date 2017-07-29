@@ -1,7 +1,7 @@
 Apache Cordova
 
 # Commands
-Start App
+Start Visual Studio Emulator and start app
 ```sh
 Cordova Run Android
 ```
