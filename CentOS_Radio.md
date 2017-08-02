@@ -17,6 +17,10 @@ yum install -y icecast libshout libshout-devel
         <port>8000</port>
     </listen-socket>
     <shoutcast-mount>/bachata.ogg</shoutcast-mount>
+    <directory>
+        <yp-url-timeout>15</yp-url-timeout>
+        <yp-url>http://dir.xiph.org/cgi-bin/yp-cgi</yp-url>
+    </directory>
 </icecast>
 ```
 
