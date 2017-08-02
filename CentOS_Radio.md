@@ -21,6 +21,7 @@ yum install -y icecast libshout libshout-devel
         <yp-url-timeout>15</yp-url-timeout>
         <yp-url>http://dir.xiph.org/cgi-bin/yp-cgi</yp-url>
     </directory>
+    <admin>mail@forlisting.com</admin>
 </icecast>
 ```
 
