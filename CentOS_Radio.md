@@ -62,6 +62,7 @@ make ; sudo make install
         <instance>
             <password>new_password</password>
             <mount>/bachata.ogg</mount>
+            <yp>1</yp>
         </instance>
     </stream>
 </ices>
