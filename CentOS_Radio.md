@@ -52,6 +52,7 @@ make ; sudo make install
             <name>Radio Name</name>
             <genre>Radio genre</genre>
             <description>Radio Description!</description>
+            <url>yoursite.com</url>
         </metadata>
         <input>
             <param name="random">1</param>
