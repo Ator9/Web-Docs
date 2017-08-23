@@ -24,11 +24,8 @@ cordova run android
 avdmanager.bat create avd -n "test" -k "system-images;android-25;google_apis;x86"
 ```
 
-# Tools
+# Tools & Fixes
 - <a href="https://www.visualstudio.com/vs/msft-android-emulator/" target="_blank">Visual Studio Emulator for Android</a> 
-
-
-# Fixes
 - Cannot launch emulator (Linux)
 
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
