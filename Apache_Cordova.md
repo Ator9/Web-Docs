@@ -6,8 +6,8 @@ Creation
 cordova create app
 
 cordova platform ls
-cordova platform add ios
 cordova platform add android
+cordova platform add ios
 ```
 Start Visual Studio Emulator and start app
 ```sh
