@@ -3,7 +3,7 @@ Apache Cordova
 # Commands
 Start Visual Studio Emulator and start app
 ```sh
-Cordova Run Android
+cordova run android
 ```
 
 # 1. AVD
