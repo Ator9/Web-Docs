@@ -1,6 +1,14 @@
 Apache Cordova
 
 # Commands
+Creation
+```sh
+cordova create app
+
+cordova platform ls
+cordova platform add ios
+cordova platform add android
+```
 Start Visual Studio Emulator and start app
 ```sh
 cordova run android
