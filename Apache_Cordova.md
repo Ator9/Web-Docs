@@ -19,13 +19,13 @@ cordova requirements
 cordova run android
 ```
 
-# 1. AVD
+# AVD
 ```sh
 avdmanager.bat create avd -n "test" -k "system-images;android-25;google_apis;x86"
 ```
 
 # Tools
-1. <a href="https://www.visualstudio.com/vs/msft-android-emulator/" target="_blank">Visual Studio Emulator for Android</a> 
+- <a href="https://www.visualstudio.com/vs/msft-android-emulator/" target="_blank">Visual Studio Emulator for Android</a> 
 
 
 # Fixes
