@@ -18,13 +18,12 @@ cordova requirements
 ```sh
 cordova build
 
-cordova emulate android
 cordova run android
 ```
 
 # AVD
 ```sh
-avdmanager.bat create avd -n "test" -k "system-images;android-25;google_apis;x86"
+android.bat create avd -n "test" -k "system-images;android-25;google_apis;x86"
 ```
 
 # Tools & Fixes
