@@ -18,6 +18,7 @@ cordova requirements
 ```sh
 cordova build
 
+cordova emulate android
 cordova run android
 ```
 
