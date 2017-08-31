@@ -27,6 +27,8 @@ android.bat create avd -n "test" -k "system-images;android-25;google_apis;x86"
 ```
 
 # Tools & Fixes
+- virtmgmt.msc
+
 - <a href="https://www.visualstudio.com/vs/msft-android-emulator/" target="_blank">Visual Studio Emulator for Android</a> 
 - Cannot launch emulator (Linux)
 
