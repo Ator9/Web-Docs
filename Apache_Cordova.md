@@ -21,6 +21,11 @@ cordova build
 cordova run android
 ```
 
+## 3. config.xml
+```sh
+<allow-navigation href="*" />
+```
+
 # AVD
 ```sh
 android.bat create avd -n "test" -k "system-images;android-25;google_apis;x86"
