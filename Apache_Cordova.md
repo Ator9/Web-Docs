@@ -15,6 +15,11 @@ cordova requirements
 
 
 ## 2. config.xml
+Change id
+```sh
+<widget id="io.cordova.your_app_name">
+```
+Security
 ```sh
 <allow-navigation href="*" />
 ```
