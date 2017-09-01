@@ -1,4 +1,4 @@
-Reacti Native
+React Native
 
 # Commands
 ## 1. Install & Project Start
