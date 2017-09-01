@@ -17,7 +17,7 @@ cordova requirements
 ## 2. config.xml
 Change id
 ```xml
-<widget id="io.cordova.your_app_name">
+<widget id="io.cordova.your_app_name" version="1.0.0">
     <name>App Name</name>
 </widget>
 ```
