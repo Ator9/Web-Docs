@@ -16,8 +16,10 @@ cordova requirements
 
 ## 2. config.xml
 Change id
-```sh
+```xml
 <widget id="io.cordova.your_app_name">
+    <name>App Name</name>
+</widget>
 ```
 Security
 ```sh
