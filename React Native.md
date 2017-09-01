@@ -9,3 +9,4 @@ create-react-native-app myapp
 cd myapp
 npm start
 ```
+Install <a href="https://expo.io/">Expo</a> on your phone
