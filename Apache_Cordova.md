@@ -25,14 +25,14 @@ cordova run android
 ```
 
 ## 4. Java Keytool & Final Build
-Generate Key at C:\Program Files\Java\jdk1.8.0_141\bin
+Generate key at C:\Program Files\Java\jdk1.8.0_141\bin
 ```sh
-keytool -genkeypair -alias app_name -keyalg RSA -keystore H:\project\key.keystore
+keytool -genkeypair -alias alias_name -keyalg RSA -keystore H:\project\key.keystore
 ```
 /platforms/android/build/outputs/apk/android-release-unsigned.apk
 ```sh
 cordova build android --release
-cordova build android --release --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password
+cordova build android --release --keystore=../key.keystore --storePassword=password --alias=alias_name --password=password
 ```
 
 # AVD
