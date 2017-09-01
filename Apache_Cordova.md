@@ -14,17 +14,21 @@ cordova requirements
 <a href="https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#requirements-and-support">Android Requirements</a> - <a href="https://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html#requirements-and-support">iOS Requirements</a>
 
 
-## 2. Start
-```sh
-cordova run android
-```
-
-## 3. config.xml
+## 2. config.xml
 ```sh
 <allow-navigation href="*" />
 ```
 
-## 4. Final Build
+## 3. Start
+```sh
+cordova run android
+```
+
+## 4. Java Keytool & Final Build
+Generate Key at C:\Program Files\Java\jdk1.8.0_141\bin
+```sh
+keytool -genkeypair -alias app_name -keyalg RSA -keystore H:\project\key.keystore
+```
 /platforms/android/build/outputs/apk/android-release-unsigned.apk
 ```sh
 cordova build android --release
