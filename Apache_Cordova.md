@@ -14,16 +14,20 @@ cordova requirements
 <a href="https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#requirements-and-support">Android Requirements</a> - <a href="https://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html#requirements-and-support">iOS Requirements</a>
 
 
-## 2. Build & Start
+## 2. Start
 ```sh
-cordova build
-
 cordova run android
 ```
 
 ## 3. config.xml
 ```sh
 <allow-navigation href="*" />
+```
+
+## 4. Final Build
+/platforms/android/build/outputs/apk/android-release-unsigned.apk
+```sh
+cordova build android --release
 ```
 
 # AVD
