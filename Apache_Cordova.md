@@ -25,7 +25,7 @@ cordova run android
 ```
 
 ## 4. Java Keytool & Final Build
-Generate key at C:\Program Files\Java\jdk1.8.0_141\bin
+Generate key at C:\Program Files\Java\jdk1.8.0_141\bin (NO completar con datos en blanco)
 ```sh
 keytool -genkeypair -alias alias_name -keyalg RSA -validity 20000 -keystore H:\project\key.keystore
 ```
