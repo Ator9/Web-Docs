@@ -32,7 +32,7 @@ keytool -genkeypair -alias alias_name -keyalg RSA -keystore H:\project\key.keyst
 /platforms/android/build/outputs/apk/android-release-unsigned.apk
 ```sh
 cordova build android --release
-cordova build android --release --keystore=../key.keystore --storePassword=password --alias=alias_name --password=password
+cordova build android --release -- --keystore=../key.keystore --storePassword=password --alias=alias_name --password=password
 ```
 
 # AVD
