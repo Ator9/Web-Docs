@@ -9,8 +9,8 @@ create-react-native-app appdir
 cd appdir
 npm start
 ```
-Install <a href="https://expo.io/">Expo</a> on your phone.
 
+## 2. Install <a href="https://expo.io/">Expo</a> on your phone.
 Fix with local ip address:
 ```sh
 set REACT_NATIVE_PACKAGER_HOSTNAME=192.168.1.105
