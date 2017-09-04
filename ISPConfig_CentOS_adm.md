@@ -146,3 +146,16 @@ sed -i -e 's/;error_log = php_errors.log/error_log = \/var\/log\/php_errors.log/
 service httpd restart
 php --version
 ```
+
+# Automatic Domains
+Paste before "NameVirtualHost" in /etc/httpd/conf/httpd.conf:
+```sh
+<VirtualHost serverip:80>
+ServerAdmin mail@mail.com
+DocumentRoot /var/www/domain.com/web
+</VirtualHost>
+<Directory /var/www/domain.com/web>
+Require all granted
+</Directory>
+```
+
