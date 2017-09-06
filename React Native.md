@@ -16,3 +16,9 @@ Fix with local ip address:
 set REACT_NATIVE_PACKAGER_HOSTNAME=192.168.1.105
 npm start
 ```
+
+## Components
+- React Navigation: <a href="https://reactnavigation.org">https://reactnavigation.org</a>
+```sh
+npm install --save react-navigation
+```
