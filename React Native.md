@@ -1,6 +1,5 @@
 React Native
 
-# Commands
 ## 1. Install & Project Start
 ```sh
 npm install -g create-react-native-app
