@@ -71,6 +71,39 @@ freenas.domain.net:/mnt/folder /home/myuser/freenas nfs defaults 0 0
 mount -a
 ```
 
+Network reset
+http://api.curltools.com/scripts/resetnetwork
+```sh
+nano netreset.sh
+```
+Content:
+```sh
+#!/bin/bash
+
+#how to reset your network from inside your server#
+
+#generate uuid#
+uuid=$(uuidgen)
+
+#grab networking data from host sever#
+xenstore-write data/host/$uuid '{"name":"resetnetwork","value":""}'
+
+secs=$((1 * 60))
+while [ $secs -gt 0 ]; do
+   echo -ne "$secs\033[0K\r"
+   sleep 1
+   : $((secs--))
+done
+
+#confirm that the reset took place#
+xenstore-read data/guest/$uuid
+#you should get a value of 0 in the responce to this command. Anything else means something is still wrong with nova-agent.#
+```
+```sh
+chmod +x netreset.sh
+./netreset.sh
+```
+
 Delete queued mail
 ```sh
 postqueue -p
