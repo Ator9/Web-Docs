@@ -76,7 +76,6 @@ http://api.curltools.com/scripts/resetnetwork
 ```sh
 nano netreset.sh
 ```
-Content:
 ```sh
 #!/bin/bash
 
