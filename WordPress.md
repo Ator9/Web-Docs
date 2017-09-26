@@ -21,6 +21,10 @@ RewriteRule ^$ http://newsite.com/ [R=301,L]
 ```
 
 # Avada
+### /etc/httpd/conf/httpd.conf
+```php
+FcgidMaxRequestLen 8000000
+```
 ### php.ini
 ```php
 max_execution_time = 300
