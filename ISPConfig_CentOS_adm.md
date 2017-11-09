@@ -156,6 +156,7 @@ DocumentRoot /var/www/domain.com/web
 </VirtualHost>
 <Directory /var/www/domain.com/web>
 Require all granted
+AllowOverride All
 </Directory>
 ```
 
