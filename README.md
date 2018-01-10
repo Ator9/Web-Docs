@@ -15,6 +15,11 @@ sudo service rackspace-monitoring-agent restart
 * * * * *   root    pgrep httpd > /dev/null || /bin/systemctl start httpd.service
 * * * * *   root    pgrep mysqld > /dev/null || /bin/systemctl start mariadb.service
 
+
+Nameservers NIC.ar
+whois -h whois.nic.ar DOMINIO.COM.AR
+
+
 mysql -V
 httpd -v
 php -v
