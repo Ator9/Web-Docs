@@ -15,11 +15,6 @@ sudo service rackspace-monitoring-agent restart
 * * * * *   root    pgrep httpd > /dev/null || /bin/systemctl start httpd.service
 * * * * *   root    pgrep mysqld > /dev/null || /bin/systemctl start mariadb.service
 
-
-Nameservers NIC.ar
-whois -h whois.nic.ar DOMINIO.COM.AR
-
-
 mysql -V
 httpd -v
 php -v
@@ -37,6 +32,13 @@ tail -100 /var/log/mariadb/mariadb.log
 scp file.tar.gz user@domain.net:/home/user
 scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 ```
+
+Nameservers NIC.ar
+```sh
+whois -h whois.nic.ar DOMINIO.COM.AR
+
+```
+
 How do I force Git to overwrite local files on pull?
 ```sh
 error: Your local changes to the following files would be overwritten by merge:
