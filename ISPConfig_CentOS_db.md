@@ -21,7 +21,7 @@ service mariadb restart
 Max Connections
 ```sh
 sed -i -e 's/\[mysqld\]/\[mysqld\]\nmax_connections = 500/g' /etc/my.cnf
-sed -i -e 's/\[mysqld\]/\[mysqld\]\nwait_timeout = 300/g' /etc/my.cnf
+sed -i -e 's/\[mysqld\]/\[mysqld\]\nmax_allowed_packet = 32M/g' /etc/my.cnf
 service mariadb restart
 ```
 Backup Cron
