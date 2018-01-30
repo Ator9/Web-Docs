@@ -35,6 +35,7 @@ mkswap /var/swap.img ; swapon /var/swap.img
 echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
 sed -i '0,/defaults/s//defaults,usrquota,grpquota/' /etc/fstab
 mount -o remount /
+
 quotacheck -avugm ; quotaon -avug
 yum install -y fail2ban
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
