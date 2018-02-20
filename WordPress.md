@@ -20,6 +20,17 @@ RewriteCond %{HTTP_HOST} ^currentsite.com$ [NC]
 RewriteRule ^$ http://newsite.com/ [R=301,L]
 ```
 
+### Admin IP Restriction with htaccess
+```sh
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php(.*)$
+RewriteCond %{REMOTE_ADDR} !^IP_ONE$
+RewriteCond %{REMOTE_ADDR} !^IP_TWO$
+RewriteRule ^(.*)$ - [R=403,L]
+</IfModule>
+```
+
 # Avada
 ### /etc/httpd/conf/httpd.conf
 ```php
