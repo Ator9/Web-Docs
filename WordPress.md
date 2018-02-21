@@ -33,6 +33,7 @@ RewriteRule ^(.*)$ - [R=403,L]
 
 ### Cache htaccess
 ```sh
+# Cache 1 week (year = 31536000)
 <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf|mp3|mp4|js|css)$">
 Header set Cache-Control "max-age=604800, public, must-revalidate"
 </FilesMatch>
