@@ -31,6 +31,13 @@ RewriteRule ^(.*)$ - [R=403,L]
 </IfModule>
 ```
 
+### Cache htaccess
+```sh
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf|mp3|mp4|js|css)$">
+Header set Cache-Control "max-age=604800, public, must-revalidate"
+</FilesMatch>
+```
+
 # Avada
 ### /etc/httpd/conf/httpd.conf
 ```php
