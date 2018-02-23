@@ -78,6 +78,24 @@ freenas.domain.net:/mnt/folder /home/myuser/freenas nfs defaults 0 0
 mount -a
 ```
 
+Network digitalocean config example
+/etc/sysconfig/network-scripts/ifcfg-eth0
+service network restart
+```sh
+BOOTPROTO=none
+DEVICE=eth0
+HWADDR=04:01:54:59:e8:01
+ONBOOT=yes
+TYPE=Ethernet
+USERCTL=no
+GATEWAY=x
+IPADDR=x
+NETMASK=x
+DNS1=8.8.8.8
+DNS2=8.8.4.4
+NM_CONTROLLED="YES"
+```
+
 Network reset
 http://api.curltools.com/scripts/resetnetwork
 ```sh
