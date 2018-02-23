@@ -80,6 +80,7 @@ mount -a
 
 Network digitalocean config example
 /etc/sysconfig/network-scripts/ifcfg-eth0
+
 service network restart
 ```sh
 BOOTPROTO=none
