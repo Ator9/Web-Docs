@@ -66,6 +66,11 @@ show top 10 biggest subdirs in the current dir
 du -sk * | sort -nr | head -10
 ```
 
+Fin files with specific size (bytes)
+```sh
+find /var/www/enlaweb.me/web/ -type f -size 85796c -exec ls -lh {} \;
+```
+
 Bind
 ```sh
 /var/www/clients/client1/web4/web /var/www/clients/client1/web5/web    none    bind,nobootwait,_netdev    0 0
