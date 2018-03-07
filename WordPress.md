@@ -7,9 +7,12 @@
 define( 'WP_ALLOW_MULTISITE', true );
 ```
 
-### Custom Vars
+### Custom Vars wp-config.php
 ```php
 if($_SERVER['HTTP_HOST'] != DOMAIN_CURRENT_SITE) define('COOKIE_DOMAIN', false);
+
+# Disable Theme Editing | trying to avoid hack
+define( 'DISALLOW_FILE_EDIT', true );
 ```
 
 ### Home Redirect with htaccess
