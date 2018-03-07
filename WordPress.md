@@ -30,6 +30,11 @@ RewriteCond %{REMOTE_ADDR} !^IP_TWO$
 RewriteRule ^(.*)$ - [R=403,L]
 </IfModule>
 ```
+Restrict specific IP
+```sh
+Order Deny,Allow
+Deny from xxx.xxx.xx.xx
+```
 
 ### Cache htaccess
 ```sh
