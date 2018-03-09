@@ -10,6 +10,8 @@ service postfix restart
 
 echo > ~/.bash_history ; history -c
 
+cat /var/log/secure | grep "Accepted password"
+
 sudo service rackspace-monitoring-agent restart
 
 * * * * *   root    pgrep httpd > /dev/null || /bin/systemctl start httpd.service
