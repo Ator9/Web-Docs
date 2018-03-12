@@ -60,4 +60,6 @@ max_input_vars = 1500
 ### wp-config.php
 ```sh
 define('WP_MEMORY_LIMIT', '256M'); // Avada
+
+define('ALLOW_UNFILTERED_UPLOADS', true); // Allow custom fonts upload
 ```
