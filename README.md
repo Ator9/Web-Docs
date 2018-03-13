@@ -70,7 +70,10 @@ du -sk * | sort -nr | head -10
 
 Fin files with specific size (bytes)
 ```sh
-find /var/www/enlaweb.me/web/ -type f -size 85796c -exec ls -lh {} \;
+find /var/www/web.me/web/ -type f -size 85796c -exec ls -lh {} \;
+```
+```sh
+find /var/www/web.me/web/ -type f -size +85550c -size -86000c -exec ls -lh {} \;
 ```
 
 Bind
