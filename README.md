@@ -68,12 +68,17 @@ show top 10 biggest subdirs in the current dir
 du -sk * | sort -nr | head -10
 ```
 
-Fin files with specific size (bytes)
+Find files with specific size (bytes)
 ```sh
 find /var/www/web.me/web/ -type f -size 85796c -exec ls -lh {} \;
 ```
 ```sh
 find /var/www/web.me/web/ -type f -size +85550c -size -86000c -exec ls -lh {} \;
+```
+
+Find files with specific text within
+```sh
+grep -rnw '/path/to/somewhere/' -e 'pattern'
 ```
 
 Bind
