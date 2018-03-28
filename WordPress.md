@@ -39,6 +39,28 @@ Order Deny,Allow
 Deny from xxx.xxx.xx.xx
 ```
 
+### Block PHP in Uploads Folder
+```sh
+Options -Indexes
+
+#Apache 2.2
+RemoveHandler .php .php3
+RemoveType .php .php3
+php_flag engine off
+
+#Apache 2.4
+<FilesMatch \.php$>
+SetHandler None
+ForceType text/plain
+</FilesMatch>
+
+<FilesMatch ".(php)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+```
+
+
 ### Cache htaccess
 ```sh
 # Cache 1 week (year = 31536000)
