@@ -73,7 +73,7 @@ Header set Cache-Control "max-age=604800, public, must-revalidate"
 Insert Code in the page
 ```javascript
 <script>
-jQuery('html').attr('dir', 'ltr');
+jQuery('html').attr('dir', 'rtl');
 </script>
 ```
 
