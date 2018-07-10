@@ -69,7 +69,7 @@ Header set Cache-Control "max-age=604800, public, must-revalidate"
 </FilesMatch>
 ```
 
-### Arabic Page
+### Arabic Page / Divi Templates
 Insert Code in the page
 ```javascript
 <script>
@@ -82,7 +82,7 @@ jQuery('head').append('<link rel="stylesheet" type="text/css" media="all" id="co
 jQuery('body').addClass('rtl');
 </script>
 <style>
-p, h1, h2, h3, h4, h5, h6, h7{text-align:right !important}
+p, h1, h2, h3, h4, h5, h6, h7{text-align:right}
 input[type="text"], input[type="email"], textarea{text-align:right !important}
 </style>
 ```
