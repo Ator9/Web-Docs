@@ -69,7 +69,7 @@ Header set Cache-Control "max-age=604800, public, must-revalidate"
 </FilesMatch>
 ```
 
-### Arabic Page / Divi Templates
+### Arabic Page / Divi Templates / Text Align Right / RTL
 Insert Code in the page
 ```javascript
 <script>
