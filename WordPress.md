@@ -69,6 +69,14 @@ Header set Cache-Control "max-age=604800, public, must-revalidate"
 </FilesMatch>
 ```
 
+### Arabic Page
+Insert Code in the page
+```javascript
+<script>
+jQuery('html').attr('dir', 'ltr');
+</script>
+```
+
 # Avada
 ### /etc/httpd/conf/httpd.conf
 ```php
@@ -84,11 +92,4 @@ max_input_vars = 1500
 define('WP_MEMORY_LIMIT', '256M'); // Avada
 
 define('ALLOW_UNFILTERED_UPLOADS', true); // Allow custom fonts upload
-```
-
-# Arabic Page
-```javascript
-<script>
-jQuery('html').attr('dir', 'ltr');
-</script>
 ```
