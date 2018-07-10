@@ -85,3 +85,10 @@ define('WP_MEMORY_LIMIT', '256M'); // Avada
 
 define('ALLOW_UNFILTERED_UPLOADS', true); // Allow custom fonts upload
 ```
+
+# Arabic Page
+```javascript
+<script>
+jQuery('html').attr('dir', 'ltr');
+</script>
+```
