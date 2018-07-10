@@ -75,6 +75,7 @@ Insert Code in the page
 <script>
 jQuery('html').attr('dir', 'rtl');
 jQuery('head').append('<link rel="stylesheet" type="text/css" media="screen" href="'+location.protocol+'//'+location.hostname+'/wp-content/themes/Divi/rtl.css">');
+jQuery('head').append('<link rel="stylesheet" type="text/css" media="all" id="contact-form-7-rtl.css" href="'+location.protocol+'//'+location.hostname+'/wp-content/plugins/contact-form-7/includes/css/styles-rtl.css">');
 </script>
 ```
 
