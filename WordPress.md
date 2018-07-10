@@ -70,7 +70,7 @@ Header set Cache-Control "max-age=604800, public, must-revalidate"
 ```
 
 ### Arabic Page / Divi Templates / Text Align Right / RTL
-Insert Code in the page
+Insert Code in the page - <a href="https://wordpress.org/plugins/page-menu/" target="_blank">Plugin - Select Menu</a>
 ```javascript
 <script>
 jQuery('html').attr('dir', 'rtl').attr('lang', 'ar');
