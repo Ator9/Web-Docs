@@ -81,6 +81,9 @@ jQuery('head').append('<link rel="stylesheet" type="text/css" media="all" id="co
 
 jQuery('body').addClass('rtl');
 </script>
+<style>
+p, h1, h2, h3, h4, h5, h6, h7{text-align:right}
+</style>
 ```
 
 # Avada
