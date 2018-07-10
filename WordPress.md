@@ -73,7 +73,7 @@ Header set Cache-Control "max-age=604800, public, must-revalidate"
 Insert Code in the page
 ```javascript
 <script>
-jQuery('html').attr('dir', 'rtl');
+jQuery('html').attr('dir', 'rtl').attr('lang', 'ar');
 
 jQuery('head').append('<link rel="stylesheet" type="text/css" media="screen" href="'+location.protocol+'//'+location.hostname+'/wp-content/themes/Divi/rtl.css">');
 
