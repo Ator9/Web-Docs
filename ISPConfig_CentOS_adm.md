@@ -189,4 +189,6 @@ metadata_expire=300
 ```
 ```sh
 sudo yum -q makecache -y --disablerepo='*' --enablerepo='varnishcache_varnish60lts'
+yum install varnish
+varnishd -V
 ```
