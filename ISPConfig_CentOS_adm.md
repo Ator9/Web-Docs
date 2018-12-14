@@ -185,8 +185,8 @@ sslverify=1
 sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 metadata_expire=300
 ```
-sudo yum -q makecache -y --disablerepo='*' --enablerepo='varnishcache_varnish60lts'
 ```sh
+sudo yum -q makecache -y --disablerepo='*' --enablerepo='varnishcache_varnish60lts'
 yum install varnish
 varnishd -V
 ```
@@ -198,3 +198,8 @@ nano /lib/systemd/system/varnish.service
 ```sh
 ExecStart=/usr/sbin/varnishd -a :80 -f /etc/varnish/default.vcl -s malloc,256m
 ```
+```sh
+sudo systemctl daemon-reload
+sudo service varnish restart
+```
+
