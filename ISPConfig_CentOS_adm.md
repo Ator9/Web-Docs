@@ -194,3 +194,9 @@ sudo yum -q makecache -y --disablerepo='*' --enablerepo='varnishcache_varnish60l
 yum install varnish
 varnishd -V
 ```
+```sh
+nano /etc/varnish/varnish.params
+```
+```sh
+VARNISH_LISTEN_PORT=80
+```
