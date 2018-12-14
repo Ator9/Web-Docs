@@ -161,9 +161,7 @@ AllowOverride All
 ```
 
 # Varnish
-```sh
 nano /etc/yum.repos.d/varnishcache_varnish60lts.repo
-```
 ```sh
 [varnishcache_varnish60lts]
 name=varnishcache_varnish60lts
@@ -187,16 +185,16 @@ sslverify=1
 sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 metadata_expire=300
 ```
-```sh
 sudo yum -q makecache -y --disablerepo='*' --enablerepo='varnishcache_varnish60lts'
-```
 ```sh
 yum install varnish
 varnishd -V
 ```
-```sh
 nano /etc/varnish/varnish.params
-```
 ```sh
 VARNISH_LISTEN_PORT=80
+```
+nano /lib/systemd/system/varnish.service
+```sh
+ExecStart=/usr/sbin/varnishd -a :80 -f /etc/varnish/default.vcl -s malloc,256m
 ```
