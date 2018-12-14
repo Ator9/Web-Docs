@@ -32,6 +32,13 @@ nano /etc/varnish/varnish.params
 ```sh
 VARNISH_LISTEN_PORT=80
 ```
+nano /etc/varnish/default.vcl
+```sh
+backend default {
+    .host = "127.0.0.1";
+    .port = "81";
+}
+```
 nano /lib/systemd/system/varnish.service
 ```sh
 ExecStart=/usr/sbin/varnishd -a :80 -f /etc/varnish/default.vcl -s malloc,256m
