@@ -47,3 +47,14 @@ ExecStart=/usr/sbin/varnishd -a :80 -f /etc/varnish/default.vcl -s malloc,256m
 sudo systemctl daemon-reload
 sudo service varnish restart
 ```
+
+# Apache
+nano /etc/httpd/conf/httpd.conf
+```sh
+Listen 81
+```
+
+# Check Ports
+```sh
+netstat -plntu
+```
