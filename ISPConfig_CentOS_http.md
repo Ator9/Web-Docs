@@ -11,7 +11,7 @@ wget http://olivier.sessink.nl/jailkit/jailkit-2.20.tar.gz
 tar -zxvf jailkit-2.20.tar.gz
 cd jailkit-2.20 ; ./configure
 make ; sudo make install
-cd .. ; rm -rf jailkit-2.19*
+cd .. ; rm -rf jailkit-2.20*
 
 ```
 ## <a href="https://github.com/Ator9/Docs/blob/master/ISPConfig_CentOS_adm.md#6-ispconfig-expert-mode" target="_blank">6. ISPConfig (Expert mode)</a>
