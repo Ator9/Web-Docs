@@ -7,9 +7,9 @@ CentOS 7 - Multiserver - HTTP Server
 ```sh
 yum install -y pure-ftpd gcc
 systemctl enable pure-ftpd.service; systemctl start pure-ftpd.service
-wget http://olivier.sessink.nl/jailkit/jailkit-2.19.tar.gz
-tar -zxvf jailkit-2.19.tar.gz
-cd jailkit-2.19 ; ./configure
+wget http://olivier.sessink.nl/jailkit/jailkit-2.20.tar.gz
+tar -zxvf jailkit-2.20.tar.gz
+cd jailkit-2.20 ; ./configure
 make ; sudo make install
 cd .. ; rm -rf jailkit-2.19*
 
