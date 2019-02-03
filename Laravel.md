@@ -1,11 +1,10 @@
 # Laravel Install
-New Project:
+New Project
 ```sh
 composer create-project laravel/laravel .
-or
 composer create-project laravel/laravel foldername
 ```
-Existing Repository: 
+Existing Repository
 - clone from bitbucket
 - install dependencies
 - copy .env.example to .env
