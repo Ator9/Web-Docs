@@ -1,7 +1,12 @@
 # Laravel Install
+New
 ```sh
 composer create-project laravel/laravel .
 composer create-project laravel/laravel foldername
+```
+Existing Repo
+```sh
+composer install
 ```
 <a href="http://www.php-fig.org/psr/psr-2/" target="_blank">Coding Style Guide</a>
 
