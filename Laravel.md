@@ -8,9 +8,12 @@ Existing Project
 - clone it from bitbucket
 - install dependencies
 - copy .env.example to .env
+- create database
 ```sh
 composer install
 php artisan key:generate
+php artisan migrate
+php artisan db:seed
 ```
 
 ## Artisan Console
