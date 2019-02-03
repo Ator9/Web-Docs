@@ -1,12 +1,13 @@
 # Laravel Install
-New
+New Project:
 ```sh
 composer create-project laravel/laravel .
 composer create-project laravel/laravel foldername
 ```
-Existing Repo
+Existing Repository: clone, install dependencies, copy .env.example to .env
 ```sh
 composer install
+php artisan key:generate
 ```
 <a href="http://www.php-fig.org/psr/psr-2/" target="_blank">Coding Style Guide</a>
 
