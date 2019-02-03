@@ -12,7 +12,6 @@ Existing Repository
 composer install
 php artisan key:generate
 ```
-<a href="http://www.php-fig.org/psr/psr-2/" target="_blank">Coding Style Guide</a>
 
 ## Artisan Console
 ```sh
@@ -111,3 +110,5 @@ Edit composer.json and add this line.
 "preferred-install": "dist"
 }
 ```
+## Links
+<a href="http://www.php-fig.org/psr/psr-2/" target="_blank">Coding Style Guide</a>
