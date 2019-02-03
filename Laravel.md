@@ -2,9 +2,13 @@
 New Project:
 ```sh
 composer create-project laravel/laravel .
+or
 composer create-project laravel/laravel foldername
 ```
-Existing Repository: clone, install dependencies, copy .env.example to .env
+Existing Repository: 
+- clone from bitbucket
+- install dependencies
+- copy .env.example to .env
 ```sh
 composer install
 php artisan key:generate
