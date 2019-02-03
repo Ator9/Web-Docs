@@ -1,4 +1,5 @@
-## Laravel - <a href="http://www.php-fig.org/psr/psr-2/" target="_blank">Coding Style Guide</a>
+# Laravel Install
+<a href="http://www.php-fig.org/psr/psr-2/" target="_blank">Coding Style Guide</a>
 ```sh
 composer create-project laravel/laravel .
 composer create-project laravel/laravel foldername
