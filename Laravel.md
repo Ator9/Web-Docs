@@ -5,7 +5,7 @@ composer create-project laravel/laravel .
 composer create-project laravel/laravel foldername
 ```
 Existing Project
-- clone from bitbucket
+- clone it from bitbucket
 - install dependencies
 - copy .env.example to .env
 ```sh
