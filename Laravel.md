@@ -37,6 +37,10 @@ php artisan migrate:fresh
 
 ## Model
 ```sh
+php artisan tinker
+App\Admin::all();
+```
+```sh
 php artisan make:model Admin
 ```
 ```php
