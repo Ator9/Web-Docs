@@ -19,7 +19,6 @@ php artisan db:seed
 ## Artisan Console
 ```sh
 php artisan list make
-php artisan help COMMAND
 ```
 
 Make Files
