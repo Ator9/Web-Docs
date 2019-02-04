@@ -34,7 +34,7 @@ Database Migrations - <a href="http://laravel.com/docs/migrations" target="_blan
 ```sh
 php artisan migrate
 php artisan migrate:rollback
-php artisan migrate:refresh
+php artisan migrate:fresh
 ```
 
 ## Model
