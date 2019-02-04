@@ -21,9 +21,10 @@ Make Files
 ```sh
 php artisan list make
 php artisan help make:migration
+
 php artisan make:controller PagesController --plain
 
-php artisan make:migration create_xxx_table --create="xxx"
+php artisan make:migration create_xxx_table
 php artisan make:migration add_column_to_xxx_table --table="xxx"
 ```
 
