@@ -19,6 +19,7 @@ php artisan db:seed
 ## Artisan Console
 ```sh
 php artisan list make
+php artisan help make:migration
 ```
 
 Make Files
