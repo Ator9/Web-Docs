@@ -17,13 +17,10 @@ php artisan db:seed
 ```
 
 ## Artisan Console
+Make Files
 ```sh
 php artisan list make
 php artisan help make:migration
-```
-
-Make Files
-```sh
 php artisan make:controller PagesController --plain
 
 php artisan make:migration create_xxx_table --create="xxx"
