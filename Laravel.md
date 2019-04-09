@@ -37,7 +37,6 @@ php artisan migrate:fresh
 Production Optimizations
 ```sh
 php artisan config:cache
-php artisan config:clear
 ```
 
 ## .git/info/exclude
