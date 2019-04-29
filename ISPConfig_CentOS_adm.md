@@ -125,6 +125,7 @@ chmod a+x ./certbot-auto
 
 # 9. ISPConfig Update (Optional / If Needed) - <a href="http://www.faqforge.com/linux/controlpanels/ispconfig3/how-to-update-ispconfig-3/" target="_blank">Notes</a>
 ```sh
+// /usr/local/ispconfig/server/scripts/
 ispconfig_update.sh
 
 ```
