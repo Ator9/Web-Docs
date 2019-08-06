@@ -161,6 +161,14 @@ Descomprimir tar.gz
 tar -zxvf  backup_2012.tar.gz
 ```
 
+Mount wp-content in another disk
+```sh
+cp -fr --preserve wp-content /data/wp-content/
+mv wp-content /wp-content.old
+
+ln -sf /data/wp-content/ /var/www/site/web/wp-content
+```
+
 Asterisk Restart from CLI Admin
 ```sh
 core restart now
