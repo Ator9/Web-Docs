@@ -136,7 +136,7 @@ Master / Slaves Config:
 - Reconfigure Services: yes
 - Reconfigure Crontab: yes
 
-# PHP 7.1
+# PHP 7.3
 ```sh
 php --version
 wget -q http://rpms.remirepo.net/enterprise/remi-release-7.rpm
