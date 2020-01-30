@@ -53,6 +53,9 @@ database/*
 !database/migrations
 database/migrations/*
 !database/migrations/2019_01_01_000000_create_adminux.php
+!database/seeds
+database/seeds/*
+!database/seeds/AdminuxSeeder.php
 
 !public/*
 public/*
