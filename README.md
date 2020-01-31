@@ -57,7 +57,7 @@ http://www.serdarbayram.net/blocking-https-facebook-and-twitter-on-pfsense.html
 whois -h whois.radb.net -- '-i origin AS32934' | grep ^route
 ```
 
-Check HTTPS. Check invalid redirects.
+Check HTTPS Certificate. Check invalid redirects.
 ```sh
 curl -IvL https://domain.me
 ```
