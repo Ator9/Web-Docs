@@ -41,6 +41,11 @@ whois -h whois.nic.ar DOMINIO.COM.AR
 
 ```
 
+External Public IP
+```sh
+dig +short myip.opendns.com @resolver1.opendns.com
+```
+
 How do I force Git to overwrite local files on pull?
 ```sh
 error: Your local changes to the following files would be overwritten by merge:
