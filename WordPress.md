@@ -1,3 +1,10 @@
+### FIX CHMOD
+<a href="https://codex.wordpress.org/Create_A_Network" target="_blank">Create a Network</a>
+```sh
+find . -type d -exec chmod 755 {} \;  # Change directory permissions rwxr-xr-x
+find . -type f -exec chmod 644 {} \;
+```
+
 # WordPress - <a href="https://codex.wordpress.org/Updating_WordPress#Manual_Update" target="_blank">Manual Update</a>
 
 ### Multisite
