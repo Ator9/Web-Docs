@@ -34,6 +34,7 @@ tail -100 /var/log/mariadb/mariadb.log
 scp file.tar.gz user@domain.net:/home/user
 scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 
+cd /opt/certbot/
 certbot renew --force-renewal
 ```
 
