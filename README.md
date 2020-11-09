@@ -44,6 +44,11 @@ whois -h whois.nic.ar DOMINIO.COM.AR
 
 ```
 
+Clean CentOS Cache
+```sh
+yum clean all
+```
+
 External Public IP
 ```sh
 dig +short myip.opendns.com @resolver1.opendns.com
