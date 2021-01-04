@@ -127,7 +127,6 @@ chmod a+x ./certbot-auto
 ```sh
 ispconfig_update.sh
 /usr/local/ispconfig/server/scripts/ispconfig_update.sh
-
 ```
 
 Master / Slaves Config:
@@ -135,6 +134,19 @@ Master / Slaves Config:
 - Reconfigure Permissions: yes
 - Reconfigure Services: yes
 - Reconfigure Crontab: yes
+
+Update from 3.1 to 3.2 (CentOS 7)
+```sh
+sudo yum -y install ncurses-devel gcc geoip-devel tokyocabinet-devel lbzip2 p7zip xz-libs lzip
+cd /tmp
+wget http://tar.goaccess.io/goaccess-1.4.tar.gz
+tar xfz goaccess-1.4.tar.gz
+cd goaccess-1.4
+sudo ./configure --enable-utf8 --enable-geoip=legacy
+sudo make
+sudo make install
+sudo ln -s /usr/local/bin/goaccess /usr/bin/goaccess
+```
 
 # PHP 7.3
 ```sh
