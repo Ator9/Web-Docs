@@ -135,7 +135,8 @@ Master / Slaves Config:
 - Reconfigure Services: yes
 - Reconfigure Crontab: yes
 
-Update from 3.1 to 3.2 (CentOS 7)
+
+Update from 3.1 to 3.2 (CentOS 7):
 ```sh
 sudo yum -y install ncurses-devel gcc geoip-devel tokyocabinet-devel lbzip2 p7zip xz-libs lzip
 cd /tmp
