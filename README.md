@@ -186,7 +186,7 @@ Mount wp-content in another disk
 cp -fr --preserve wp-content /data/wp-content
 mv wp-content wp-content.old
 
-ln -sf /data/wp-content wp-content
+ln -sf /data/uploads uploads
 ```
 
 Asterisk Restart from CLI Admin
