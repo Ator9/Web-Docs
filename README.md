@@ -181,7 +181,7 @@ Descomprimir tar.gz
 tar -zxvf  backup_2012.tar.gz
 ```
 
-Mount wp-content in another disk
+Mount wp-content in another disk (ispconfig PHP open_basedir :/data)
 ```sh
 cp -fr --preserve wp-content /data/wp-content
 mv wp-content wp-content.old
