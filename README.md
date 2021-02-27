@@ -187,6 +187,7 @@ cp -fr --preserve wp-content /data/wp-content
 mv wp-content wp-content.old
 
 ln -sf /data/uploads uploads
+chown -h web7:client1 uploads
 ```
 
 Asterisk Restart from CLI Admin
