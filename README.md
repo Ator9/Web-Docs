@@ -12,8 +12,6 @@ echo > ~/.bash_history ; history -c
 
 cat /var/log/secure | grep "Accepted password"
 
-sudo service rackspace-monitoring-agent restart
-
 * * * * *   root    pgrep httpd > /dev/null || /bin/systemctl start httpd.service
 * * * * *   root    pgrep mysqld > /dev/null || /bin/systemctl start mariadb.service
 
@@ -36,6 +34,7 @@ scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 
 cd /opt/certbot/
 ./certbot-auto renew --force-renewal
+sudo certbot delete
 ```
 
 Nameservers NIC.ar
@@ -61,13 +60,6 @@ error: The following untracked working tree files would be overwritten by merge:
 
 git fetch --all
 git reset --hard origin/master
-```
-
-PfSense Block Ips/Domains
-```sh
-http://www.serdarbayram.net/blocking-https-facebook-and-twitter-on-pfsense.html
-
-whois -h whois.radb.net -- '-i origin AS32934' | grep ^route
 ```
 
 Check HTTPS Certificate. Check invalid redirects.
@@ -111,26 +103,6 @@ Mount
 ```sh
 freenas.domain.net:/mnt/folder /home/myuser/freenas nfs defaults 0 0
 mount -a
-```
-
-Network digitalocean config example
-```sh
-/etc/sysconfig/network-scripts/ifcfg-eth0
-service network restart
-```
-```sh
-BOOTPROTO=none
-DEVICE=eth0
-HWADDR=x
-ONBOOT=yes
-TYPE=Ethernet
-USERCTL=no
-GATEWAY=x
-IPADDR=x
-NETMASK=x
-DNS1=8.8.8.8
-DNS2=8.8.4.4
-NM_CONTROLLED="YES"
 ```
 
 Network reset
@@ -188,11 +160,6 @@ mv wp-content wp-content.old
 
 ln -sf /data/uploads uploads
 chown -h web7:client1 uploads
-```
-
-Asterisk Restart from CLI Admin
-```sh
-core restart now
 ```
 
 Search repo rpm and delete (to solve yum conflicts)
