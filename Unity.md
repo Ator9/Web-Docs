@@ -1,1 +1,5 @@
--batchmode -nographics
+Linux Execute Game
+```sh
+chmod +x nameOfGame.x86
+./nameOfGame.x86 -batchmode -nographics
+```
