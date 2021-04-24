@@ -28,6 +28,18 @@ Build Exclusion 2 (Code excluded in final build)
 #endif
 ```
 
+Build Exclusion 3 (Code excluded in final build)
+```c#
+ServerFunction();
+public void ServerFunction()
+{
+    #if UNITY_STANDALONE_LINUX || UNITY_EDITOR
+    print("im server");
+    #endif
+}
+
+```
+
 Server check if
 ```c#
 if (SystemInfo.deviceName == "domain.server.com")
