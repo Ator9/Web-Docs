@@ -6,7 +6,7 @@ chmod +x nameOfGame.x86
 
 IF Code Compile
 ```c#
-#if HEADLESS || UNITY_STANDALONE_LINUX || UNITY_EDITOR
+#if UNITY_STANDALONE_LINUX || UNITY_EDITOR
     Debug.Log("server");
 #endif
 
