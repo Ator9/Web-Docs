@@ -8,7 +8,7 @@ Code Build Exclusion
 ```c#
 #if UNITY_STANDALONE_LINUX || UNITY_EDITOR
     Debug.Log("server");
-    ServerFunction);
+    ServerFunction();
 #endif
 
 #if UNITY_STANDALONE_LINUX || UNITY_EDITOR
