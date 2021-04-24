@@ -4,7 +4,7 @@ chmod +x nameOfGame.x86
 ./nameOfGame.x86 -batchmode
 ```
 
-Code Build Exclusion 1
+Build Exclusion 1 (Code included)
 ```c#
 [Conditional("UNITY_STANDALONE_LINUX"), Conditional("UNITY_EDITOR")]
 public void ServerFunction()
@@ -13,7 +13,7 @@ public void ServerFunction()
 }
 ```
 
-Code Build Exclusion 2
+Build Exclusion 2 (Code excluded)
 ```c#
 #if UNITY_STANDALONE_LINUX || UNITY_EDITOR
     Debug.Log("server");
