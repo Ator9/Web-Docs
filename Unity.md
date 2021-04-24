@@ -28,9 +28,6 @@ Code Build Exclusion 2
 #endif
 ```
 
-
-[Conditional("UNITY_STANDALONE_LINUX"), Conditional("UNITY_EDITOR")]
-
 Server check if
 ```c#
 if (SystemInfo.deviceName == "domain.server.com")
