@@ -3,3 +3,15 @@ Linux execute game
 chmod +x nameOfGame.x86
 ./nameOfGame.x86 -batchmode -nographics
 ```
+
+Linux execute game
+```c#
+#if HEADLESS || UNITY_EDITOR
+    Debug.Log("server");
+#endif
+
+if (SystemInfo.deviceName == "domain.server.com")
+{
+    AutoClickServer(); // 1 host
+}
+```
