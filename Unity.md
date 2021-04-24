@@ -4,7 +4,7 @@ chmod +x nameOfGame.x86
 ./nameOfGame.x86 -batchmode -nographics
 ```
 
-Linux execute game
+IF Code Compile
 ```c#
 #if HEADLESS || UNITY_EDITOR
     Debug.Log("server");
