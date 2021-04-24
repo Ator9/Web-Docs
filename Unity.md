@@ -17,7 +17,16 @@ Code Build Exclusion
         print("im server");
     }
 #endif
+
+[Conditional("UNITY_STANDALONE_LINUX"), Conditional("UNITY_EDITOR")]
+public void ServerFunction()
+{
+    print("im server");
+}
 ```
+
+
+[Conditional("UNITY_STANDALONE_LINUX"), Conditional("UNITY_EDITOR")]
 
 Server check if
 ```c#
