@@ -8,6 +8,14 @@ Code Build Exclusion
 ```c#
 #if UNITY_STANDALONE_LINUX || UNITY_EDITOR
     Debug.Log("server");
+    ServerFunction);
+#endif
+
+#if UNITY_STANDALONE_LINUX || UNITY_EDITOR
+    public void ServerFunction()
+    {
+        print("im server");
+    }
 #endif
 ```
 
