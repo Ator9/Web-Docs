@@ -123,7 +123,7 @@ chmod a+x ./certbot-auto
 ./certbot-auto
 ```
 
-Remove OLD certbot-auto
+Remove OLD certbot-auto - <a href="https://certbot.eff.org/lets-encrypt/centosrhel7-apache" target="_blank">Notes</a> 
 ```sh
 sudo rm -rf /opt/eff.org
 ```
