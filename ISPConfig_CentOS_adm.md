@@ -123,6 +123,21 @@ chmod a+x ./certbot-auto
 ./certbot-auto
 ```
 
+Remove OLD certbot-auto
+```sh
+sudo rm -rf /opt/eff.org
+```
+
+Install NEW certbot
+```sh
+sudo yum install snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+
+sudo snap install --classic certbot
+```
+
+
 # 9. ISPConfig Update (Optional / If Needed) - <a href="http://www.faqforge.com/linux/controlpanels/ispconfig3/how-to-update-ispconfig-3/" target="_blank">Notes</a>
 ```sh
 ispconfig_update.sh
