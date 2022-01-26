@@ -165,12 +165,12 @@ sudo make install
 sudo ln -s /usr/local/bin/goaccess /usr/bin/goaccess
 ```
 
-# PHP 7.3
+# PHP 7.4
 ```sh
 php --version
 wget -q http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 rpm -Uvh remi-release-7.rpm 
-yum-config-manager --enable remi-php73
+yum-config-manager --enable remi-php74
 yum install -y php php-pecl-zip ; yum update -y
 sed -i -e 's/;error_log = php_errors.log/error_log = \/var\/log\/php_errors.log/g' /etc/php.ini
 service httpd restart
