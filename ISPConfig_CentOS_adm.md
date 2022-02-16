@@ -176,6 +176,10 @@ sed -i -e 's/;error_log = php_errors.log/error_log = \/var\/log\/php_errors.log/
 service httpd restart
 php --version
 ```
+```sh
+yum-config-manager --disable remi-php71
+yum repolist
+```
 
 # Automatic Domains
 Paste before "NameVirtualHost" in /etc/httpd/conf/httpd.conf:
