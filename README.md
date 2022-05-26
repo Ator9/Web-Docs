@@ -45,6 +45,17 @@ whois -h whois.nic.ar DOMINIO.COM.AR
 
 ```
 
+ISPCONFIG /usr/local/ispconfig/server/plugins-available/webserver_plugin.inc.php
+```sh
+if(!function_exists("array_column")){
+        function array_column($array,$column_name){
+                return array_map(function($element) use($column_name){return $element[$column_name];}, $array);
+        }
+}
+
+```
+
+
 Clean CentOS Cache
 ```sh
 yum clean all
