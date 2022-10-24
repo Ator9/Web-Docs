@@ -65,6 +65,8 @@ ForceType text/plain
 Order allow,deny
 Deny from all
 </FilesMatch>
+
+RedirectMatch 403 "(.*)\.html$"
 ```
 
 
