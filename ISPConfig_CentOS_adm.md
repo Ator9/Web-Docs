@@ -181,6 +181,16 @@ yum-config-manager --disable remi-php71
 yum repolist
 ```
 
+# PHP 8.0
+```sh
+php -v
+yum-config-manager --enable remi-php80
+yum update
+yum remove php-pecl-apcu-bc
+service httpd restart
+php -v
+```
+
 # Automatic Domains
 Paste before "NameVirtualHost" in /etc/httpd/conf/httpd.conf:
 ```sh
