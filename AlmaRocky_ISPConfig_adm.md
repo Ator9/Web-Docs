@@ -22,7 +22,7 @@ ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
 sed -i -e 's/PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/sshd_config
 service sshd restart
 
-echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
+echo "$my_cp_ip     $my_cp_host" >> /etc/hosts
 echo "$my_http_ip     $my_http_host" >> /etc/hosts
 service network restart
 
