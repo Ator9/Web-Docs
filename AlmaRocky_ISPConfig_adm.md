@@ -15,8 +15,11 @@ my_http_ip=XXX
 
 ```sh
 yum update -y
+yum install -y nano git telnet nmap quota epel-release
+yum install -y yum-utils clamav clamav-update rkhunter
+
+
 yum install -y telnet nmap quota ntp epel-release git yum-utils
-yum install -y clamav clamav-update rkhunter
 echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
 echo "$my_http_ip     $my_http_host" >> /etc/hosts
 service network restart
