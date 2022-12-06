@@ -28,3 +28,21 @@ service sshd restart
 chkconfig ip6tables off
 
 ```
+
+# 2. Swap, quota, fail2ban & firewall
+```sh
+sudo fallocate -l 1G /var/swap.img ; chmod 600 /var/swap.img
+mkswap /var/swap.img ; swapon /var/swap.img
+echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
+sed -i '0,/defaults/s//defaults,usrquota,grpquota/' /etc/fstab
+mount -o remount /
+
+quotacheck -avugm ; quotaon -avug
+yum install -y fail2ban
+cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+sed -i -e 's/bantime  = 600/bantime  = 3600/g' /etc/fail2ban/jail.local
+systemctl enable fail2ban.service ; systemctl start fail2ban.service
+systemctl stop firewalld.service ; systemctl disable firewalld.service
+sed -i -e "s/=permissive/=disabled/g" /etc/selinux/config
+
+```
