@@ -113,30 +113,6 @@ Bind
 mount -a
 ```
 
-#how to reset your network from inside your server#
-
-#generate uuid#
-uuid=$(uuidgen)
-
-#grab networking data from host sever#
-xenstore-write data/host/$uuid '{"name":"resetnetwork","value":""}'
-
-secs=$((1 * 60))
-while [ $secs -gt 0 ]; do
-   echo -ne "$secs\033[0K\r"
-   sleep 1
-   : $((secs--))
-done
-
-#confirm that the reset took place#
-xenstore-read data/guest/$uuid
-#you should get a value of 0 in the responce to this command. Anything else means something is still wrong with nova-agent.#
-```
-```sh
-chmod +x netreset.sh
-./netreset.sh
-```
-
 Delete queued mail
 ```sh
 postqueue -p
@@ -167,14 +143,3 @@ Search repo rpm and delete (to solve yum conflicts)
 rpm -qa | grep -i repo-name
 rpm -e repo-name
 ```
-
-Flush All Rules, Delete All Chains, and Accept All
-```sh
-sudo iptables -P INPUT ACCEPT ; sudo iptables -P FORWARD ACCEPT ; sudo iptables -P OUTPUT ACCEPT
-
-sudo iptables -t nat -F ; sudo iptables -t mangle -F ; sudo iptables -F ; sudo iptables -X ;
-/etc/init.d/iptables save
-
-csf -x
-```
-You can disable the "bandmin" cron jobs using the "crontab -e" command, as it's those cron jobs that add the iptables rules you are referring to. 
