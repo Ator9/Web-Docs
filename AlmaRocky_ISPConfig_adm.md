@@ -14,13 +14,13 @@ my_http_ip=XXX
 ```
 
 ```sh
-yum update -y
-yum install -y nano git telnet nmap quota epel-release langpacks-en
-yum install -y yum-utils clamav clamd clamav-update rkhunter
-
 ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
 sed -i -e 's/PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/sshd_config
 service sshd restart
+
+yum update -y
+yum install -y nano git telnet nmap quota epel-release langpacks-en
+yum install -y yum-utils clamav clamd clamav-update rkhunter
 
 echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
 echo "$my_http_ip     $my_http_host" >> /etc/hosts
