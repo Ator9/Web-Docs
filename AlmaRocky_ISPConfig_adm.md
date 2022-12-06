@@ -19,7 +19,6 @@ yum install -y nano git telnet nmap quota epel-release langpacks-en
 yum install -y yum-utils clamav clamd clamav-update rkhunter
 
 
-yum install -y telnet nmap quota ntp epel-release git yum-utils
 echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
 echo "$my_http_ip     $my_http_host" >> /etc/hosts
 service network restart
