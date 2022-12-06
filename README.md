@@ -113,20 +113,6 @@ Bind
 mount -a
 ```
 
-Mount
-```sh
-freenas.domain.net:/mnt/folder /home/myuser/freenas nfs defaults 0 0
-mount -a
-```
-
-Network reset
-http://api.curltools.com/scripts/resetnetwork
-```sh
-nano netreset.sh
-```
-```sh
-#!/bin/bash
-
 #how to reset your network from inside your server#
 
 #generate uuid#
