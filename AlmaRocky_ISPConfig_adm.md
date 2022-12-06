@@ -16,7 +16,7 @@ my_http_ip=XXX
 ```sh
 yum update -y
 yum install -y nano git telnet nmap quota epel-release
-yum install -y yum-utils clamav clamav-update rkhunter
+yum install -y yum-utils clamav clamd clamav-update rkhunter
 
 
 yum install -y telnet nmap quota ntp epel-release git yum-utils
