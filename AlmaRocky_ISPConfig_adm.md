@@ -61,3 +61,24 @@ mysql -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_http_
 
 mysql -uroot -p$my_db_pass -e "SHOW DATABASES;SELECT User,Host FROM mysql.user"
 ```
+
+# 4. Apache & PHP
+```sh
+yum install -y httpd mod_ssl
+service httpd start ; systemctl enable httpd.service
+yum install -y php php-devel php-gd php-imap php-ldap php-mssql php-mysql php-odbc php-pear php-xml php-xmlrpc php-pecl-apc php-mbstring php-mcrypt php-snmp php-soap php-tidy curl curl-devel perl-libwww-perl ImageMagick libxml2 libxml2-devel php-cli httpd-devel unzip bzip2 perl-DBD-mysql php-fpm mod_fcgid
+systemctl start php-fpm.service ; systemctl enable php-fpm.service
+service httpd restart
+
+```
+
+# 5. phpMyAdmin
+```sh
+yum install -y phpmyadmin
+sed -i -e 's/Require ip ::1/Require ip ::1\nRequire all granted/' /etc/httpd/conf.d/phpMyAdmin.conf
+sed -i -e 's/?>//g' /etc/phpMyAdmin/config.inc.php
+sed -i -e "s/localhost/$my_db_host/g" /etc/phpMyAdmin/config.inc.php
+echo "\$cfg['Servers'][\$i]['hide_db'] = '^information_schema|dbispconfig|performance_schema|mysql\$';" >> /etc/phpMyAdmin/config.inc.php
+service httpd restart
+
+```
