@@ -26,7 +26,7 @@ echo "$my_cp_ip     $my_cp_host" >> /etc/hosts
 echo "$my_http_ip     $my_http_host" >> /etc/hosts
 ```
 
-# 2. Swap, quota, fail2ban & firewall
+# 2. Swap, quota, firewall
 ```sh
 sudo fallocate -l 1G /var/swap.img ; chmod 600 /var/swap.img
 mkswap /var/swap.img ; swapon /var/swap.img
@@ -37,10 +37,6 @@ sed -i '0,/console=tty0/s//console=tty0 rootflags=uquota,gquota/' /etc/default/g
 grub2-mkconfig -o /boot/grub2/grub.cfg
 reboot
 
-yum install -y fail2ban
-cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-sed -i -e 's/bantime  = 600/bantime  = 3600/g' /etc/fail2ban/jail.local
-systemctl enable fail2ban.service ; systemctl start fail2ban.service
 systemctl stop firewalld.service ; systemctl disable firewalld.service
 sed -i -e "s/=permissive/=disabled/g" /etc/selinux/config
 
