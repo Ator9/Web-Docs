@@ -1,7 +1,7 @@
 
 Rocky Linux 9 - ISPConfig Multiserver - HTTP Server
 ## <a href="https://github.com/Ator9/Docs/blob/master/AlmaRocky_ISPConfig_adm.md#1-startup" target="_blank">1. Startup</a>
-## <a href="https://github.com/Ator9/Docs/blob/master/AlmaRocky_ISPConfig_adm.md#2-swap-quota-fail2ban--firewall" target="_blank">2. Swap, quota, fail2ban & firewall</a>
+## <a href="https://github.com/Ator9/Docs/blob/master/AlmaRocky_ISPConfig_adm.md#2-swap-quota-fail2ban--firewall" target="_blank">2. Swap, quota, firewall</a>
 ## <a href="https://github.com/Ator9/Docs/blob/master/AlmaRocky_ISPConfig_adm.md#3-mariadb--grant-access-to-servers" target="_blank">3. MariaDB & GRANT access to servers</a>
 ## <a href="https://github.com/Ator9/Docs/blob/master/AlmaRocky_ISPConfig_adm.md#4-apache--php" target="_blank">4. Apache & PHP</a>
 ## 5. PureFTPd & Jailkit
