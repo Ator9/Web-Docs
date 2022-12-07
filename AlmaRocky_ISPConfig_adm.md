@@ -38,6 +38,6 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 reboot
 
 systemctl stop firewalld.service ; systemctl disable firewalld.service
-sed -i -e "s/=permissive/=disabled/g" /etc/selinux/config
+sed -i -e "s/=enforcing/=permissive/g" /etc/selinux/config
 
 ```
