@@ -39,5 +39,5 @@ reboot
 
 systemctl stop firewalld.service ; systemctl disable firewalld.service
 sed -i -e "s/=enforcing/=permissive/g" /etc/selinux/config
-
+reboot
 ```
