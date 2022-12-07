@@ -24,8 +24,6 @@ service sshd restart
 
 echo "$my_cp_ip     $my_cp_host" >> /etc/hosts
 echo "$my_http_ip     $my_http_host" >> /etc/hosts
-service network restart
-
 ```
 
 # 2. Swap, quota, fail2ban & firewall
