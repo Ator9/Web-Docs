@@ -31,7 +31,8 @@ echo "$my_http_ip     $my_http_host" >> /etc/hosts
 sudo fallocate -l 1G /var/swap.img ; chmod 600 /var/swap.img
 mkswap /var/swap.img ; swapon /var/swap.img
 echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
-sed -i '0,/defaults/s//defaults,usrquota,grpquota/' /etc/fstab
+
+sed -i '0,/console=tty0/s//console=tty0 rootflags=uquota,gquota/' /etc/default/grub
 mount -o remount /
 
 quotacheck -avugm ; quotaon -avug
