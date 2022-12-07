@@ -66,7 +66,7 @@ mysql -uroot -p$my_db_pass -e "SHOW DATABASES;SELECT User,Host FROM mysql.user"
 ```sh
 yum install -y httpd mod_ssl
 service httpd start ; systemctl enable httpd.service
-yum install -y php php-devel php-gd php-imap php-ldap php-mssql php-mysql php-odbc php-pear php-xml php-xmlrpc php-pecl-apc php-mbstring php-mcrypt php-snmp php-soap php-tidy curl curl-devel perl-libwww-perl ImageMagick libxml2 libxml2-devel php-cli httpd-devel unzip bzip2 perl-DBD-mysql php-fpm mod_fcgid
+yum install -y php php-devel php-gd php-ldap php-odbc php-pear php-xml php-mbstring php-snmp php-soap php-tidy curl curl-devel perl-libwww-perl ImageMagick libxml2 libxml2-devel php-cli httpd-devel unzip bzip2 perl-DBD-mysql php-fpm mod_fcgid
 systemctl start php-fpm.service ; systemctl enable php-fpm.service
 service httpd restart
 
