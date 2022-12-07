@@ -70,6 +70,11 @@ yum install -y php php-devel php-gd php-ldap php-odbc php-pear php-xml php-mbstr
 systemctl start php-fpm.service ; systemctl enable php-fpm.service
 
 echo "RequestHeader unset Proxy early" >> /etc/httpd/conf/httpd.conf
+echo "AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript" >> /etc/httpd/conf/httpd.conf
+echo 'ServerTokens Prod' >> /etc/httpd/conf/httpd.conf
+
+sed -i -e 's/short_open_tag = Off/short_open_tag = On/g' /etc/php.ini
+sed -i -e 's/expose_php = On/expose_php = Off/g' /etc/php.ini
 
 service httpd restart
 
