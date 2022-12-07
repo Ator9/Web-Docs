@@ -96,7 +96,6 @@ if(!in_array($_SERVER['REMOTE_ADDR'], array('yourip'))) exit();
 # 6. ISPConfig
 Expert mode ("N" to mail/jailkit/pureftpd/dns/OpenVZ/firewall, "Y" rest)
 ```sh
-service httpd restart
 wget http://www.ispconfig.org/downloads/ISPConfig-3-stable.tar.gz
 tar -zxvf ISPConfig-3-stable.tar.gz
 sudo php -q ispconfig3_install/install/install.php
