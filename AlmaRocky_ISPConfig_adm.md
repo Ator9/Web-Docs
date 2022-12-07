@@ -32,10 +32,11 @@ sudo fallocate -l 1G /var/swap.img ; chmod 600 /var/swap.img
 mkswap /var/swap.img ; swapon /var/swap.img
 echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
 
+mount | grep ' / '
 sed -i '0,/console=tty0/s//console=tty0 rootflags=uquota,gquota/' /etc/default/grub
-mount -o remount /
+grub2-mkconfig -o /boot/grub2/grub.cfg
+reboot
 
-quotacheck -avugm ; quotaon -avug
 yum install -y fail2ban
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 sed -i -e 's/bantime  = 600/bantime  = 3600/g' /etc/fail2ban/jail.local
