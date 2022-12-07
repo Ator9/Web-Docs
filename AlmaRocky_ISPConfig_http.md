@@ -12,7 +12,7 @@ wget http://olivier.sessink.nl/jailkit/jailkit-2.23.tar.gz
 tar -zxvf jailkit-2.23.tar.gz
 cd jailkit-2.23 ; ./configure
 make ; sudo make install
-cd .. ; rm -rf jailkit-2.20*
+cd .. ; rm -rf jailkit-2.23*
 
 ```
 ## <a href="https://github.com/Ator9/Web-Docs/blob/master/AlmaRocky_ISPConfig_adm.md#6-ispconfig" target="_blank">6. ISPConfig (Expert mode)</a>
