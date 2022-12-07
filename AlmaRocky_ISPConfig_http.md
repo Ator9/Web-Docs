@@ -1,9 +1,9 @@
 
 Rocky Linux 9 - ISPConfig Multiserver - HTTP Server
-## <a href="https://github.com/Ator9/Docs/blob/master/ISPConfig_CentOS_adm.md#1-startup" target="_blank">1. Startup</a>
-## <a href="https://github.com/Ator9/Docs/blob/master/ISPConfig_CentOS_adm.md#2-swap-quota-fail2ban--firewall" target="_blank">2. Swap, quota, fail2ban & firewall</a>
-## <a href="https://github.com/Ator9/Docs/blob/master/ISPConfig_CentOS_adm.md#3-mariadb--grant-access-to-servers" target="_blank">3. MariaDB & GRANT access to servers</a>
-## <a href="https://github.com/Ator9/Docs/blob/master/ISPConfig_CentOS_adm.md#4-apache--php" target="_blank">4. Apache & PHP</a>
+## <a href="https://github.com/Ator9/Docs/blob/master/AlmaRocky_ISPConfig_adm.md#1-startup" target="_blank">1. Startup</a>
+## <a href="https://github.com/Ator9/Docs/blob/master/AlmaRocky_ISPConfig_adm.md#2-swap-quota-fail2ban--firewall" target="_blank">2. Swap, quota, fail2ban & firewall</a>
+## <a href="https://github.com/Ator9/Docs/blob/master/AlmaRocky_ISPConfig_adm.md#3-mariadb--grant-access-to-servers" target="_blank">3. MariaDB & GRANT access to servers</a>
+## <a href="https://github.com/Ator9/Docs/blob/master/AlmaRocky_ISPConfig_adm.md#4-apache--php" target="_blank">4. Apache & PHP</a>
 ## 5. PureFTPd & Jailkit
 ```sh
 yum install -y pure-ftpd gcc
@@ -15,8 +15,8 @@ make ; sudo make install
 cd .. ; rm -rf jailkit-2.20*
 
 ```
-## <a href="https://github.com/Ator9/Docs/blob/master/ISPConfig_CentOS_adm.md#6-ispconfig-expert-mode" target="_blank">6. ISPConfig (Expert mode)</a>
-## <a href="https://github.com/Ator9/Docs/blob/master/ISPConfig_CentOS_adm.md#7-configuration" target="_blank">7. Configuration</a>
+## <a href="https://github.com/Ator9/Docs/blob/master/AlmaRocky_ISPConfig_adm.md#6-ispconfig-expert-mode" target="_blank">6. ISPConfig (Expert mode)</a>
+## <a href="https://github.com/Ator9/Docs/blob/master/AlmaRocky_ISPConfig_adm.md#7-configuration" target="_blank">7. Configuration</a>
 ## 8. Server Status (Optional)
 ```sh
 echo '<Location /status>' >> /etc/httpd/conf/httpd.conf
