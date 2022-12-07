@@ -15,9 +15,8 @@ make ; sudo make install
 cd .. ; rm -rf jailkit-2.20*
 
 ```
-## <a href="https://github.com/Ator9/Docs/blob/master/AlmaRocky_ISPConfig_adm.md#6-ispconfig-expert-mode" target="_blank">6. ISPConfig (Expert mode)</a>
-## <a href="https://github.com/Ator9/Docs/blob/master/AlmaRocky_ISPConfig_adm.md#7-configuration" target="_blank">7. Configuration</a>
-## 8. Server Status (Optional)
+## <a href="https://github.com/Ator9/Web-Docs/blob/master/AlmaRocky_ISPConfig_adm.md#6-ispconfig" target="_blank">6. ISPConfig (Expert mode)</a>
+## 7. Server Status (Optional)
 ```sh
 echo '<Location /status>' >> /etc/httpd/conf/httpd.conf
 echo 'SetHandler server-status' >> /etc/httpd/conf/httpd.conf
@@ -28,7 +27,7 @@ echo '</Location>' >> /etc/httpd/conf/httpd.conf
 service httpd restart
 
 ```
-## 9. Secure PureFTPd (Optional)
+## 8. Secure PureFTPd (Optional)
 ```sh
 mkdir -p /etc/ssl/private/
 openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
