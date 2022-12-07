@@ -79,8 +79,9 @@ service httpd restart
 ```sh
 yum install -y phpmyadmin
 sed -i -e 's/Require local/Require local\nRequire all granted/' /etc/httpd/conf.d/phpMyAdmin.conf
-sed -i -e "s/localhost/$my_adm_host/g" /etc/phpMyAdmin/config.inc.php
 echo "\$cfg['Servers'][\$i]['hide_db'] = '^information_schema|dbispconfig|performance_schema|mysql\$';" >> /etc/phpMyAdmin/config.inc.php
 service httpd restart
-
+```
+```php
+if(!in_array($_SERVER['REMOTE_ADDR'], array('yourip'))) exit();
 ```
