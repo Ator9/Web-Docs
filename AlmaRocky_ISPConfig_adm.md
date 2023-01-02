@@ -91,7 +91,7 @@ sudo php -q ispconfig3_install/install/install.php
 
 ```
 
-# A1. phpMyAdmin (Master Server)
+## A1. phpMyAdmin (Master Server)
 ```sh
 yum install -y phpmyadmin
 sed -i -e 's/Require local/Require local\nRequire all granted/' /etc/httpd/conf.d/phpMyAdmin.conf
