@@ -70,10 +70,10 @@ mysql -uroot -p$my_db_pass -e "SHOW DATABASES;SELECT User,Host FROM mysql.user"
 
 # 4. Apache & PHP
 ```sh
-yum install -y httpd mod_ssl
+yum install -y httpd httpd-devel mod_ssl
 service httpd start ; systemctl enable httpd.service
-yum install -y php php-devel php-gd php-ldap php-mysqlnd php-odbc php-pear php-xml php-mbstring php-snmp php-soap php-tidy curl curl-devel perl-libwww-perl ImageMagick libxml2 libxml2-devel php-cli httpd-devel unzip bzip2 perl-DBD-mysql php-fpm mod_fcgid
-systemctl start php-fpm.service ; systemctl enable php-fpm.service
+yum install -y php php-devel php-gd php-ldap php-mysqlnd php-odbc php-pear php-xml php-mbstring php-snmp php-soap php-tidy curl curl-devel
+yum install -y perl-libwww-perl ImageMagick libxml2 libxml2-devel php-cli unzip bzip2 perl-DBD-mysql php-fpm mod_fcgid
 
 echo "RequestHeader unset Proxy early" >> /etc/httpd/conf/httpd.conf
 echo "AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript" >> /etc/httpd/conf/httpd.conf
@@ -82,6 +82,7 @@ echo 'ServerTokens Prod' >> /etc/httpd/conf/httpd.conf
 sed -i -e 's/short_open_tag = Off/short_open_tag = On/g' /etc/php.ini
 sed -i -e 's/expose_php = On/expose_php = Off/g' /etc/php.ini
 
+systemctl start php-fpm.service ; systemctl enable php-fpm.service
 service httpd restart
 
 ```
