@@ -114,7 +114,7 @@ cd .. ; rm -rf jailkit-2.23*
 
 ```
 
-## B2. Secure PureFTPd (Optional)
+Secure PureFTPd (Optional)
 ```sh
 mkdir -p /etc/ssl/private/
 openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
