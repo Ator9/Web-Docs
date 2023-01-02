@@ -92,7 +92,7 @@ wget http://www.ispconfig.org/downloads/ISPConfig-3-stable.tar.gz
 tar -zxvf ISPConfig-3-stable.tar.gz
 sudo php -q ispconfig3_install/install/install.php
 ```
-- Master Server: Expert mode ("N" to mail/jailkit/pureftpd/dns/OpenVZ/firewall, "Y" rest)
+- Master Server: Expert mode ("N" to mail/jailkit/pureftpd/dns/OpenVZ/Firewall Server/Metronome XMPP Server, "Y" rest)
 - Web Server: Expert mode ("N" to mail/dns/OpenVZ, "Y" rest)
 
 ### Updates
