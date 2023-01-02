@@ -83,7 +83,8 @@ service httpd restart
 ```
 
 # 5. ISPConfig
-Expert mode ("N" to mail/jailkit/pureftpd/dns/OpenVZ/firewall, "Y" rest)
+- Master Server: Expert mode ("N" to mail/jailkit/pureftpd/dns/OpenVZ/firewall, "Y" rest)
+- Web Server: Expert mode ("N" to mail/dns/OpenVZ, "Y" rest)
 ```sh
 wget http://www.ispconfig.org/downloads/ISPConfig-3-stable.tar.gz
 tar -zxvf ISPConfig-3-stable.tar.gz
