@@ -89,8 +89,18 @@ service httpd restart
 wget http://www.ispconfig.org/downloads/ISPConfig-3-stable.tar.gz
 tar -zxvf ISPConfig-3-stable.tar.gz
 sudo php -q ispconfig3_install/install/install.php
-
 ```
+Updates
+- Method: stable
+- Reconfigure Permissions: yes
+- Reconfigure Services: yes
+- Reconfigure Crontab: yes
+```sh
+ispconfig_update.sh
+/usr/local/ispconfig/server/scripts/ispconfig_update.sh
+```
+
+
 
 ## A. phpMyAdmin (Master Server)
 ```sh
