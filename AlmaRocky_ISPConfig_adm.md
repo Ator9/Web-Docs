@@ -91,7 +91,7 @@ sudo php -q ispconfig3_install/install/install.php
 
 ```
 
-## A1. phpMyAdmin (Master Server)
+## A. phpMyAdmin (Master Server)
 ```sh
 yum install -y phpmyadmin
 sed -i -e 's/Require local/Require local\nRequire all granted/' /etc/httpd/conf.d/phpMyAdmin.conf
@@ -102,7 +102,7 @@ service httpd restart
 if(!in_array($_SERVER['REMOTE_ADDR'], array('yourip'))) exit();
 ```
 
-## B1. PureFTPd & Jailkit (Web Server)
+## B. PureFTPd & Jailkit (Web Server)
 ```sh
 yum install -y pure-ftpd gcc
 systemctl enable pure-ftpd.service; systemctl start pure-ftpd.service
