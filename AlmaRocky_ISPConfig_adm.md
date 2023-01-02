@@ -83,14 +83,16 @@ service httpd restart
 ```
 
 # 5. ISPConfig
-- Master Server: Expert mode ("N" to mail/jailkit/pureftpd/dns/OpenVZ/firewall, "Y" rest)
-- Web Server: Expert mode ("N" to mail/dns/OpenVZ, "Y" rest)
+### Install
 ```sh
 wget http://www.ispconfig.org/downloads/ISPConfig-3-stable.tar.gz
 tar -zxvf ISPConfig-3-stable.tar.gz
 sudo php -q ispconfig3_install/install/install.php
 ```
-Updates
+- Master Server: Expert mode ("N" to mail/jailkit/pureftpd/dns/OpenVZ/firewall, "Y" rest)
+- Web Server: Expert mode ("N" to mail/dns/OpenVZ, "Y" rest)
+
+### Updates
 - Method: stable
 - Reconfigure Permissions: yes
 - Reconfigure Services: yes
