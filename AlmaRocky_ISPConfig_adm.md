@@ -110,6 +110,9 @@ sed -i -e 's/Require local/Require local\nRequire all granted/' /etc/httpd/conf.
 echo "\$cfg['Servers'][\$i]['hide_db'] = '^information_schema|dbispconfig|performance_schema|mysql\$';" >> /etc/phpMyAdmin/config.inc.php
 service httpd restart
 ```
+```sh
+nano /etc/phpMyAdmin/config.inc.php
+```
 ```php
 if(!in_array($_SERVER['REMOTE_ADDR'], array('yourip'))) exit();
 ```
