@@ -140,7 +140,7 @@ echo "TLS    2" >> /etc/pure-ftpd/pure-ftpd.conf
 systemctl restart pure-ftpd.service
 ```
 
-# Final
+# Final - Clean History
 ```sh
 echo > ~/.bash_history ; history -c
 ```
