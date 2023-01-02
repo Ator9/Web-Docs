@@ -13,6 +13,10 @@ my_http_ip=XXX
 ```
 
 ```sh
+echo > ~/.bash_history ; history -c
+```
+
+```sh
 yum update -y
 yum install -y nano git telnet nmap quota epel-release langpacks-en
 yum install -y yum-utils clamav clamd clamav-update rkhunter
