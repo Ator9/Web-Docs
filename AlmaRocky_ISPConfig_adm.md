@@ -94,7 +94,7 @@ tar -zxvf ISPConfig-3-stable.tar.gz
 sudo php -q ispconfig3_install/install/install.php
 ```
 - Firewall Bastille
-- Master Server: Expert mode ("N" to mail/jailkit/pureftpd/dns/OpenVZ/Metronome XMPP Server, "Y" rest)
+- Master Server: Expert mode ("N" to mail/jailkit/pureftpd/dns/OpenVZ/Firewall/Metronome XMPP Server, "Y" rest)
 - Web Server: Expert mode ("N" to mail/dns/OpenVZ, "Y" rest)
 
 ### Updates
