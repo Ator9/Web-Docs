@@ -42,6 +42,8 @@ reboot
 ```
 
 # 3. MariaDB & GRANT access to servers
+- unix_socket: n
+- yes to rest
 ```sh
 yum install -y mariadb-server
 systemctl start mariadb.service ; systemctl enable mariadb.service
@@ -49,7 +51,6 @@ systemctl start mariadb.service ; systemctl enable mariadb.service
 
 sed -i -e "s/\[mysqld\]/\[mysqld\]\nbind-address = $my_adm_ip/g" /etc/my.cnf.d/mariadb-server.cnf
 service mariadb restart
-
 ```
 GRANT access to servers:
 ```sh
