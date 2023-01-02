@@ -13,10 +13,6 @@ my_http_ip=XXX
 ```
 
 ```sh
-echo > ~/.bash_history ; history -c
-```
-
-```sh
 yum update -y
 yum install -y nano git telnet nmap quota epel-release langpacks-en
 yum install -y yum-utils clamav clamd clamav-update rkhunter
@@ -142,4 +138,9 @@ openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout /etc/ssl/private/pu
 chmod 600 /etc/ssl/private/pure-ftpd.pem
 echo "TLS    2" >> /etc/pure-ftpd/pure-ftpd.conf
 systemctl restart pure-ftpd.service
+```
+
+# Final
+```sh
+echo > ~/.bash_history ; history -c
 ```
