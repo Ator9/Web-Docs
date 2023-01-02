@@ -42,8 +42,7 @@ reboot
 ```
 
 # 3. MariaDB & GRANT access to servers
-- unix_socket: n
-- yes to rest
+unix_socket: no
 ```sh
 yum install -y mariadb-server
 systemctl start mariadb.service ; systemctl enable mariadb.service
