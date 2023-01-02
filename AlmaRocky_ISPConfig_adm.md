@@ -48,7 +48,9 @@ reboot
 yum install -y mariadb-server
 systemctl start mariadb.service ; systemctl enable mariadb.service
 /usr/bin/mysql_secure_installation
-
+```
+Set own private ip
+```sh
 sed -i -e "s/\[mysqld\]/\[mysqld\]\nbind-address = $my_adm_ip/g" /etc/my.cnf.d/mariadb-server.cnf
 service mariadb restart
 ```
