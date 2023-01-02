@@ -93,15 +93,14 @@ sudo php -q ispconfig3_install/install/install.php
 - Web Server: Expert mode ("N" to mail/dns/OpenVZ, "Y" rest)
 
 ### Updates
-- Method: stable
-- Reconfigure Permissions: yes
-- Reconfigure Services: yes
-- Reconfigure Crontab: yes
 ```sh
 ispconfig_update.sh
 /usr/local/ispconfig/server/scripts/ispconfig_update.sh
 ```
-
+- Method: stable
+- Reconfigure Permissions: yes
+- Reconfigure Services: yes
+- Reconfigure Crontab: yes
 
 
 ## A. phpMyAdmin (Master Server)
@@ -124,7 +123,6 @@ tar -zxvf jailkit-2.23.tar.gz
 cd jailkit-2.23 ; ./configure
 make ; sudo make install
 cd .. ; rm -rf jailkit-2.23*
-
 ```
 
 Secure PureFTPd (Optional)
@@ -137,5 +135,4 @@ openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout /etc/ssl/private/pu
 chmod 600 /etc/ssl/private/pure-ftpd.pem
 echo "TLS    2" >> /etc/pure-ftpd/pure-ftpd.conf
 systemctl restart pure-ftpd.service
-
 ```
