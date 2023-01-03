@@ -2,6 +2,18 @@ SSH Key + mRemoteNG: https://technotes.khitrenovich.com/opening-ssh-aws-hosted-l
 
 ## Rocky Linux 9 - ISPConfig Multiserver - Admin & HTTP
 
+# Commands
+```sh
+cat /var/log/ispconfig/cron.log
+cat /var/log/ispconfig/acme.log
+cat /var/log/php_errors.log
+
+tail -200 /var/log/httpd/access_log
+tail -200 /var/log/httpd/error_log
+
+echo > ~/.bash_history ; history -c
+```
+
 # 1. Startup
 ```sh
 my_db_pass=XXX
@@ -146,19 +158,4 @@ nano /etc/phpMyAdmin/config.inc.php
 ```
 ```php
 if(!in_array($_SERVER['REMOTE_ADDR'], array('yourip'))) exit();
-```
-
-# Final - Clean History
-```sh
-echo > ~/.bash_history ; history -c
-```
-
-# Commands
-```sh
-cat /var/log/ispconfig/cron.log
-cat /var/log/ispconfig/acme.log
-cat /var/log/php_errors.log
-
-tail -200 /var/log/httpd/access_log
-tail -200 /var/log/httpd/error_log
 ```
