@@ -88,7 +88,30 @@ service httpd restart
 
 ```
 
-# 5. ISPConfig
+# 5. PureFTPd & Jailkit (Web Server only)
+```sh
+yum install -y pure-ftpd gcc
+systemctl enable pure-ftpd.service; systemctl start pure-ftpd.service
+wget http://olivier.sessink.nl/jailkit/jailkit-2.23.tar.gz
+tar -zxvf jailkit-2.23.tar.gz
+cd jailkit-2.23 ; ./configure
+make ; sudo make install
+cd .. ; rm -rf jailkit-2.23*
+```
+
+Secure PureFTPd (Optional)
+```sh
+mkdir -p /etc/ssl/private/
+openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
+
+```
+```sh
+chmod 600 /etc/ssl/private/pure-ftpd.pem
+echo "TLS    2" >> /etc/pure-ftpd/pure-ftpd.conf
+systemctl restart pure-ftpd.service
+```
+
+# 6. ISPConfig
 ### Install
 ```sh
 wget http://www.ispconfig.org/downloads/ISPConfig-3-stable.tar.gz
@@ -110,7 +133,7 @@ ispconfig_update.sh
 - Reconfigure Crontab: yes
 
 
-## A. phpMyAdmin (Master Server)
+# 7. phpMyAdmin (Master Server only)
 ```sh
 yum install -y phpmyadmin
 sed -i -e 's/Require local/Require local\nRequire all granted/' /etc/httpd/conf.d/phpMyAdmin.conf
@@ -122,29 +145,6 @@ nano /etc/phpMyAdmin/config.inc.php
 ```
 ```php
 if(!in_array($_SERVER['REMOTE_ADDR'], array('yourip'))) exit();
-```
-
-## B. PureFTPd & Jailkit (Web Server)
-```sh
-yum install -y pure-ftpd gcc
-systemctl enable pure-ftpd.service; systemctl start pure-ftpd.service
-wget http://olivier.sessink.nl/jailkit/jailkit-2.23.tar.gz
-tar -zxvf jailkit-2.23.tar.gz
-cd jailkit-2.23 ; ./configure
-make ; sudo make install
-cd .. ; rm -rf jailkit-2.23*
-```
-
-Secure PureFTPd (Optional)
-```sh
-mkdir -p /etc/ssl/private/
-openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
-
-```
-```sh
-chmod 600 /etc/ssl/private/pure-ftpd.pem
-echo "TLS    2" >> /etc/pure-ftpd/pure-ftpd.conf
-systemctl restart pure-ftpd.service
 ```
 
 # Final - Clean History
