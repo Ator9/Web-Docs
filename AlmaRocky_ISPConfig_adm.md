@@ -22,14 +22,13 @@ my_adm_host=XXX
 my_adm_ip=XXX
 my_http_host=XXX
 my_http_ip=XXX
-
-curl https://get.acme.sh | sh -s
 ```
 
 ```sh
 yum update -y
 yum install -y nano git telnet nmap quota epel-release langpacks-en
 yum install -y yum-utils clamav clamd clamav-update rkhunter
+curl https://get.acme.sh | sh -s
 
 ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
 sed -i -e 's/PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/sshd_config
