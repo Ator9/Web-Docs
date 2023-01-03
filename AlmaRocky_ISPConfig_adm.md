@@ -82,6 +82,7 @@ echo 'ServerTokens Prod' >> /etc/httpd/conf/httpd.conf
 
 sed -i -e 's/short_open_tag = Off/short_open_tag = On/g' /etc/php.ini
 sed -i -e 's/expose_php = On/expose_php = Off/g' /etc/php.ini
+sed -i -e 's/;error_log = php_errors.log/error_log = \/var\/log\/php_errors.log/g' /etc/php.ini
 
 systemctl start php-fpm.service ; systemctl enable php-fpm.service
 service httpd restart
@@ -158,4 +159,5 @@ cat /var/log/ispconfig/cron.log
 cat /var/log/ispconfig/acme.log
 
 tail -200 /var/log/httpd/access_log
+tail -200 /var/log/httpd/error_log
 ```
