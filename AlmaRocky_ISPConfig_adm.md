@@ -157,6 +157,7 @@ echo > ~/.bash_history ; history -c
 ```sh
 cat /var/log/ispconfig/cron.log
 cat /var/log/ispconfig/acme.log
+cat /var/log/php_errors.log
 
 tail -200 /var/log/httpd/access_log
 tail -200 /var/log/httpd/error_log
