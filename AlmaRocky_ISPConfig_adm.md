@@ -151,3 +151,11 @@ if(!in_array($_SERVER['REMOTE_ADDR'], array('yourip'))) exit();
 ```sh
 echo > ~/.bash_history ; history -c
 ```
+
+# Commands
+```sh
+cat /var/log/ispconfig/cron.log
+cat /var/log/ispconfig/acme.log
+
+tail -200 /var/log/httpd/access_log
+```
