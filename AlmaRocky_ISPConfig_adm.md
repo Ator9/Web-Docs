@@ -1,7 +1,5 @@
+# Rocky Linux 9 - ISPConfig Multiserver - Admin & HTTP
 SSH Key + mRemoteNG: https://technotes.khitrenovich.com/opening-ssh-aws-hosted-linux-servers-mremoteng/
-
-## Rocky Linux 9 - ISPConfig Multiserver - Admin & HTTP
-
 ### Commands
 ```sh
 cat /var/log/ispconfig/cron.log
