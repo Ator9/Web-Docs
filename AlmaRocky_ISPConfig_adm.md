@@ -10,6 +10,8 @@ my_adm_host=XXX
 my_adm_ip=XXX
 my_http_host=XXX
 my_http_ip=XXX
+
+curl https://get.acme.sh | sh -s
 ```
 
 ```sh
