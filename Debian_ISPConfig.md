@@ -6,10 +6,9 @@ Debug: https://www.faqforge.com/linux/debugging-ispconfig-3-server-actions-in-ca
 ```sh
 cat /var/log/ispconfig/cron.log
 cat /var/log/ispconfig/acme.log
-cat /var/log/php_errors.log
 
-tail -200 /var/log/httpd/access_log
-tail -200 /var/log/httpd/error_log
+tail -200 /var/log/apache2/access_log
+tail -200 /var/log/apache2/error_log
 
 echo > ~/.bash_history ; history -c
 ```
