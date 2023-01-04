@@ -25,6 +25,27 @@ my_http_ip=XXX
 ```
 
 ```sh
+apt update && apt upgrade
+
+
+wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --use-php=system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 yum update -y
 yum install -y nano git telnet nmap quota epel-release langpacks-en
 yum install -y yum-utils clamav clamd clamav-update rkhunter
