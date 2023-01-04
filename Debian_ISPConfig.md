@@ -32,10 +32,6 @@ echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
 echo "$my_http_ip     $my_http_host" >> /etc/hosts
 ```
 
-```sh
-wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --use-php=system
-```
-
 # 2. Swap, quota
 ```sh
 sudo fallocate -l 1G /var/swap.img ; chmod 600 /var/swap.img
@@ -56,6 +52,11 @@ apt-get update -y
 
 apt-get install php8.0
 php -v
+```
+
+# 4. ISPConfig
+```sh
+wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --use-php=system
 ```
 
 # 3. MariaDB & GRANT access to servers
