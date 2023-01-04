@@ -39,12 +39,12 @@ mkswap /var/swap.img ; swapon /var/swap.img
 echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
 ```
 
-# 4. ISPConfig
+# 3. ISPConfig
 ```sh
 wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --ssh-permit-root=without-password --use-php=8.0,8.1,8.2
 ```
 
-# 3. MariaDB & GRANT access to servers
+# 4. MariaDB & GRANT access to servers
 Set own private ip
 ```sh
 sed -i -e "s/\[mysqld\]/\[mysqld\]\nbind-address = $my_adm_ip/g" /etc/mysql/mariadb.conf.d/50-server.cnf
@@ -64,13 +64,8 @@ mysql -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_http_
 mysql -uroot -p$my_db_pass -e "SHOW DATABASES;SELECT User,Host FROM mysql.user"
 ```
 
-# 4. Apache & PHP
+# 5. Apache & PHP
 ```sh
-yum install -y httpd httpd-devel mod_ssl
-service httpd start ; systemctl enable httpd.service
-yum install -y php php-devel php-gd php-ldap php-mysqlnd php-odbc php-pear php-xml php-mbstring php-snmp php-soap php-tidy curl curl-devel
-yum install -y perl-libwww-perl ImageMagick libxml2 libxml2-devel php-cli unzip bzip2 perl-DBD-mysql php-fpm mod_fcgid
-
 echo "RequestHeader unset Proxy early" >> /etc/httpd/conf/httpd.conf 
 echo "AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript" >> /etc/httpd/conf/httpd.conf
 echo 'ServerTokens Prod' >> /etc/httpd/conf/httpd.conf
@@ -79,34 +74,9 @@ sed -i -e 's/short_open_tag = Off/short_open_tag = On/g' /etc/php/8.0/apache2/ph
 sed -i -e 's/expose_php = On/expose_php = Off/g' /etc/php/8.0/apache2/php.ini
 sed -i -e 's/;error_log = php_errors.log/error_log = \/var\/log\/php_errors.log/g' /etc/php/8.0/apache2/php.ini
 
-systemctl start php-fpm.service ; systemctl enable php-fpm.service
 service httpd restart
 
 ```
-
-# 5. PureFTPd & Jailkit (Web Server only)
-```sh
-yum install -y pure-ftpd gcc
-systemctl enable pure-ftpd.service; systemctl start pure-ftpd.service
-wget http://olivier.sessink.nl/jailkit/jailkit-2.23.tar.gz
-tar -zxvf jailkit-2.23.tar.gz
-cd jailkit-2.23 ; ./configure
-make ; sudo make install
-cd .. ; rm -rf jailkit-2.23*
-```
-
-Secure PureFTPd (Optional)
-```sh
-mkdir -p /etc/ssl/private/
-openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem
-
-```
-```sh
-chmod 600 /etc/ssl/private/pure-ftpd.pem
-echo "TLS    2" >> /etc/pure-ftpd/pure-ftpd.conf
-systemctl restart pure-ftpd.service
-```
-
 
 # 7. phpMyAdmin (Master Server only)
 ```sh
