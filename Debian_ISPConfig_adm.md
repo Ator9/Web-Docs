@@ -109,27 +109,6 @@ echo "TLS    2" >> /etc/pure-ftpd/pure-ftpd.conf
 systemctl restart pure-ftpd.service
 ```
 
-# 6. ISPConfig
-### Install
-```sh
-wget http://www.ispconfig.org/downloads/ISPConfig-3-stable.tar.gz
-tar -zxvf ISPConfig-3-stable.tar.gz
-sudo php -q ispconfig3_install/install/install.php
-```
-- Firewall Bastille
-- Master Server: Expert mode ("N" to mail/jailkit/pureftpd/dns/OpenVZ/Firewall/Metronome XMPP Server, "Y" rest)
-- Web Server: Expert mode ("N" to mail/dns/OpenVZ, "Y" rest)
-
-### Updates
-```sh
-ispconfig_update.sh
-/usr/local/ispconfig/server/scripts/ispconfig_update.sh
-```
-- Method: stable
-- Reconfigure Permissions: yes
-- Reconfigure Services: yes
-- Reconfigure Crontab: yes
-
 
 # 7. phpMyAdmin (Master Server only)
 ```sh
