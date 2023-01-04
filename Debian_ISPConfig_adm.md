@@ -41,7 +41,7 @@ echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
 
 # 4. ISPConfig
 ```sh
-wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --ssh-permit-root=without-password --use-php=8.0
+wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --ssh-permit-root=without-password --use-php=8.0,8.1,8.2
 ```
 
 # 3. MariaDB & GRANT access to servers
