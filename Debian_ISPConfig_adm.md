@@ -80,14 +80,12 @@ service httpd restart
 
 # 7. phpMyAdmin (Master Server only)
 ```sh
-yum install -y phpmyadmin
-sed -i -e 's/Require local/Require local\nRequire all granted/' /etc/httpd/conf.d/phpMyAdmin.conf
-echo "\$cfg['Servers'][\$i]['hide_db'] = '^information_schema|dbispconfig|performance_schema|mysql\$';" >> /etc/phpMyAdmin/config.inc.php
-service httpd restart
+echo "\$cfg['Servers'][\$i]['hide_db'] = '^information_schema|dbispconfig|performance_schema|mysql\$';" >> /usr/share/phpmyadmin/config.inc.php
+echo "if(!in_array(\$_SERVER['REMOTE_ADDR'], array('yourip'))) exit();" >> /usr/share/phpmyadmin/config.inc.php
 ```
 ```sh
-nano /etc/phpMyAdmin/config.inc.php
+nano /usr/share/phpmyadmin/config.inc.php
 ```
 ```php
-if(!in_array($_SERVER['REMOTE_ADDR'], array('yourip'))) exit();
+echo if(!in_array($_SERVER['REMOTE_ADDR'], array('yourip'))) exit();
 ```
