@@ -81,7 +81,7 @@ service httpd restart
 # 7. phpMyAdmin (Master Server only)
 ```sh
 echo "\$cfg['Servers'][\$i]['hide_db'] = '^information_schema|dbispconfig|performance_schema|mysql|phpmyadmin\$';" >> /usr/share/phpmyadmin/config.inc.php
-echo "if(\!in_array(\$_SERVER['REMOTE_ADDR'], array('yourip'))) exit();" >> /usr/share/phpmyadmin/config.inc.php
+echo "if("'!'"in_array(\$_SERVER['REMOTE_ADDR'], array('yourip'))) exit();" >> /usr/share/phpmyadmin/config.inc.php
 ```
 ```sh
 nano /usr/share/phpmyadmin/config.inc.php
