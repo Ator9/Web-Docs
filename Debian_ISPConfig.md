@@ -2,7 +2,7 @@
 
 ### Info / Commands
 SSH Key + mRemoteNG: https://technotes.khitrenovich.com/opening-ssh-aws-hosted-linux-servers-mremoteng/
-https://www.faqforge.com/linux/debugging-ispconfig-3-server-actions-in-case-of-a-failure/
+Debug: https://www.faqforge.com/linux/debugging-ispconfig-3-server-actions-in-case-of-a-failure/
 ```sh
 cat /var/log/ispconfig/cron.log
 cat /var/log/ispconfig/acme.log
