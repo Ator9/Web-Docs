@@ -17,7 +17,7 @@ echo > ~/.bash_history ; history -c
 
 # 1. Startup
 ```sh
-my_db_pass=zxcvQQww.1233
+my_db_pass=xxx
 my_adm_host=XXX
 my_adm_ip=XXX
 my_http_host=XXX
