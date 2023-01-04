@@ -24,7 +24,7 @@ my_http_ip=XXX
 ```
 
 ```sh
-apt update && apt upgrade
+apt update && apt upgrade -y
 ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
 sed -i -e 's/PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/sshd_config
 service sshd restart
