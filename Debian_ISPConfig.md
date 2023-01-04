@@ -82,13 +82,13 @@ service httpd start ; systemctl enable httpd.service
 yum install -y php php-devel php-gd php-ldap php-mysqlnd php-odbc php-pear php-xml php-mbstring php-snmp php-soap php-tidy curl curl-devel
 yum install -y perl-libwww-perl ImageMagick libxml2 libxml2-devel php-cli unzip bzip2 perl-DBD-mysql php-fpm mod_fcgid
 
-echo "RequestHeader unset Proxy early" >> /etc/httpd/conf/httpd.conf
+echo "RequestHeader unset Proxy early" >> /etc/httpd/conf/httpd.conf 
 echo "AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript" >> /etc/httpd/conf/httpd.conf
 echo 'ServerTokens Prod' >> /etc/httpd/conf/httpd.conf
 
-sed -i -e 's/short_open_tag = Off/short_open_tag = On/g' /etc/php.ini
-sed -i -e 's/expose_php = On/expose_php = Off/g' /etc/php.ini
-sed -i -e 's/;error_log = php_errors.log/error_log = \/var\/log\/php_errors.log/g' /etc/php.ini
+sed -i -e 's/short_open_tag = Off/short_open_tag = On/g' /etc/php/8.0/apache2/php.ini
+sed -i -e 's/expose_php = On/expose_php = Off/g' /etc/php/8.0/apache2/php.ini
+sed -i -e 's/;error_log = php_errors.log/error_log = \/var\/log\/php_errors.log/g' /etc/php/8.0/apache2/php.ini
 
 systemctl start php-fpm.service ; systemctl enable php-fpm.service
 service httpd restart
