@@ -45,7 +45,7 @@ wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube
 ```
 
 # 4. MariaDB & GRANT access to servers
-Set own private ip
+Set server private ip
 ```sh
 sed -i -e "s/\[mysqld\]/\[mysqld\]\nbind-address = $my_adm_ip/g" /etc/mysql/mariadb.conf.d/50-server.cnf
 service mariadb restart
