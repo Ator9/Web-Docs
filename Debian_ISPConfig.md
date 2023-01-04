@@ -56,7 +56,7 @@ php -v
 
 # 4. ISPConfig
 ```sh
-wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --ssh-permit-root=without-password --use-php=system
+wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --ssh-permit-root=without-password --use-php=8.0
 ```
 
 # 3. MariaDB & GRANT access to servers
