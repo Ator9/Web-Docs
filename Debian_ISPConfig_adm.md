@@ -34,15 +34,11 @@ echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
 echo "$my_http_ip     $my_http_host" >> /etc/hosts
 ```
 
-# 2. Swap, quota
+# 2. Swap
 ```sh
 sudo fallocate -l 1G /var/swap.img ; chmod 600 /var/swap.img
 mkswap /var/swap.img ; swapon /var/swap.img
 echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
-
-sed -i -e "s/=enforcing/=permissive/g" /etc/selinux/config
-
-reboot
 ```
 
 # 4. ISPConfig
