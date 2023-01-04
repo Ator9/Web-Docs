@@ -1,6 +1,5 @@
 # Debian 11 - ISPConfig Multiserver - Admin & HTTP
 
-### Info / Commands
 SSH Key + mRemoteNG: https://technotes.khitrenovich.com/opening-ssh-aws-hosted-linux-servers-mremoteng/
 
 Debug: https://www.faqforge.com/linux/debugging-ispconfig-3-server-actions-in-case-of-a-failure/
