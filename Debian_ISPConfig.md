@@ -43,17 +43,6 @@ sed -i -e "s/=enforcing/=permissive/g" /etc/selinux/config
 reboot
 ```
 
-# 3. PHP 8
-```sh
-apt-get install ca-certificates apt-transport-https software-properties-common -y
-echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/sury-php.list
-wget -qO - https://packages.sury.org/php/apt.gpg | apt-key add -
-apt-get update -y
-
-apt-get install php8.0
-php -v
-```
-
 # 4. ISPConfig
 ```sh
 wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --ssh-permit-root=without-password --use-php=8.0
