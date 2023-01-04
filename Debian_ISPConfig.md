@@ -60,12 +60,6 @@ wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube
 ```
 
 # 3. MariaDB & GRANT access to servers
-unix_socket no, yes to rest
-```sh
-yum install -y mariadb-server
-systemctl start mariadb.service ; systemctl enable mariadb.service
-/usr/bin/mysql_secure_installation
-```
 Set own private ip
 ```sh
 sed -i -e "s/\[mysqld\]/\[mysqld\]\nbind-address = $my_adm_ip/g" /etc/my.cnf.d/mariadb-server.cnf
