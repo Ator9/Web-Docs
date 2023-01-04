@@ -37,16 +37,26 @@ echo "$my_http_ip     $my_http_host" >> /etc/hosts
 wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --use-php=system
 ```
 
-# 2. Swap, quota, firewall
+# 2. Swap, quota
 ```sh
 sudo fallocate -l 1G /var/swap.img ; chmod 600 /var/swap.img
 mkswap /var/swap.img ; swapon /var/swap.img
 echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
 
-systemctl stop firewalld.service ; systemctl disable firewalld.service
 sed -i -e "s/=enforcing/=permissive/g" /etc/selinux/config
 
 reboot
+```
+
+# 3. PHP 8
+```sh
+apt-get install ca-certificates apt-transport-https software-properties-common -y
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/sury-php.list
+wget -qO - https://packages.sury.org/php/apt.gpg | apt-key add -
+apt-get update -y
+
+apt-get install php8.0
+php -v
 ```
 
 # 3. MariaDB & GRANT access to servers
