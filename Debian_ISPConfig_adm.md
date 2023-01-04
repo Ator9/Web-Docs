@@ -86,6 +86,3 @@ echo "if("'!'"in_array(\$_SERVER['REMOTE_ADDR'], array('yourip'))) exit();" >> /
 ```sh
 nano /usr/share/phpmyadmin/config.inc.php
 ```
-```php
-echo if(!in_array($_SERVER['REMOTE_ADDR'], array('yourip'))) exit();
-```
