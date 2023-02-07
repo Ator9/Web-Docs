@@ -65,7 +65,7 @@ rm -rf /var/cache/yum/
 package-cleanup --quiet --leaves --exclude-bin
 package-cleanup --quiet --leaves --exclude-bin | xargs yum remove -y
 
-Remove old kernels
+# Remove old kernels
 package-cleanup --oldkernels --count=2
 ```
 
