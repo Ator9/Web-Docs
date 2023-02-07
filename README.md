@@ -60,6 +60,13 @@ Clean CentOS Cache
 ```sh
 yum clean all
 rm -rf /var/cache/yum/
+
+# Remove orphan packages
+package-cleanup --quiet --leaves --exclude-bin
+package-cleanup --quiet --leaves --exclude-bin | xargs yum remove -y
+
+Remove old kernels
+package-cleanup --oldkernels --count=2
 ```
 
 External Public IP
