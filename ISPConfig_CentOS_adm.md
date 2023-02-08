@@ -191,6 +191,15 @@ service httpd restart
 php -v
 ```
 
+# PHP 8.1
+```sh
+php -v
+yum-config-manager --enable remi-php81
+yum update
+service httpd restart
+php -v
+```
+
 # Automatic Domains
 Paste before "NameVirtualHost" in /etc/httpd/conf/httpd.conf:
 ```sh
