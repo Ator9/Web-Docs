@@ -151,7 +151,7 @@ rpm -qa | grep -i repo-name
 rpm -e repo-name
 ```
 
-Compsoer 2 - Centos 7
+Composer 2 - Centos 7
 ```sh
 cd /usr/bin
 https://getcomposer.org/download/
