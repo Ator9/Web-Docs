@@ -150,3 +150,11 @@ Search repo rpm and delete (to solve yum conflicts)
 rpm -qa | grep -i repo-name
 rpm -e repo-name
 ```
+
+Compsoer 2 - Centos 7
+```sh
+cd /usr/bin
+https://getcomposer.org/download/
+sudo mv composer.phar /usr/bin/composer
+```
+sudo -u web135 composer install
