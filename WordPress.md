@@ -22,12 +22,27 @@ if($_SERVER['HTTP_HOST'] != DOMAIN_CURRENT_SITE) define('COOKIE_DOMAIN', false);
 define( 'DISALLOW_FILE_EDIT', true );
 ```
 
-### Home Redirect with htaccess
+### Block Author with htaccess
 ```sh
+<IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
+
+RewriteCond %{QUERY_STRING} ^author= [NC]
+RewriteRule .* - [F,L]
+RewriteRule ^author/ - [F,L]
+</IfModule>
+```
+
+### Home Redirect with htaccess
+```sh
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
 RewriteCond %{HTTP_HOST} ^currentsite.com$ [NC]
 RewriteRule ^$ http://newsite.com/ [R=301,L]
+</IfModule>
 ```
 
 ### Admin IP Restriction with htaccess
