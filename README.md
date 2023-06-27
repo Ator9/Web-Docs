@@ -42,6 +42,7 @@ sudo certbot delete
 FIX BITBUCKET
 ```sh
 sudo -u web115 git pull
+sudo echo > /var/www/site.com/.ssh/known_hosts
 sudo -u web115 ssh-keygen -R bitbucket.org && curl https://bitbucket.org/site/ssh >> /var/www/site.com/.ssh/known_hosts
 ```
 
