@@ -39,6 +39,12 @@ cd /opt/certbot/
 sudo certbot delete
 ```
 
+FIX BITBUCKET
+```sh
+sudo -u web115 git pull
+sudo -u web115 ssh-keygen -R bitbucket.org && curl https://bitbucket.org/site/ssh >> /var/www/site.com/.ssh/known_hosts
+```
+
 Nameservers NIC.ar
 ```sh
 whois -h whois.nic.ar DOMINIO.COM.AR
