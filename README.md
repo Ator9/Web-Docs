@@ -68,6 +68,11 @@ git fetch --all
 git reset --hard origin/master
 ```
 
+Reset file changes
+```sh
+git checkout -- file.xxx
+```
+
 Check HTTPS Certificate. Check invalid redirects.
 ```sh
 curl -IvL https://domain.me
