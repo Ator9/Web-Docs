@@ -46,23 +46,6 @@ sudo echo > /var/www/site.com/.ssh/known_hosts
 sudo -u web115 ssh-keygen -R bitbucket.org && curl https://bitbucket.org/site/ssh >> /var/www/site.com/.ssh/known_hosts
 ```
 
-Nameservers NIC.ar
-```sh
-whois -h whois.nic.ar DOMINIO.COM.AR
-
-```
-
-ISPCONFIG /usr/local/ispconfig/server/plugins-available/webserver_plugin.inc.php
-```sh
-if(!function_exists("array_column")){
-        function array_column($array,$column_name){
-                return array_map(function($element) use($column_name){return $element[$column_name];}, $array);
-        }
-}
-
-```
-
-
 Clean CentOS Cache
 ```sh
 yum clean all
@@ -74,11 +57,6 @@ package-cleanup --quiet --leaves --exclude-bin | xargs yum remove
 
 # Remove old kernels
 package-cleanup --oldkernels --count=2
-```
-
-External Public IP
-```sh
-dig +short myip.opendns.com @resolver1.opendns.com
 ```
 
 How do I force Git to overwrite local files on pull?
@@ -98,6 +76,12 @@ curl -IvL https://domain.me
 Email
 ```sh
 mail -s "asunto ejemplo" your@email.com <<< "mensaje"
+```
+
+Delete queued mail
+```sh
+postqueue -p
+postsuper -d ALL
 ```
 
 show top 10 biggest subdirs in the current dir
@@ -125,12 +109,6 @@ Bind
 ```sh
 /var/www/clients/client1/web4/web /var/www/clients/client1/web5/web    none    bind,nobootwait,_netdev    0 0
 mount -a
-```
-
-Delete queued mail
-```sh
-postqueue -p
-postsuper -d ALL
 ```
 
 Comprimir tar.gz
