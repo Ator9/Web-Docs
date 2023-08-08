@@ -10,6 +10,14 @@ Existing Project
 - copy .env.example to .env
 - create database
 ```sh
+
+```
+sudo -u web57 git clone git@bitbucket.org:Ator9/server.git .
+sudo chmod -R 777 storage
+sudo -u web57 ln -s /var/www/domain/private/public/ /var/www/domain/web/
+sudo -u web57 php artisan storage:link
+```sh
+
 composer install
 php artisan key:generate
 php artisan migrate
