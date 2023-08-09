@@ -1,4 +1,4 @@
-# Debian 11 - ISPConfig Multiserver - Admin & HTTP
+# Debian 12 - ISPConfig Multiserver - Admin & HTTP
 
 SSH Key + mRemoteNG (Parameters > PPK file version 2): https://technotes.khitrenovich.com/opening-ssh-aws-hosted-linux-servers-mremoteng/
 
