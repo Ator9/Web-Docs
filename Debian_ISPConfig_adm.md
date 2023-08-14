@@ -12,25 +12,25 @@ tail -200 /var/log/apache2/error.log
 echo > ~/.bash_history ; history -c
 ```
 
-# 1. Startup
 ```sh
-passwd ; adduser XXX ; passwd XXX
-
 my_db_pass=xxx
 my_adm_host=XXX
 my_adm_ip=XXX
 my_http_host=XXX
 my_http_ip=XXX
+
+echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
+echo "$my_http_ip     $my_http_host" >> /etc/hosts
 ```
 
+# 1. Startup
 ```sh
+passwd ; adduser XXX ; passwd XXX
+
 apt update && apt upgrade -y
 ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
 sed -i -e 's/PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/sshd_config
 systemctl restart ssh.service
-
-echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
-echo "$my_http_ip     $my_http_host" >> /etc/hosts
 ```
 
 # 2. Swap
