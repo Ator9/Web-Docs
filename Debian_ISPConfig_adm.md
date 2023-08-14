@@ -27,7 +27,7 @@ my_http_ip=XXX
 apt update && apt upgrade -y
 ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
 sed -i -e 's/PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/sshd_config
-service sshd restart
+systemctl restart ssh.service
 
 echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
 echo "$my_http_ip     $my_http_host" >> /etc/hosts
