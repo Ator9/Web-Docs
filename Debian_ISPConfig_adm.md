@@ -45,11 +45,11 @@ echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
 
 # 3. ISPConfig
 ```sh
-wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --ssh-permit-root=without-password --use-php=8.2,8.3
+wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --use-php=8.2,8.3
 ```
 
 # 4. MariaDB & GRANT access to servers
-Set server private ip
+Set server private ip (multiserver only)
 ```sh
 sed -i -e "s/\[mysqld\]/\[mysqld\]\nbind-address = $my_adm_ip/g" /etc/mysql/mariadb.conf.d/50-server.cnf
 service mariadb restart
