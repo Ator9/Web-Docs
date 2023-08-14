@@ -3,6 +3,10 @@
 Debug: https://www.faqforge.com/linux/debugging-ispconfig-3-server-actions-in-case-of-a-failure/
 
 ```sh
+passwd ; adduser XXX ; passwd XXX
+```
+
+```sh
 cat /var/log/ispconfig/cron.log
 cat /var/log/ispconfig/acme.log
 
