@@ -1,9 +1,5 @@
 # Debian 12 - ISPConfig Multiserver - Admin & HTTP
 
-SSH Key + mRemoteNG (Parameters > PPK file version 2). Delete old ppk file if issues.
-
-https://technotes.khitrenovich.com/opening-ssh-aws-hosted-linux-servers-mremoteng/
-
 Debug: https://www.faqforge.com/linux/debugging-ispconfig-3-server-actions-in-case-of-a-failure/
 
 Autoinstaller: https://git.ispconfig.org/ispconfig/ispconfig-autoinstaller/-/blob/master/lib/class.ISPConfig.inc.php
@@ -91,3 +87,7 @@ echo "if("'!'"in_array(\$_SERVER['REMOTE_ADDR'], array('yourip'))) exit();" >> /
 ```sh
 nano /usr/share/phpmyadmin/config.inc.php
 ```
+
+# EXTRA
+## SSH Key + mRemoteNG (Parameters > PPK file version 2). Delete old ppk file if issues.
+https://technotes.khitrenovich.com/opening-ssh-aws-hosted-linux-servers-mremoteng/
