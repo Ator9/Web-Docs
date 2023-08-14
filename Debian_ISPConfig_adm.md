@@ -48,8 +48,8 @@ echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
 wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --use-php=8.2,8.3
 ```
 
-# 4. MariaDB & GRANT access to servers
-Set server private ip (multiserver only)
+# 4. MariaDB & GRANT access to servers (multiserver only)
+Set server private ip
 ```sh
 sed -i -e "s/\[mysqld\]/\[mysqld\]\nbind-address = $my_adm_ip/g" /etc/mysql/mariadb.conf.d/50-server.cnf
 service mariadb restart
