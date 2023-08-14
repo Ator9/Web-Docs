@@ -76,7 +76,7 @@ echo 'ServerTokens Prod' >> /etc/httpd/conf/httpd.conf
 
 sed -i -e 's/;error_log = php_errors.log/error_log = \/var\/log\/php_errors.log/g' /etc/php/8.2/fpm/php.ini
 
-service httpd restart
+systemctl restart apache2
 
 ```
 
