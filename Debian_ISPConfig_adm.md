@@ -3,10 +3,6 @@
 Debug: https://www.faqforge.com/linux/debugging-ispconfig-3-server-actions-in-case-of-a-failure/
 
 ```sh
-passwd ; adduser XXX ; passwd XXX
-```
-
-```sh
 cat /var/log/ispconfig/cron.log
 cat /var/log/ispconfig/acme.log
 
@@ -18,6 +14,8 @@ echo > ~/.bash_history ; history -c
 
 # 1. Startup
 ```sh
+passwd ; adduser XXX ; passwd XXX
+
 my_db_pass=xxx
 my_adm_host=XXX
 my_adm_ip=XXX
@@ -28,6 +26,8 @@ my_http_ip=XXX
 ```sh
 apt update && apt upgrade -y
 ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
+sed -i -e 's/#PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/sshd_config
+service sshd restart
 
 echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
 echo "$my_http_ip     $my_http_host" >> /etc/hosts
