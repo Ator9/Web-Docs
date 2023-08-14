@@ -35,8 +35,9 @@ systemctl restart ssh.service
 
 # 2. Swap
 ```sh
+sudo swapon --show
 sudo fallocate -l 2G /var/swap.img ; chmod 600 /var/swap.img
-mkswap /var/swap.img ; swapon /var/swap.img
+sudo mkswap /var/swap.img ; sudo swapon /var/swap.img
 echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
 ```
 
