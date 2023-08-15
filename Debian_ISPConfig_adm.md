@@ -29,7 +29,7 @@ echo "$my_http_ip     $my_http_host" >> /etc/hosts
 ```sh
 passwd ; adduser XXX ; passwd XXX
 
-apt update && apt install resolvconf -y && apt upgrade -y
+apt update && sudo apt install resolvconf -y && apt upgrade -y
 
 ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
 sed -i -e 's/PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/sshd_config
