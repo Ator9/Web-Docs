@@ -4,6 +4,7 @@ Debug: https://www.faqforge.com/linux/debugging-ispconfig-3-server-actions-in-ca
 
 ```sh
 systemctl reboot
+su -
 
 cat /var/log/ispconfig/cron.log
 cat /var/log/ispconfig/acme.log
