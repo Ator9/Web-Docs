@@ -40,7 +40,8 @@ sudo mkswap /var/swap.img ; sudo swapon /var/swap.img
 echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
 ```
 
-# 2. ISPConfig (log in as root or switch using su -)
+# 2. ISPConfig
+Log in as root or switch using su -
 ```sh
 wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --use-php=8.2,8.3
 ```
