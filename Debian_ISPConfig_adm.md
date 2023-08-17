@@ -13,7 +13,7 @@ systemctl restart php8.2-fpm
 cat /var/log/ispconfig/cron.log
 cat /var/log/ispconfig/acme.log
 
-tail -200 /var/log/apache2/access_log
+tail -200 /var/log/apache2/access.log
 tail -200 /var/log/apache2/error.log
 
 echo > ~/.bash_history ; history -c
