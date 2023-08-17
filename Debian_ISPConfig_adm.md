@@ -5,7 +5,7 @@ Debug: https://www.faqforge.com/linux/debugging-ispconfig-3-server-actions-in-ca
 ```sh
 su -
 systemctl reboot
-service apache2 restart
+systemctl restart apache2
 
 /etc/php/8.2/fpm/php.ini
 
