@@ -72,7 +72,6 @@ mysql -uroot -p$my_db_pass -e "SHOW DATABASES;SELECT User,Host FROM mysql.user"
 ```sh
 echo "RequestHeader unset Proxy early" >> /etc/apache2/apache2.conf
 echo "AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript" >> /etc/apache2/apache2.conf
-echo 'ServerTokens Prod' >> /etc/apache2/apache2.conf
 
 sed -i -e 's/;error_log = php_errors.log/error_log = \/var\/log\/php_errors.log/g' /etc/php/8.2/fpm/php.ini
 ```
