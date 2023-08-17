@@ -5,6 +5,7 @@ Debug: https://www.faqforge.com/linux/debugging-ispconfig-3-server-actions-in-ca
 ```sh
 su -
 systemctl reboot
+service apache2 restart
 
 cat /var/log/ispconfig/cron.log
 cat /var/log/ispconfig/acme.log
@@ -74,18 +75,12 @@ echo "AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/
 echo 'ServerTokens Prod' >> /etc/apache2/apache2.conf
 
 sed -i -e 's/;error_log = php_errors.log/error_log = \/var\/log\/php_errors.log/g' /etc/php/8.2/fpm/php.ini
-
-systemctl restart apache2
-
 ```
 
 # 5. phpMyAdmin (Master Server only)
 ```sh
 echo "\$cfg['Servers'][\$i]['hide_db'] = '^information_schema|dbispconfig|performance_schema|mysql|phpmyadmin|sys\$';" >> /usr/share/phpmyadmin/config.inc.php
 echo "if("'!'"in_array(\$_SERVER['REMOTE_ADDR'], array('yourip'))) exit();" >> /usr/share/phpmyadmin/config.inc.php
-```
-```sh
-nano /usr/share/phpmyadmin/config.inc.php
 ```
 
 # 6 ISPConfig Ports
