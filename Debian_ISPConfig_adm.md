@@ -88,6 +88,10 @@ echo "if("'!'"in_array(\$_SERVER['REMOTE_ADDR'], array('yourip'))) exit();" >> /
 nano /usr/share/phpmyadmin/config.inc.php
 ```
 
+# 6 ISPConfig Ports
+Web/FTP: 20, 21, 22, 80, 443, 8080, 8081 (TCP)
+DataBase: 22, 3306 (TCP)
+
 # EXTRA
 ## SSH Key + mRemoteNG (Parameters > PPK file version 2). Delete old ppk file if issues.
 https://technotes.khitrenovich.com/opening-ssh-aws-hosted-linux-servers-mremoteng/
