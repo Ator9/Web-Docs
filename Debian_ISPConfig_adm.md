@@ -68,7 +68,7 @@ mysql -uroot -p$my_db_pass -e "GRANT ALL PRIVILEGES ON *.* TO  'root'@'$my_http_
 mysql -uroot -p$my_db_pass -e "SHOW DATABASES;SELECT User,Host FROM mysql.user"
 ```
 
-# 4. Apache & PHP
+# 4. Apache & PHP (not needed)
 ```sh
 echo "RequestHeader unset Proxy early" >> /etc/apache2/apache2.conf
 echo "AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript" >> /etc/apache2/apache2.conf
