@@ -7,6 +7,8 @@ su -
 systemctl reboot
 service apache2 restart
 
+/etc/php/8.2/fpm/php.ini
+
 cat /var/log/ispconfig/cron.log
 cat /var/log/ispconfig/acme.log
 
