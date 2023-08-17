@@ -84,9 +84,9 @@ echo "if("'!'"in_array(\$_SERVER['REMOTE_ADDR'], array('yourip'))) exit();" >> /
 ```
 
 # 6 ISPConfig Ports
-Web/FTP: 20, 21, 22, 80, 443, 8080, 8081 (TCP)
+Web/FTP: 21,22,80,443,8080,8081 (TCP)
 
-Database: 22, 3306 (TCP)
+Database: 22,3306 (TCP)
 
 # EXTRA
 ## SSH Key + mRemoteNG (Parameters > PPK file version 2). Delete old ppk file if issues.
