@@ -8,7 +8,7 @@ systemctl reboot
 systemctl restart apache2
 systemctl restart php8.2-fpm
 
-/etc/php/8.2/fpm/php.ini
+nano /etc/php/8.2/fpm/php.ini
 
 cat /var/log/ispconfig/cron.log
 cat /var/log/ispconfig/acme.log
