@@ -91,6 +91,8 @@ echo "if("'!'"in_array(\$_SERVER['REMOTE_ADDR'], array('yourip'))) exit();" >> /
 # 6 ISPConfig Ports
 Web/FTP: 21,22,80,443,8080,8081 (TCP)
 
+Mail: 25,110,143,465,587,993,995 (TCP)
+
 Database: 22,3306 (TCP)
 
 # EXTRA
