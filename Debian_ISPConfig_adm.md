@@ -7,11 +7,14 @@ su -
 systemctl reboot
 systemctl restart apache2
 systemctl restart php8.2-fpm
+systemctl restart supervisor
 
 nano /etc/php/8.2/fpm/php.ini
+nano /etc/apache2/apache2.conf
 
-cat /var/log/ispconfig/cron.log
 cat /var/log/ispconfig/acme.log
+cat /var/log/ispconfig/cron.log
+cat /var/log/supervisor/supervisord.log
 
 tail -200 /var/log/apache2/access.log
 tail -200 /var/log/apache2/error.log
