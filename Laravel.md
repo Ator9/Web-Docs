@@ -47,6 +47,15 @@ Production Optimizations
 php artisan config:cache
 ```
 
+- public/.htaccess (optional windows)
+```sh
+RewriteEngine On
+
+<IfVersion < 2.4.57>
+RewriteBase /filament/public
+</IfVersion>
+```
+
 ## .git/info/exclude
 ```sh
 *
