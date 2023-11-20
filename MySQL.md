@@ -1,3 +1,8 @@
+#### Recovery MariaDB service
+```sh
+For starting mysql, you should config Innodb force recovery (increase this value from 1 to 6). This will give you detail information https://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html
+```
+
 #### Export
 Crontab: escape "%" to "/%".
 ```sh
