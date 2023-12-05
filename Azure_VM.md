@@ -1,6 +1,9 @@
 Attach disk
 ========
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal?tabs=ubuntu
+```sh
+apt install parted
+```
 
 Once connected to your VM, you need to find the disk. In this example, we're using lsblk to list the disks.
 ```sh
