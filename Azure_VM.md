@@ -23,8 +23,12 @@ sudo mkdir /data1
 sudo mount /dev/sdb1 /data1
 ```
 
-/etc/fstab
+Edit /etc/fstab
+
 ```sh
+#disk id
 sudo blkid
+```
+```sh
 UUID=33333333-3b3b-3c3c-3d3d-3e3e3e3e3e3e   /data1   xfs   defaults,nofail   1   2
 ```
