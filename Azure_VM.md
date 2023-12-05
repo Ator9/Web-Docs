@@ -26,7 +26,7 @@ sudo mount /dev/sdb1 /data1
 Edit /etc/fstab
 
 ```sh
-#disk id
+# get disk id
 sudo blkid
 ```
 ```sh
