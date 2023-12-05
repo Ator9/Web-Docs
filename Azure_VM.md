@@ -6,8 +6,16 @@ Once connected to your VM, you need to find the disk. In this example, we're usi
 ```sh
 lsblk -o NAME,HCTL,SIZE,MOUNTPOINT | grep -i "sd"
 ```
+
+Prepare a new empty disk
+```sh
+sudo parted /dev/sdb --script mklabel gpt mkpart xfspart xfs 0% 100%
+sudo mkfs.xfs /dev/sdb1
+sudo partprobe /dev/sdb1
+```
+
 Mount the disk
 ```sh
 sudo mkdir /data1
-sudo mount /dev/sdb /data1
+sudo mount /dev/sdb1 /data1
 ```
