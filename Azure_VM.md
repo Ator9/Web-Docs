@@ -8,5 +8,5 @@ lsblk -o NAME,HCTL,SIZE,MOUNTPOINT | grep -i "sd"
 Mount the disk
 ```sh
 sudo mkdir /data1
-sudo mount /dev/sdb /datadrive
+sudo mount /dev/sdb /data1
 ```
