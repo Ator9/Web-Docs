@@ -8,6 +8,11 @@ find . -type f -exec chmod 644 {} \;
 ## Security
 If you are installing WordPress in your web root directory (such as public_html), you can move your wp-config.php file to the parent directory — one that isn’t readable from a browser — without changing any settings. WordPress will automatically recognize the file’s new location.
 
+### FIX WW2 Network Subdomain
+```sh
+sed -i -e 's/|^www\/|^www2\/g' /var/www/ww2.bizonline.ae/web/wp-admin/network/site-new.php
+```
+
 
 # WordPress - <a href="https://codex.wordpress.org/Updating_WordPress#Manual_Update" target="_blank">Manual Update</a>
 
