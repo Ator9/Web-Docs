@@ -32,3 +32,6 @@ sudo blkid
 ```sh
 UUID=33333333-3b3b-3c3c-3d3d-3e3e3e3e3e3e   /data1   xfs   defaults,nofail   1   2
 ```
+
+FQDN Domain
+========
