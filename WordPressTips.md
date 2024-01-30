@@ -10,7 +10,7 @@ If you are installing WordPress in your web root directory (such as public_html)
 
 ### FIX WW2 Network Subdomain
 ```sh
-sed -i -e 's/|^www\/|^www2\/g' /var/www/ww2.domain.com/web/wp-admin/network/site-new.php
+sed -i -e 's/|^www/|^ww2/g' /var/www/ww2.domain.com/web/wp-admin/network/site-new.php
 ```
 
 
