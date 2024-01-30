@@ -38,9 +38,9 @@ FQDN Domain
 Edit /etc/hosts
 
 ```sh
-10.10.10.10 webs1.domain.com webs1
+127.0.1.1 webs1.domain.com webs1
 ```
-Edit /etc/hostname
+Edit /etc/hostname (same as vm name in azure)
 
 ```sh
 webs1
