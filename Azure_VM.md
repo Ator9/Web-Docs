@@ -35,3 +35,13 @@ UUID=33333333-3b3b-3c3c-3d3d-3e3e3e3e3e3e   /data1   xfs   defaults,nofail   1  
 
 FQDN Domain
 ========
+Edit /etc/hosts
+
+```sh
+10.10.10.10 webs1.domain.com webs1
+```
+Edit /etc/hostname
+
+```sh
+webs1
+```
