@@ -88,7 +88,7 @@ echo "\$cfg['Servers'][\$i]['hide_db'] = '^information_schema|dbispconfig|perfor
 echo "if("'!'"in_array(\$_SERVER['REMOTE_ADDR'], array('yourip'))) exit();" >> /usr/share/phpmyadmin/config.inc.php
 ```
 
-# 6 ISPConfig Ports
+# 6 ISPConfig Ports (Azure Add 8080)
 Web/FTP: 21,22,80,443,8080,8081 (TCP)
 
 Mail: 25,110,143,465,587,993,995 (TCP)
