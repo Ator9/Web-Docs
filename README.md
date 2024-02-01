@@ -127,15 +127,6 @@ Descomprimir tar.gz
 tar -zxvf  backup_2012.tar.gz
 ```
 
-Mount wp-content in another disk (ispconfig PHP open_basedir :/data)
-```sh
-cp -fr --preserve wp-content /data/wp-content
-mv wp-content wp-content.old
-
-ln -sf /data/uploads uploads
-chown -h web7:client1 uploads
-```
-
 Search repo rpm and delete (to solve yum conflicts)
 ```sh
 rpm -qa | grep -i repo-name
