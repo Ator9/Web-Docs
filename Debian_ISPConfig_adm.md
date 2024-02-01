@@ -40,7 +40,7 @@ passwd ; adduser XXX ; passwd XXX
 apt update && apt upgrade -y
 
 ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
-sed -i -e 's/PermitRootLogin yes/PermitRootLogin without-password/' /etc/ssh/sshd_config
+sed -i -e 's/PermitRootLogin yes/PermitRootLogin prohibit-password/' /etc/ssh/sshd_config
 systemctl restart ssh.service
 sudo swapon --show
 sudo fallocate -l 2G /var/swap.img ; chmod 600 /var/swap.img
