@@ -10,7 +10,7 @@ Mount wp-content in another disk (ispconfig PHP open_basedir :/data1)
 cp -fr --preserve wp-content /data1/wp-content
 mv wp-content wp-content.old
 
-ln -sf /data1/uploads uploads  (ln -s [target] [symlink])
+ln -sf /data1/uploads uploads  // ln -s [target] [symlink]
 chown -h web7:client1 uploads
 ```
 
