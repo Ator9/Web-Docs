@@ -7,11 +7,13 @@ find . -type f -exec chmod 644 {} \;
 
 Mount wp-content in another disk (ispconfig PHP open_basedir :/data1)
 ```sh
-cp -fr --preserve wp-content /data1/wp-content
-mv wp-content wp-content.old
+@wp-content#
+
+cp -fr --preserve uploads /data1/uploads
+mv uploads uploads.old
 
 ln -sf /data1/uploads uploads  // ln -s [target] [symlink]
-chown -h web7:client1 uploads
+chown -h web1:client1 uploads
 ```
 
 ## Security
