@@ -5,7 +5,7 @@ find . -type d -exec chmod 755 {} \;  # Change directory permissions rwxr-xr-x
 find . -type f -exec chmod 644 {} \;
 ```
 
-Mount wp-content in another disk (ispconfig PHP open_basedir :/data1)
+Mount uploads in another disk (ispconfig PHP open_basedir :/data1)
 ```sh
 @wp-content#
 
