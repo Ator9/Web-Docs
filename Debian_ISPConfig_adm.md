@@ -8,6 +8,7 @@ systemctl reboot
 systemctl restart apache2
 systemctl restart php8.2-fpm
 systemctl restart supervisor
+/etc/init.d/fail2ban restart
 
 nano /etc/php/8.2/fpm/php.ini
 nano /etc/apache2/apache2.conf
