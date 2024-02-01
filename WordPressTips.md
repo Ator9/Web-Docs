@@ -5,6 +5,15 @@ find . -type d -exec chmod 755 {} \;  # Change directory permissions rwxr-xr-x
 find . -type f -exec chmod 644 {} \;
 ```
 
+Mount wp-content in another disk (ispconfig PHP open_basedir :/data)
+```sh
+cp -fr --preserve wp-content /data/wp-content
+mv wp-content wp-content.old
+
+ln -sf /data/uploads uploads
+chown -h web7:client1 uploads
+```
+
 ## Security
 If you are installing WordPress in your web root directory (such as public_html), you can move your wp-config.php file to the parent directory — one that isn’t readable from a browser — without changing any settings. WordPress will automatically recognize the file’s new location.
 
@@ -12,7 +21,6 @@ If you are installing WordPress in your web root directory (such as public_html)
 ```sh
 sed -i -e 's/|^www/|^ww2/g' /var/www/ww2.domain.com/web/wp-admin/network/site-new.php
 ```
-
 
 # WordPress - <a href="https://codex.wordpress.org/Updating_WordPress#Manual_Update" target="_blank">Manual Update</a>
 
