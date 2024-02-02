@@ -22,7 +22,7 @@ rsync -ruvt --delete uploads user@2.2.2.2:/data1
 ```
 
 ```sh
-chown -R web:client1 uploads/
+chown -R web1:client1 uploads/
 ```
 
 ## Security
