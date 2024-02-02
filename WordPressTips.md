@@ -16,6 +16,12 @@ ln -sf /data1/uploads uploads  // ln -s [target] [symlink]
 chown -h web1:client1 uploads
 ```
 
+Rsync uploads server to server (r recursive, u sincronize, v verbose, t times)
+```sh
+rsync -ruvt --delete uploads user@2.2.2.2:/data1
+```
+
+
 ## Security
 If you are installing WordPress in your web root directory (such as public_html), you can move your wp-config.php file to the parent directory — one that isn’t readable from a browser — without changing any settings. WordPress will automatically recognize the file’s new location.
 
