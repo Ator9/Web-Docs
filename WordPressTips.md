@@ -94,9 +94,9 @@ Deny from xxx.xxx.xx.xx
 Options -Indexes
 
 #Apache 2.2
-RemoveHandler .php .php3
-RemoveType .php .php3
-php_flag engine off
+#RemoveHandler .php .php3
+#RemoveType .php .php3
+#php_flag engine off
 
 #Apache 2.4
 <FilesMatch \.php$>
