@@ -111,9 +111,9 @@ Find files with specific text within
 grep -rnw '/path/to/somewhere/' -e 'pattern'
 ```
 
-Bind
+Bind /etc/fstab (web, wordpress, ispconfig)
 ```sh
-/var/www/clients/client1/web4/web /var/www/clients/client1/web5/web    none    bind,nobootwait,_netdev    0 0
+/var/www/clients/client1/web1/web /var/www/clients/client1/web2/web    none    bind,nobootwait,_netdev    0 0
 mount -a
 ```
 
