@@ -21,6 +21,9 @@ Rsync uploads server to server (r recursive, u sincronize, v verbose, t times)
 rsync -ruvt --delete uploads user@2.2.2.2:/data1
 ```
 
+```sh
+chown -R web:client1 uploads/
+```
 
 ## Security
 If you are installing WordPress in your web root directory (such as public_html), you can move your wp-config.php file to the parent directory — one that isn’t readable from a browser — without changing any settings. WordPress will automatically recognize the file’s new location.
