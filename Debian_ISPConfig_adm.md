@@ -6,11 +6,11 @@ Debug: https://www.faqforge.com/linux/debugging-ispconfig-3-server-actions-in-ca
 su -
 systemctl reboot
 systemctl restart apache2
-systemctl restart php8.2-fpm
+systemctl restart php8.3-fpm
 systemctl restart supervisor
 /etc/init.d/fail2ban restart
 
-nano /etc/php/8.2/fpm/php.ini
+nano /etc/php/8.3/fpm/php.ini
 nano /etc/apache2/apache2.conf
 
 cat /var/log/ispconfig/acme.log
