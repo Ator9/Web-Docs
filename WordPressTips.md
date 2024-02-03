@@ -59,6 +59,8 @@ RewriteBase /
 RewriteCond %{QUERY_STRING} ^author= [NC]
 RewriteRule .* - [F,L]
 RewriteRule ^author/ - [F,L]
+
+RewriteRule ^wp-signup - [F]
 </IfModule>
 ```
 
