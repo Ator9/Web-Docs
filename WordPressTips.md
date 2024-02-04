@@ -35,13 +35,6 @@ sed -i -e 's/|^www/|^ww2/g' /var/www/ww2.domain.com/web/wp-admin/network/site-ne
 
 # WordPress - <a href="https://codex.wordpress.org/Updating_WordPress#Manual_Update" target="_blank">Manual Update</a>
 
-### Multisite
-<a href="https://codex.wordpress.org/Create_A_Network" target="_blank">Create a Network</a>
-```php
-/* Multisite */
-define( 'WP_ALLOW_MULTISITE', true );
-```
-
 ### Custom Vars wp-config.php
 ```php
 if($_SERVER['HTTP_HOST'] != DOMAIN_CURRENT_SITE) define('COOKIE_DOMAIN', false);
@@ -112,6 +105,13 @@ Deny from all
 </FilesMatch>
 ```
 
+### Divi
+Broken content:
+```sh
+chmod 777 -R /var/www/domain.com/web/wp-content/et-cache/1/
+
+or css dynamic off
+```
 
 ### Cache htaccess
 ```sh
