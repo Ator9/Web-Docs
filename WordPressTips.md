@@ -54,8 +54,36 @@ RewriteRule .* - [F,L]
 RewriteRule ^author/ - [F,L]
 
 RewriteRule ^wp-signup - [F]
+
+# Block/Forbid Requests to: /wp-json
+RewriteCond %{REQUEST_METHOD} ^(GET|POST|PUT|PATCH|DELETE) [NC]
+RewriteCond %{REQUEST_URI} ^.*wp-json [NC]
+RewriteRule ^(.*)$ - [F]
 </IfModule>
 ```
+
+### Block Files
+```sh
+<Files xmlrpc.php>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files "qnap_firmware.xml">
+  Require all denied
+</Files>
+
+<Files wp-sitemap.xml>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files wp-sitemap-posts-page-1.xml>
+Order Allow,Deny
+Deny from all
+</Files>
+```
+
 
 ### Home Redirect with htaccess
 ```sh
