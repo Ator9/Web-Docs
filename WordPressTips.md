@@ -55,10 +55,10 @@ RewriteRule ^author/ - [F,L]
 
 RewriteRule ^wp-signup - [F]
 
-# Block/Forbid Requests to: /wp-json
-RewriteCond %{REQUEST_METHOD} ^(GET|POST|PUT|PATCH|DELETE) [NC]
-RewriteCond %{REQUEST_URI} ^.*wp-json [NC]
-RewriteRule ^(.*)$ - [F]
+# Block/Forbid Requests to: /wp-json DIVI USE
+#RewriteCond %{REQUEST_METHOD} ^(GET|POST|PUT|PATCH|DELETE) [NC]
+#RewriteCond %{REQUEST_URI} ^.*wp-json [NC]
+#RewriteRule ^(.*)$ - [F]
 
 RewriteCond %{REQUEST_URI} ^.*feed/ [NC]
 RewriteRule ^(.*)$ - [F]
