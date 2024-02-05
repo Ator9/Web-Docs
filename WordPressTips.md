@@ -63,11 +63,17 @@ RewriteRule ^(.*)$ - [F]
 RewriteCond %{REQUEST_URI} ^.*feed/ [NC]
 RewriteRule ^(.*)$ - [F]
 
+# block example
 RewriteCond %{REQUEST_URI} ^.*hello-world/ [NC]
 RewriteRule ^(.*)$ - [F]
 
+# block blog lists 
 RewriteCond %{REQUEST_URI} ^.*category/uncategorized/ [NC]
 RewriteRule ^(.*)$ - [F]
+
+# block blog lists 
+RewriteRule ^\d{4}/(.*)$ - [F]
+
 </IfModule>
 ```
 
