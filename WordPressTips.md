@@ -59,6 +59,9 @@ RewriteRule ^wp-signup - [F]
 RewriteCond %{REQUEST_METHOD} ^(GET|POST|PUT|PATCH|DELETE) [NC]
 RewriteCond %{REQUEST_URI} ^.*wp-json [NC]
 RewriteRule ^(.*)$ - [F]
+
+RewriteCond %{REQUEST_URI} ^.*feed/ [NC]
+RewriteRule ^(.*)$ - [F]
 </IfModule>
 ```
 
