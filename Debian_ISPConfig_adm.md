@@ -17,6 +17,8 @@ cat /var/log/ispconfig/acme.log
 cat /var/log/ispconfig/cron.log
 cat /var/log/supervisor/supervisord.log
 
+cat /var/log/php8.3-fpm.log
+
 tail -200 /var/log/apache2/access.log
 tail -200 /var/log/apache2/error.log
 
