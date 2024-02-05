@@ -72,7 +72,9 @@ RewriteCond %{REQUEST_URI} ^.*category/uncategorized/ [NC]
 RewriteRule ^(.*)$ - [F]
 
 # block blog lists 
-RewriteRule ^\d{4}/(.*)$ - [F]
+RewriteRule ^\d{4}/$ - [F]
+RewriteRule ^\d{4}/\d{2}/$ - [F]
+RewriteRule ^\d{4}/\d{2}/\d{2}/$ - [F]
 
 </IfModule>
 ```
