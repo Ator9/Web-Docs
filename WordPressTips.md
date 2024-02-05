@@ -99,6 +99,11 @@ Deny from all
 Order Allow,Deny
 Deny from all
 </Files>
+
+<Files wp-sitemap-posts-post-1.xml>
+Order Allow,Deny
+Deny from all
+</Files>
 ```
 
 
