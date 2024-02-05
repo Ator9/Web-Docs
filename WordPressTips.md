@@ -65,6 +65,9 @@ RewriteRule ^(.*)$ - [F]
 
 RewriteCond %{REQUEST_URI} ^.*hello-world/ [NC]
 RewriteRule ^(.*)$ - [F]
+
+RewriteCond %{REQUEST_URI} ^.*category/uncategorized/ [NC]
+RewriteRule ^(.*)$ - [F]
 </IfModule>
 ```
 
