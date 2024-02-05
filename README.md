@@ -9,6 +9,8 @@ service pure-ftpd restart
 service postfix restart
 
 echo > ~/.bash_history ; history -c
+# delete single line:
+history -d 1234 ; history -w
 
 cat /var/log/secure | grep "Accepted password"
 
