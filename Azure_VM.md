@@ -38,6 +38,7 @@ FQDN Domain
 Edit /etc/hosts
 
 ```sh
+127.0.0.1 localhost
 127.0.1.1 webs1.domain.com webs1
 ```
 Edit /etc/hostname (same as vm name in azure)
