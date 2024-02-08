@@ -23,6 +23,8 @@ tail -200 /var/log/apache2/access.log
 tail -200 /var/log/apache2/error.log
 
 echo > ~/.bash_history ; history -c
+# delete single line:
+history -d 1234 ; history -w
 ```
 
 ```sh
