@@ -7,7 +7,7 @@ su -
 systemctl reboot
 systemctl restart apache2
 systemctl restart php8.3-fpm
-systemctl restart supervisor (nano /etc/supervisor/conf.d/laravel-worker.conf)
+systemctl restart supervisor (apt install supervisor | nano /etc/supervisor/conf.d/laravel-worker.conf)
 /etc/init.d/fail2ban restart
 
 nano /etc/php/8.3/fpm/php.ini
