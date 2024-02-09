@@ -100,6 +100,18 @@ Mail: 25,110,143,465,587,993,995 (TCP)
 
 Database: 22,3306 (TCP)
 
+# 7. ISPConfig Update (Optional / If Needed) - <a href="http://www.faqforge.com/linux/controlpanels/ispconfig3/how-to-update-ispconfig-3/" target="_blank">Notes</a>
+```sh
+ispconfig_update.sh
+/usr/local/ispconfig/server/scripts/ispconfig_update.sh
+```
+
+Master / Slaves Config:
+- Method: stable
+- Reconfigure Permissions: yes
+- Reconfigure Services: yes
+- Reconfigure Crontab: yes
+
 # EXTRA
 ## SSH Key + mRemoteNG (Parameters > PPK file version 2). Delete old ppk file if issues.
 https://technotes.khitrenovich.com/opening-ssh-aws-hosted-linux-servers-mremoteng/
