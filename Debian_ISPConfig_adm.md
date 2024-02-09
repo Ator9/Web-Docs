@@ -108,7 +108,7 @@ ispconfig_update.sh
 
 Master / Slaves Config:
 - Method: stable
-- Reconfigure Permissions: yes
+- Reconfigure Permissions: no
 - Reconfigure Services: yes
 - Reconfigure Crontab: yes
 
