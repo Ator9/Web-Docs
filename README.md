@@ -16,6 +16,7 @@ cat /var/log/secure | grep "Accepted password"
 
 * * * * *   root    pgrep httpd > /dev/null || /bin/systemctl start httpd.service
 * * * * *   root    pgrep mariadb > /dev/null || /bin/systemctl start mariadb.service
+* * * * *   root    pgrep supervisor > /dev/null || /bin/systemctl start supervisor
 0 4 * * *   root    /bin/systemctl restart mariadb.service
 
 mysql -V
