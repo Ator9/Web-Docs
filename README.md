@@ -38,6 +38,8 @@ scp -r plugins user@domain.net:/home/user
 
 scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 
+rsync -ruvt --delete folder user@222.222.222.222:/data
+
 bash-4.2# sudo /sbin/reboot --force
 ```
 
