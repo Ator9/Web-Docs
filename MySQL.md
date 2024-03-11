@@ -9,10 +9,15 @@ mysqldump -uroot -pXXX dbname | gzip > /var/backup/dbname.sql.gz
 mysqldump -uroot -pXXX --databases $(mysql -uroot -pXXX -N information_schema -e "SELECT DISTINCT(TABLE_SCHEMA) FROM tables WHERE TABLE_SCHEMA LIKE 'prefix%'" ) | gzip > /var/backup/alldb.sql.gz
 ```
 
-#### Import
+#### Import (multiples separated ;)
 ```sh
 mysql -uroot -pXXX dbname < /backups/dbname.sql
 zcat /backups/dbname.sql.gz | mysql -uroot -pXXX dbname
+```
+
+#### Recreate Databases
+```sh
+mysql -uroot -pPass -e "DROP DATABASE base1;CREATE DATABASE base1;DROP DATABASE base2;CREATE DATABASE base2;"
 ```
 
 #### INSERT + ON DUPLICATE KEY UPDATE
