@@ -16,7 +16,7 @@ nano /etc/apache2/apache2.conf
 cat /var/log/ispconfig/acme.log
 cat /var/log/ispconfig/cron.log
 cat /var/log/supervisor/supervisord.log
-cat var/mail/root
+cat /var/mail/root
 
 cat /var/log/php8.3-fpm.log
 
