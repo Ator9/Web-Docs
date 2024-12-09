@@ -2,6 +2,7 @@ Attach disk
 ========
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal?tabs=ubuntu
 ```sh
+apt update ; apt upgrade
 apt install parted xfsprogs net-tools
 ```
 
