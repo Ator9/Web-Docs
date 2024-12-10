@@ -11,6 +11,34 @@ AllowOverride All
 </Directory>
 ```
 
+## security apache2.conf
+```sh
+<Files xmlrpc.php>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files "qnap_firmware.xml">
+  Require all denied
+</Files>
+
+<Files wp-sitemap.xml>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files wp-sitemap-posts-page-1.xml>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files wp-sitemap-posts-post-1.xml>
+Order Allow,Deny
+Deny from all
+</Files>
+```
+
+
 ### FIX CHMOD
 <a href="https://codex.wordpress.org/Create_A_Network" target="_blank">Create a Network</a>
 ```sh
