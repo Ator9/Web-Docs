@@ -1,3 +1,16 @@
+# Automatic Domains
+Paste after IncludeOptional conf-enabled/*.conf:
+```sh
+<VirtualHost *:80>
+ServerAdmin mail@mail.com
+DocumentRoot /var/www/domain.com/web
+</VirtualHost>
+<Directory /var/www/domain.com/web>
+Require all granted
+AllowOverride All
+</Directory>
+```
+
 ### FIX CHMOD
 <a href="https://codex.wordpress.org/Create_A_Network" target="_blank">Create a Network</a>
 ```sh
