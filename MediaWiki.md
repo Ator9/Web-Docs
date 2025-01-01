@@ -30,7 +30,7 @@ $wgHooks['SkinAddFooterLinks'][] = function ( Skin $skin, string $key, array &$f
             [
                 'href' => 'https://www.example.org/wiki/Project:Imprint',
                 'rel' => 'noreferrer noopener', // not required, but recommended for security reasons
-                'target' => '_blank'
+                'target' => '_parent'
             ],
         $skin->msg( 'test-desc' )->escaped() // test-desc is an i18n message of the text
         );
