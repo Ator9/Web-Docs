@@ -1,9 +1,14 @@
 # OptionsLocalSettings.php
 Allow same origin iframe
-```sh
+```php
 $wgEditPageFrameOptions = 'SAMEORIGIN';
 ```
 Max 1MB uploads
-```sh;
+```php;
 $wgMaxUploadSize = 1000000;
+```
+Disable page creation for logged in users
+```php;
+$wgGroupPermissions['*']['createpage'] = false;
+$wgGroupPermissions['user']['createpage'] = false;
 ```
