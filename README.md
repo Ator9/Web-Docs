@@ -8,6 +8,8 @@ service httpd restart
 service pure-ftpd restart
 service postfix restart
 
+git checkout -- file.xxx
+
 echo > ~/.bash_history ; history -c
 # delete single line:
 history -d 1234 ; history -w
