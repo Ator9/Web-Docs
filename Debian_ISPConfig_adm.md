@@ -13,6 +13,10 @@ systemctl restart supervisor (apt install supervisor | nano /etc/supervisor/conf
 nano /etc/php/8.3/fpm/php.ini
 nano /etc/apache2/apache2.conf
 
+# Google DNS
+# /etc/network/interfaces > dns-nameservers  8.8.8.8 8.8.4.4
+systemctl restart networking
+
 cat /var/log/ispconfig/acme.log
 cat /var/log/ispconfig/cron.log
 cat /var/log/supervisor/supervisord.log
