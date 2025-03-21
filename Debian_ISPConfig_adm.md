@@ -15,7 +15,8 @@ nano /etc/apache2/apache2.conf
 
 # Google DNS
 # /etc/network/interfaces > dns-nameservers  8.8.8.8 8.8.4.4
-systemctl restart networking
+systemctl status systemd-networkd.service
+systemctl restart systemd-networkd.service
 
 cat /var/log/ispconfig/acme.log
 cat /var/log/ispconfig/cron.log
