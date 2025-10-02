@@ -87,6 +87,9 @@ define( 'DISALLOW_FILE_EDIT', true );
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_LOG', true );
 define( 'WP_DEBUG_DISPLAY', false );
+
+#fix divi error with forminator
+define( 'FS_METHOD', 'direct' );
 ```
 
 ### Block Author with htaccess
