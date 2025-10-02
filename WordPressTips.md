@@ -82,6 +82,11 @@ if($_SERVER['HTTP_HOST'] != DOMAIN_CURRENT_SITE) define('COOKIE_DOMAIN', false);
 
 # Disable Theme Editing | trying to avoid hack
 define( 'DISALLOW_FILE_EDIT', true );
+
+# check errors in /web/wp-content/debug.log
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', false );
 ```
 
 ### Block Author with htaccess
