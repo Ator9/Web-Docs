@@ -98,6 +98,10 @@ sed -i -e 's/;error_log = php_errors.log/error_log = \/var\/log\/php_errors.log/
 echo "\$cfg['Servers'][\$i]['hide_db'] = '^information_schema|dbispconfig|performance_schema|mysql|phpmyadmin|sys\$';" >> /usr/share/phpmyadmin/config.inc.php
 echo "if("'!'"in_array(\$_SERVER['REMOTE_ADDR'], array('yourip'))) exit();" >> /usr/share/phpmyadmin/config.inc.php
 ```
+If debian deletes phpmyadmin:
+```sh
+sudo chmod -x /etc/cron.daily/auto_update_phpmyadmin
+```
 
 # 6 ISPConfig Ports (Azure Add 8080)
 Web/FTP: 21,22,80,443,8080,8081 (TCP)
