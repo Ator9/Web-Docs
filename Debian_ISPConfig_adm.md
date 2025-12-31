@@ -122,6 +122,15 @@ Master / Slaves Config:
 - Reconfigure Services: yes
 - Reconfigure Crontab: yes
 
+# 8.  Force BIND9 to use IPv4 Only (to avoid curl errors)
+```sh
+sudo nano /etc/default/named
+
+OPTIONS="-u bind -4"
+
+sudo systemctl restart bind9
+```
+
 # EXTRA
 ## SSH Key + mRemoteNG (Parameters > PPK file version 2). Delete old ppk file if issues.
 https://technotes.khitrenovich.com/opening-ssh-aws-hosted-linux-servers-mremoteng/
