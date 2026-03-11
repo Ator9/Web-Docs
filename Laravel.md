@@ -1,3 +1,20 @@
+# ISPConfig - Bitbucket Install
+
+```sh
+cd /var/www/site/private
+sudo -u web36 ssh-keygen (copy .ssh/id_rsa.pub to Bitbucket settings)
+sudo -u web36 git clone git@bitbucket.org:xxx/yyy.git .
+sudo -u web36 cp .env.example .env
+sudo -u web36 composer install
+php artisan key:generate
+
+sudo -u web36 ln -s /var/www/site/private/public/ /var/www/site/web/
+```
+
+## Apache Directives (ISPConfig)
+DocumentRoot "{DOCROOT_CLIENT}/public"
+
+
 # Install Laravel
 New Project
 ```sh
