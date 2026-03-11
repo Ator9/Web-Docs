@@ -9,7 +9,7 @@ sudo -u web36 composer install
 php artisan key:generate
 
 sudo -u web36 ln -s /var/www/site/private/public/ /var/www/site/web/
-sudo -u web57 php artisan storage:link
+sudo -u web36 php artisan storage:link
 ```
 
 ## Apache Directives (ISPConfig)
