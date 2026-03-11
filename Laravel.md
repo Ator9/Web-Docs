@@ -9,6 +9,7 @@ sudo -u web36 composer install
 php artisan key:generate
 
 sudo -u web36 ln -s /var/www/site/private/public/ /var/www/site/web/
+sudo -u web57 php artisan storage:link
 ```
 
 ## Apache Directives (ISPConfig)
@@ -27,20 +28,6 @@ Existing Project
 - install dependencies
 - copy .env.example to .env
 - create database
-
-```sh
-sudo -u web57 git clone git@bitbucket.org:Ator9/server.git .
-sudo chmod -R 777 storage
-sudo -u web57 ln -s /var/www/domain/private/public/ /var/www/domain/web/
-sudo -u web57 php artisan storage:link
-```
-
-```sh
-composer install
-php artisan key:generate
-php artisan migrate
-php artisan db:seed
-```
 
 ## Artisan Console
 ```sh
