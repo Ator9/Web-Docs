@@ -18,8 +18,7 @@ DocumentRoot "{DOCROOT_CLIENT}/public"
 # Install Laravel
 New Project
 ```sh
-composer create-project laravel/laravel .
-composer create-project laravel/laravel foldername
+php artisan migrate:fresh ; php artisan db:seed
 ```
 Existing Project
 - clone it from github
