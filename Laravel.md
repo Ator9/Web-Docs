@@ -20,8 +20,7 @@ New Project
 ```sh
 php artisan migrate:fresh ; php artisan db:seed
 
-sudo -u web36 git --work-tree=/var/www/domain/web --git-dir=/var/www/domain/private pull origin master
-sudo -u web36 git --work-tree=/var/www/domain/web --git-dir=/var/www/domain/private checkout -f
+sudo -u web36 git pull
 ```
 Existing Project
 - clone it from github
