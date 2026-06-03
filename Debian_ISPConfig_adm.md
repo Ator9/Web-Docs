@@ -3,7 +3,7 @@
 Debug: https://www.faqforge.com/linux/debugging-ispconfig-3-server-actions-in-case-of-a-failure/
 
 ```sh
-suso su -
+sudo su -
 systemctl reboot
 systemctl restart apache2
 systemctl restart php8.3-fpm
