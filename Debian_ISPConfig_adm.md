@@ -3,7 +3,7 @@
 Debug: https://www.faqforge.com/linux/debugging-ispconfig-3-server-actions-in-case-of-a-failure/
 
 ```sh
-su -
+suso su -
 systemctl reboot
 systemctl restart apache2
 systemctl restart php8.3-fpm
@@ -59,9 +59,9 @@ sudo mkswap /var/swap.img ; sudo swapon /var/swap.img
 echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
 ```
 
-# 2. ISPConfig
-Log in as root or switch using su -
+# 2. ISPConfig Install
 ```sh
+su - (this method needed)
 wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --use-php=8.2,8.3
 ```
 
