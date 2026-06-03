@@ -40,12 +40,13 @@ passwd ; adduser XXX ; passwd XXX
 
 apt update && apt upgrade -y
 
-Check if "prohibit-password" is default
-sed -i -e 's/PermitRootLogin yes/PermitRootLogin prohibit-password/' /etc/ssh/sshd_config
-systemctl restart ssh.service
-
 echo "127.0.1.1 server1.domain.com server1" >> /etc/hosts
 systemctl reboot
+```
+Check if "prohibit-password" is default
+```sh
+sed -i -e 's/PermitRootLogin yes/PermitRootLogin prohibit-password/' /etc/ssh/sshd_config
+systemctl restart ssh.service
 ```
 ```sh
 ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
