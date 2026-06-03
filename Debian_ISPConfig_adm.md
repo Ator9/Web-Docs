@@ -35,6 +35,8 @@ history -d 1234 ; history -w
 
 ```sh
 echo "127.0.1.1 server1.domain.com server1" >> /etc/hosts
+
+systemctl reboot
 ```
 
 # 1. Startup & Swap
