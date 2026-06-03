@@ -33,18 +33,17 @@ echo > ~/.bash_history ; history -c
 history -d 1234 ; history -w
 ```
 
-```sh
-echo "127.0.1.1 server1.domain.com server1" >> /etc/hosts
-
-systemctl reboot
-```
-
 # 1. Startup & Swap
 ```sh
+su - (this method needed, then "sudo su -" to enter faster)
 passwd ; adduser XXX ; passwd XXX
 
 apt update && apt upgrade -y
 
+echo "127.0.1.1 server1.domain.com server1" >> /etc/hosts
+systemctl reboot
+```
+```sh
 ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
 sed -i -e 's/PermitRootLogin yes/PermitRootLogin prohibit-password/' /etc/ssh/sshd_config
 systemctl restart ssh.service
@@ -56,7 +55,7 @@ echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
 
 # 2. ISPConfig Install
 ```sh
-su - (this method needed)
+
 wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --use-php=8.2,8.3
 ```
 
