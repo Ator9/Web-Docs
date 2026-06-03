@@ -69,13 +69,6 @@ If debian deletes phpmyadmin:
 sudo chmod -x /etc/cron.daily/auto_update_phpmyadmin
 ```
 
-# 6 ISPConfig Ports (Azure Add 8080)
-Web/FTP: 21,22,80,443,8080,8081 (TCP)
-
-Mail: 25,110,143,465,587,993,995 (TCP)
-
-Database: 22,3306 (TCP)
-
 # 3. ISPConfig Update (Optional / If Needed) - <a href="http://www.faqforge.com/linux/controlpanels/ispconfig3/how-to-update-ispconfig-3/" target="_blank">Notes</a>
 ```sh
 ispconfig_update.sh
@@ -100,3 +93,10 @@ sudo systemctl restart bind9
 # EXTRA
 ## SSH Key + mRemoteNG (Parameters > PPK file version 2). Delete old ppk file if issues.
 https://technotes.khitrenovich.com/opening-ssh-aws-hosted-linux-servers-mremoteng/
+
+# ISPConfig Ports (Azure Add 8080)
+Web/FTP: 21,22,80,443,8080,8081 (TCP)
+
+Mail: 25,110,143,465,587,993,995 (TCP)
+
+Database: 22,3306 (TCP)
