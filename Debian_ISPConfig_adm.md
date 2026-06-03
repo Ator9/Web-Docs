@@ -60,7 +60,7 @@ echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
 # 2. ISPConfig Install
 ```sh
 
-wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --use-php=8.2,8.3
+wget -O - https://get.ispconfig.org | sh -s -- --no-mail --no-dns --no-roundcube --use-php=8.1,8.2,8.3,8.4
 ```
 
 # 3. MariaDB & GRANT access to servers (multiserver only)
