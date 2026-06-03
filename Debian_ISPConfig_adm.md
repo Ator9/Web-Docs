@@ -34,14 +34,7 @@ history -d 1234 ; history -w
 ```
 
 ```sh
-my_db_pass=xxx
-my_adm_host=XXX
-my_adm_ip=XXX
-my_http_host=XXX
-my_http_ip=XXX
-
-echo "$my_adm_ip     $my_adm_host" >> /etc/hosts
-echo "$my_http_ip     $my_http_host" >> /etc/hosts
+echo "127.0.1.1 server1.domain.com server1" >> /etc/hosts
 ```
 
 # 1. Startup & Swap
