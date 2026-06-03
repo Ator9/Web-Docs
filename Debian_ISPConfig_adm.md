@@ -76,7 +76,7 @@ Mail: 25,110,143,465,587,993,995 (TCP)
 
 Database: 22,3306 (TCP)
 
-# 7. ISPConfig Update (Optional / If Needed) - <a href="http://www.faqforge.com/linux/controlpanels/ispconfig3/how-to-update-ispconfig-3/" target="_blank">Notes</a>
+# 3. ISPConfig Update (Optional / If Needed) - <a href="http://www.faqforge.com/linux/controlpanels/ispconfig3/how-to-update-ispconfig-3/" target="_blank">Notes</a>
 ```sh
 ispconfig_update.sh
 /usr/local/ispconfig/server/scripts/ispconfig_update.sh
@@ -88,7 +88,7 @@ Master / Slaves Config:
 - Reconfigure Services: yes
 - Reconfigure Crontab: yes
 
-# 8.  Force BIND9 to use IPv4 Only (to avoid curl errors)
+# 4.  Force BIND9 to use IPv4 Only (to avoid curl errors)
 ```sh
 sudo nano /etc/default/named
 
